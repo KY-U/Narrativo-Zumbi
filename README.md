@@ -1,1 +1,3 @@
-# Narrativo-Zumbi
+Narrativo-Zumbi
+
+Simplesmente o pináculo do game design
