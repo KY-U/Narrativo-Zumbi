@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena1>
+	<bloco s="0">
+		<dialogos>
+			<dialogo>
+				<nome> José Carlos </nome>
+				<texto> É mano bagulho é doido </texto>
+			</dialogo>
+			<dialogo>
+				<nome> Outro Cara da Silva </nome>
+				<texto> Demais bixo *dab* </texto>
+			</dialogo>
+		</dialogos>
+		<escolhas>
+			<escolha escolha="1"> morrer </escolha>
+			<escolha escolha="2"> perder a vida </escolha>
+		</escolhas>
+	</bloco>
+
+	<bloco s="1">
+		<dialogos>
+			<dialogo>
+				<nome> José Carlos </nome>
+				<texto> Ovo morrer </texto>
+			</dialogo>
+			<dialogo>
+				<nome> Outro Cara da Silva </nome>
+				<texto> Foda </texto>
+			</dialogo>
+		</dialogos>
+	</bloco>
+
+	<bloco s="2"> 
+		<dialogos>
+			<dialogo>
+				<nome> José Carlos </nome>
+				<texto> *Cringes to death* </texto>
+			</dialogo>
+			<dialogo>
+				<nome> Outro Cara da Silva </nome>
+				<texto> Foda </texto>
+			</dialogo>
+		</dialogos>
+	</bloco>
+</cena1>
