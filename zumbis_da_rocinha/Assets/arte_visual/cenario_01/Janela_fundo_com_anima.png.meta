@@ -107,10 +107,10 @@ TextureImporter:
       name: Janela_fundo_com_anima_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 215
-        width: 74
-        height: 70
+        x: 15
+        y: 221
+        width: 64
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,6 +120,216 @@ TextureImporter:
       bones: []
       spriteID: 62269b433072f254e91a9fb2034c7b27
       internalID: 844954267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 221
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9700bf447397a774a846829560d7b713
+      internalID: 1759850086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_2
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 221
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ccdb47123fea24d8cae7da88a6bc47
+      internalID: -142798298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 144
+        width: 74
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a513e9c5e1d0a80418fec6e43ec11533
+      internalID: -402982758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 144
+        width: 74
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0b324d77b6aa646a9a88a05d002b1d
+      internalID: 204183670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_5
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 144
+        width: 74
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf868343e597e04db8b87679ad8e027
+      internalID: -2081107782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_6
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 76
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79296e7ba1ca9ff42bc48783602034b8
+      internalID: -776151163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 76
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74ee93348ce4894bba6e6d689f96e1f
+      internalID: 152377320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 76
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc1d4b5b80cbcc418733a85b6dda131
+      internalID: 622711837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 7
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c361b44fcad0cb845af521a5f0357680
+      internalID: -780685234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Janela_fundo_com_anima_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 7
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758ed5977c399d94592d31b16ba53d80
+      internalID: 2079437731
       vertices: []
       indices: 
       edges: []
@@ -135,7 +345,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Janela_fundo_com_anima_5: -2081107782
+      Janela_fundo_com_anima_2: -142798298
+      Janela_fundo_com_anima_1: 1759850086
+      Janela_fundo_com_anima_6: -776151163
+      Janela_fundo_com_anima_4: 204183670
+      Janela_fundo_com_anima_3: -402982758
+      Janela_fundo_com_anima_7: 152377320
+      Janela_fundo_com_anima_8: 622711837
       Janela_fundo_com_anima_0: 844954267
+      Janela_fundo_com_anima_10: 2079437731
+      Janela_fundo_com_anima_9: -780685234
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
