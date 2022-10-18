@@ -81,11 +81,15 @@ public class TextManager : MonoBehaviour
     }
 
     // sub rotina para imprimir o texto letra por letra
+    public AudioSource source;
+    public AudioClip clip;
     IEnumerator LBLTyping(XmlNode texto){
         GameObject caixaTexto = GameObject.Find("dialogoUI(Clone)/CaixaDialogoFrame/CaixaDialogo");
         caixaTexto.GetComponent<TextMeshProUGUI>().text = "";
         foreach(char letra in texto.InnerXml.ToCharArray()){
+            source.Stop();
             caixaTexto.GetComponent<TextMeshProUGUI>().text += letra;
+            source.PlayOneShot(clip);
             yield return null;
         }
     }
