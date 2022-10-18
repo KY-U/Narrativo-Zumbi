@@ -5,6 +5,7 @@ using System.IO;
 using System.Xml;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TextManager : MonoBehaviour
 {
@@ -122,5 +123,22 @@ public class TextManager : MonoBehaviour
             
             i++;
         }
+    }
+
+    // Tipos de triggers para os botões
+    // Proximo bloco de dialogo
+    void ProximoBloco(string bloco){
+        LoadDialogue(bloco);
+    }
+
+    // Proxima cena
+    void ProximaCena(string cena){
+        // Chama a animação de transição
+        SceneManager.LoadScene(cena);
+    }
+
+    // Game Over
+    void GameOver(){
+        ProximaCena("GameOver");
     }
 }

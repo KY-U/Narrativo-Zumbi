@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Adicionar esse dialogo na tela da morte 69 (nice) -->
 <cena>
 	<bloco s="0">
 		<dialogos>
@@ -17,8 +18,8 @@
 		</dialogos>
 		<escolhas>
 			<resumo> Oh mama </resumo>
-			<escolha escolha="1"> morrer </escolha>
-			<escolha escolha="2"> perder a vida </escolha>
+			<escolha escolha="1"> Morrer </escolha>
+			<escolha escolha="2"> Perder a vida </escolha>
 		</escolhas>
 	</bloco>
 
