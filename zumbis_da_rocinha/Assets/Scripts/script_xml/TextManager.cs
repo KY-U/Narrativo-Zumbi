@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class TextManager : MonoBehaviour
 {
     [SerializeField] private XML_reading xReader;   // Instanciação da classe que lê o XML
-    public string blocoS = "0";
+    [SerializeField] private PlayerManager Jogador; 
 
     public GameObject canvas;                       // Parente de todas as UI bases
 
@@ -25,19 +25,19 @@ public class TextManager : MonoBehaviour
     
     void Start(){
         falas = new Queue<XmlNode>();
-        LoadDialogue("0"); // Chama a primeira execução de bloco
+        xReader.definirBloco("0");
+        xReader.LoadFile();
+        LoadDialogue(); // Chama a primeira execução de bloco
     }
 
-    public void LoadDialogue(string bloco){
-        xReader.LoadFile();
-        foreach(XmlNode dialogo in xReader.ParseDialogo(bloco)){
+    public void LoadDialogue(){
+        foreach(XmlNode dialogo in xReader.ParseDialogo()){
             falas.Enqueue(dialogo); // Adiciona todos os nodes na fila
         }
 
-        blocoS = bloco;
         Destroy(GameObject.Find("escolhasUI(Clone)"));  // Limpa a tela se necessário
         Instantiate(prefabDialogo, canvas.transform);   // Instancia a UI de diálogo
-
+        
         //Atualiza o trigger do "botao" que chama a proxima parte do dialogo 
         GameObject trigger = GameObject.Find("dialogoUI(Clone)/Trigger");
         trigger.GetComponent<Button>().onClick.AddListener(CallNextDialogue);
@@ -99,50 +99,84 @@ public class TextManager : MonoBehaviour
 
         // Atualiza a caixa de resumo da escolha
         GameObject resumoEscolha = GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame/ResumoEscolha");
-        resumoEscolha.GetComponentInChildren<TextMeshProUGUI>().text = xReader.ParseResumo(blocoS);
+        resumoEscolha.GetComponentInChildren<TextMeshProUGUI>().text = xReader.ParseResumo();
 
-        foreach(XmlNode escolha in xReader.ParseEscolhas(blocoS)){
-            // Cria um botao pra cada node da NodeList
-            GameObject botao = Instantiate(prefabBotao, GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame").transform);
-            // Atualiza a posição da instância na UI
-            switch (i)
-            {
-                case 2:
-                    botao.transform.localPosition += new Vector3(330,0,0);
-                    break;
-                case 3:
-                    botao.transform.localPosition += new Vector3(0,-35,0);
-                    break;
-                case 4:
-                    botao.transform.localPosition += new Vector3(330,-35,0);
-                    break;
+        XmlNodeList escolhas = xReader.ParseEscolhas();
+        if(escolhas.Count == 0) GameOver();
+        foreach(XmlNode escolha in escolhas){
+            // Testa se a escolha deveria aparecer
+            bool saudavel;
+            bool arma;
+
+            XmlNode estaSaudavel = escolha["estaSaudavel"];
+            if(estaSaudavel != null){
+                saudavel = (Jogador.machucado < int.Parse(estaSaudavel.InnerXml));
             }
+            else saudavel = true;
 
-            // Atualiza o texto do botao
-            botao.GetComponentInChildren<TextMeshProUGUI>().text = escolha.InnerXml;
+            XmlNode estaArmado = escolha["estaArmado"];
+            if(estaArmado != null){
+                arma = ((Jogador.armado & 1 << int.Parse(estaArmado.InnerXml)) != 0);
+            }
+            else arma = true;
 
-            // Atualiza o trigger do botao **
-            string proximoBloco = (int.Parse(blocoS) + i).ToString();
-            botao.GetComponent<Button>().onClick.AddListener(delegate{LoadDialogue(proximoBloco);});
-            
-            i++;
+            if(saudavel && arma){
+                // Cria um botao pra cada node da NodeList
+                GameObject botao = Instantiate(prefabBotao, GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame").transform);
+                
+                // Atualiza a posição da instância na UI
+                switch (i){
+                    case 1:
+                        break;
+                    case 2:
+                        botao.transform.localPosition += new Vector3(330,0,0);
+                        break;
+                    case 3:
+                        botao.transform.localPosition += new Vector3(0,-35,0);
+                        break;
+                    case 4:
+                        botao.transform.localPosition += new Vector3(330,-35,0);
+                        break;
+                }
+
+                // Atualiza o texto do botao
+                botao.GetComponentInChildren<TextMeshProUGUI>().text = escolha["texto"].InnerXml;
+
+                // Testa as consequências da escolha
+                if(escolha["machucado"] != null)
+                    botao.GetComponent<Button>().onClick.AddListener(Jogador.Ai);
+                if(escolha["armado"] != null)
+                    botao.GetComponent<Button>().onClick.AddListener(delegate {Jogador.GunControl(escolha["armado"].InnerXml);});
+                
+                // Atualiza o caminho do botão
+                if(escolha["paraBloco"] != null)
+                    botao.GetComponent<Button>().onClick.AddListener(delegate {ProximoBloco(escolha["paraBloco"].InnerXml); });
+                else if(escolha["gameOver"] != null)
+                    botao.GetComponent<Button>().onClick.AddListener(GameOver);
+                else
+                    botao.GetComponent<Button>().onClick.AddListener(delegate {ProximaCena(escolha["paraCena"].InnerXml); }); 
+                
+                i++;
+            }
         }
     }
 
-    // Tipos de triggers para os botões
     // Proximo bloco de dialogo
     void ProximoBloco(string bloco){
-        LoadDialogue(bloco);
+        xReader.definirBloco(bloco);
+        LoadDialogue();
     }
 
     // Proxima cena
     void ProximaCena(string cena){
+        Jogador.curScene++;
         // Chama a animação de transição
         SceneManager.LoadScene(cena);
     }
 
     // Game Over
     void GameOver(){
+        Jogador.Morreu();
         ProximaCena("GameOver");
     }
 }

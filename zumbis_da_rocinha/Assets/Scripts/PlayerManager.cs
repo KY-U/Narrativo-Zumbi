@@ -8,11 +8,10 @@ using UnityEngine;
     taco    -> 3
 */
 public class PlayerManager : MonoBehaviour{
-    int curScene;
-    //int curDialogue;
-    int machucado = 0;
-    int armado = 0;
-    int deathCount = 0;
+    public int curScene;
+    public int machucado = 0;
+    public int armado = 0;
+    public int deathCount = 0;
 
     private void Start() {
         //Carregar Status
@@ -23,11 +22,14 @@ public class PlayerManager : MonoBehaviour{
 
     // Sets
         // Machucado
-        int Ai(){ return machucado++; }
+        public void Ai(){ 
+            machucado++; 
+        }
         // Contador mortes
-        int Morreu(){ return deathCount++; }
+        public void Morreu(){ deathCount++; }
         // Adicionar/retirar arma
-        void GunControl(int gun){
+        public void GunControl(string g){
+            int gun = int.Parse(g);
             if(gun > 0) armado |= 1 << gun;
             else armado &= ~(1 << -gun);
         }

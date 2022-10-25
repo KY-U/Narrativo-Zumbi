@@ -9,8 +9,9 @@ using UnityEngine.UI;
 [System.Serializable]
 public class XML_reading {
     [SerializeField] private TextAsset xmlFile; // Arquivo XML a ser lido
-    public XmlDocument xmlDoc;
-    private string xPath;
+    private XmlDocument xmlDoc;
+    public string bloco;
+    string xPath;
 
     // Carrega o arquivo em uma string e le o documento a partir dela
     public void LoadFile(){ 
@@ -19,22 +20,26 @@ public class XML_reading {
         xmlDoc.Load(new StringReader(data));
     }
 
+    public void definirBloco(string b){
+        bloco = b; 
+    }
+
     // Retorna uma lista com todos os nodes de dialogo de determinado bloco
-    public XmlNodeList ParseDialogo(string bloco){
+    public XmlNodeList ParseDialogo(){
         xPath = "//cena/bloco[@s='"+ bloco +"']/dialogos/dialogo";
-        return xmlDoc.SelectNodes(xPath);;
-    }
-
-    // Retorna o texto do node resumo (textinho da UI de escolha)
-    public string ParseResumo(string bloco){
-        xPath = "//cena/bloco[@s='"+ bloco +"']/escolhas/resumo";
-        return xmlDoc.SelectNodes(xPath)[0].InnerXml;
-    }
-
-    // Retorna uma lista com os nodes de escolha de determinado bloco
-    public XmlNodeList ParseEscolhas(string bloco){
-        xPath = "//cena/bloco[@s='"+ bloco +"']/escolhas/escolha";
         return xmlDoc.SelectNodes(xPath);
     }
 
+    // Retorna o texto do node resumo (textinho da UI de escolha)
+    public string ParseResumo(){
+        xPath = "//cena/bloco[@s='"+ bloco +"']/escolhas/resumo";
+        if(xmlDoc[xPath] != null) return xmlDoc[xPath].InnerXml;
+        else return "";
+    }
+
+    // Retorna uma lista com os nodes de escolha de determinado bloco
+    public XmlNodeList ParseEscolhas(){
+        xPath = "//cena/bloco[@s='"+ bloco +"']/escolhas/escolha";
+        return xmlDoc.SelectNodes(xPath);
+    }
 }
