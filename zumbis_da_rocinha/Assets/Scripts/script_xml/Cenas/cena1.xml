@@ -5,50 +5,62 @@
 		<dialogos>
 			<dialogo>
 				<nome> José Carlos </nome>
-				<texto> É mano bagulho é doido </texto>
+				<texto> Ugh...Que dor de cabeça...</texto>
 			</dialogo>
-			<dialogo>
-				<nome> Outro Cara da Silva </nome>
-				<texto> Demais bixo *dab* </texto>
+      
+      <dialogo>
+				<nome> José Carlos </nome>
+				<texto> Devia ter bebido um pouquinho menos...E essa casa tá uma bagunça.</texto>
 			</dialogo>
-			<dialogo>
-				<nome> Outro Cara da Silva </nome>
-				<texto> Batata </texto>
+      
+      <dialogo>
+				<nome> José Carlos </nome>
+				<texto> Outra hora eu arrumo, melhor eu tomar o café e... O que eu tinha pra fazer mesmo?</texto>
 			</dialogo>
 		</dialogos>
+    
 		<escolhas>
 			<resumo> Oh mama </resumo>
 			<escolha>
-				<texto> Morrer </texto>
+				<texto> SAIR DE CASA </texto>
 				<paraBloco>1</paraBloco>
 			</escolha>
 			<escolha>
-				<texto> Perder a vida </texto>
+				<texto> FICAR EM CASA </texto>
 				<paraBloco>2</paraBloco>
 			</escolha>
 		</escolhas>
+  
 	</bloco>
 	<bloco s="1">
 		<dialogos>
 			<dialogo>
 				<nome> José Carlos </nome>
-				<texto> Ovo morrer </texto>
+				<texto> É tenho que ir buscar ela mais tarde, preciso de alguma coisa pra passar a ressaca.</texto>
 			</dialogo>
-			<dialogo>
-				<nome> Outro Cara da Silva </nome>
-				<texto> Foda </texto>
+      
+    <dialogo>
+				<nome> José Carlos </nome>
+				<texto> Hmmm, o Túlio deve ter algo.</texto>
 			</dialogo>
 		</dialogos>
+  
 	</bloco>
 	<bloco s="2">
 		<dialogos>
 			<dialogo>
 				<nome> José Carlos </nome>
-				<texto> *Cringes to death* </texto>
+				<texto> Acho que não tinha nada pra fazer mesmo. Melhor dormir até passar essa dor... </texto>
 			</dialogo>
-			<dialogo>
-				<nome> Outro Cara da Silva </nome>
-				<texto> Foda </texto>
+			
+          <dialogo>
+				<nome> José Carlos </nome>
+				<texto> Que barulho é esse?</texto>
+			</dialogo>
+      
+          <dialogo>
+				<nome> José Carlos </nome>
+				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM SÃO VOC-</texto>
 			</dialogo>
 		</dialogos>
 	</bloco>
