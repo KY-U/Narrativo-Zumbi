@@ -11,7 +11,7 @@ public class Menu : MonoBehaviour
     }
     public void Quit()
     {
+        Debug.Log("Saindo");
         Application.Quit();
-
     }
 }

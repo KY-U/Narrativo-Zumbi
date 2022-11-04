@@ -25,8 +25,12 @@ public class PlayerManager : MonoBehaviour{
         public void Ai(){ 
             machucado++; 
         }
+
         // Contador mortes
-        public void Morreu(){ deathCount++; }
+        public void Morreu(){ 
+            deathCount++; 
+        }
+
         // Adicionar/retirar arma
         public void GunControl(string g){
             int gun = int.Parse(g);

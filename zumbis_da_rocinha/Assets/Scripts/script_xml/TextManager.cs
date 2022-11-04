@@ -169,7 +169,7 @@ public class TextManager : MonoBehaviour
 
     // Proxima cena
     void ProximaCena(string cena){
-        Jogador.curScene++;
+        Jogador.curScene = int.Parse(cena);
         // Chama a animação de transição
         SceneManager.LoadScene(cena);
     }

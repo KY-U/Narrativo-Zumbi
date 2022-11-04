@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: bcf818f5d7ce65192a2ce77a430c3a29
   - enabled: 1
-    path: Assets/Scenes/Cena 1.unity
+    path: Assets/Scenes/Cena 1.0.unity
     guid: bf90950e0cd3fb260bb1eb015ff346c8
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
