@@ -44,7 +44,7 @@
 				<texto> Hmmm, o Túlio deve ter algo.</texto>
 			</dialogo>
 		</dialogos>
-  
+    <!-- Transição pra cena 1.1 -->
 	</bloco>
 	<bloco s="2">
 		<dialogos>
@@ -52,7 +52,12 @@
 				<nome> José Carlos </nome>
 				<texto> Acho que não tinha nada pra fazer mesmo. Melhor dormir até passar essa dor... </texto>
 			</dialogo>
-			
+
+      <dialogo>
+        <nome> </nome>
+        <texto> Algum tempo se passa. </texto>
+      </dialogo>
+      
           <dialogo>
 				<nome> José Carlos </nome>
 				<texto> Que barulho é esse?</texto>
@@ -63,5 +68,6 @@
 				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM SÃO VOC-</texto>
 			</dialogo>
 		</dialogos>
+    <!-- MORTE -->
 	</bloco>
 </cena>

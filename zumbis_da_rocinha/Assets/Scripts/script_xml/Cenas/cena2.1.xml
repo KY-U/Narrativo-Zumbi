@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Adicionar esse dialogo na tela da morte 69 (nice) -->
+<cena>
+	<bloco s="0">
+		<dialogos>
+			<dialogo>
+				<nome> José Carlos </nome>
+				<texto> Tudo certo aí cara?</texto>
+			</dialogo>
+      
+      <dialogo>
+				<nome> José Carlos </nome>
+				<texto> Que que eu to fazendo, nem conheço esse maluco.</texto>
+			</dialogo>
+      
+      <dialogo>
+				<nome> José Carlos </nome>
+				<texto> Melhor ir embora.</texto>
+			</dialogo>
+		</dialogos>
+    
+		<escolhas>
+			<resumo> </resumo>
+			<escolha>
+				<texto> CONVERSAR </texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+			<escolha>
+				<texto> LUTAR </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+			<escolha>
+				<texto> CORRER </texto>
+				<paraBloco>3</paraBloco>
+			</escolha>
+		</escolhas>
+  
+	</bloco>
+	<bloco s="1">
+		<dialogos>
+			<dialogo>
+				<nome> José Carlos </nome>
+				<texto> E-ei calma, não tem necessidade diss-</texto>
+			</dialogo>
+      <!-- Morte -->
+    </dialogos>
+   
+	</bloco>
+	<bloco s="2">
+		<dialogos>
+      <dialogo>
+        <nome> </nome>
+        <texto> Isso nao faz o menor sentido.</texto>
+      </dialogo>
+      <dialogo>
+        <nome> </nome>
+        <texto> Algum tempo se passa. </texto>
+      </dialogo>
+      
+          <dialogo>
+				<nome> José Carlos </nome>
+				<texto> Que barulho é esse?</texto>
+			</dialogo>
+      
+          <dialogo>
+				<nome> José Carlos </nome>
+				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM SÃO VOC-</texto>
+			</dialogo>
+		</dialogos>
+    <!-- MORTE -->
+	</bloco>
+</cena>

@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xReader:
-    xmlFile: {fileID: 4900000, guid: 2424ad8f57ef0595c8b32531066457eb, type: 3}
+    xmlFile: {fileID: 4900000, guid: 65c6b86576ec42f4ead8ff1bf569ac5a, type: 3}
     bloco: 
   Jogador: {fileID: 1175641754}
   canvas: {fileID: 658604850}
