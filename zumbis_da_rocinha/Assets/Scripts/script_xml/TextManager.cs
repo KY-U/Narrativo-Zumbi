@@ -83,6 +83,7 @@ public class TextManager : MonoBehaviour
     // sub rotina para imprimir o texto letra por letra
     public AudioSource source;
     public AudioClip clip;
+    WaitForSeconds delay = new WaitForSeconds(0.01f);
     IEnumerator LBLTyping(XmlNode texto){
         GameObject caixaTexto = GameObject.Find("dialogoUI(Clone)/CaixaDialogoFrame/CaixaDialogo");
         caixaTexto.GetComponent<TextMeshProUGUI>().text = "";
@@ -90,7 +91,8 @@ public class TextManager : MonoBehaviour
             source.Stop();
             caixaTexto.GetComponent<TextMeshProUGUI>().text += letra;
             source.PlayOneShot(clip);
-            yield return null;
+            //yield return null;
+            yield return delay;
         }
     }
 
@@ -168,8 +170,8 @@ public class TextManager : MonoBehaviour
     }
 
     // Proxima cena
-    void ProximaCena(string cena){
-        Jogador.curScene = int.Parse(cena);
+    void ProximaCena(string c){
+        string cena = "Cena " + c;
         // Chama a animação de transição
         SceneManager.LoadScene(cena);
     }
