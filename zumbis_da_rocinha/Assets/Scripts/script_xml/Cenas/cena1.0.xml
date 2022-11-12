@@ -20,7 +20,7 @@
 		</dialogos>
     
 		<escolhas>
-			<resumo> Oh mama </resumo>
+			<resumo> </resumo>
 			<escolha>
 				<texto> SAIR DE CASA </texto>
 				<paraBloco>1</paraBloco>
@@ -43,8 +43,9 @@
 				<nome> José Carlos </nome>
 				<texto> Hmmm, o Túlio deve ter algo.</texto>
 			</dialogo>
-		</dialogos>
-    <!-- Transição pra cena 1.1 -->
+ 		</dialogos>
+     <paraCena> Cena 1.1 </paraCena> <!-- Transição pra cena 1.1 -->
+  
 	</bloco>
 	<bloco s="2">
 		<dialogos>
@@ -67,7 +68,7 @@
 				<nome> José Carlos </nome>
 				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM SÃO VOC-</texto>
 			</dialogo>
-		</dialogos>
-    <!-- MORTE -->
+    </dialogos>
+     <gameOver></gameOver> <!-- MORTE -->
 	</bloco>
-</cena>
+ </cena>
