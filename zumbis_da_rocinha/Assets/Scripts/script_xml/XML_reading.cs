@@ -43,4 +43,9 @@ public class XML_reading {
         xPath = "//cena/bloco[@s='"+ bloco +"']/escolhas/escolha";
         return xmlDoc.SelectNodes(xPath);
     }
+
+    public XmlNode ParseTransicao(){
+        xPath = "//cena/bloco[@s='"+ bloco +"']/transicao";
+        return xmlDoc.SelectSingleNode(xPath);
+    }
 }

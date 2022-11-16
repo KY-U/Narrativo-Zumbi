@@ -20,8 +20,11 @@ public class TextManager : MonoBehaviour
     public GameObject prefabEscolhas;               // Prefab da UI de escolhas
     public GameObject prefabBotao;                  // Prefab dos botões da UI de escolha
 
-    private Vector3 pos1;
+    // Para dinâmicas da caixa de nome
+    private Vector3 pos1 = new Vector3(0,0,0);
     private Vector3 pos2;
+    private Color original = new Color(0,0,0,0);
+    private Color invisivel;
     
     void Start(){
         falas = new Queue<XmlNode>();
@@ -58,16 +61,30 @@ public class TextManager : MonoBehaviour
         XmlNode nome = fala.FirstChild;
         XmlNode texto = nome.NextSibling;
 
+        // Define as posições da caixa de nome
         GameObject caixaNome = GameObject.Find("dialogoUI(Clone)/CaixaNomeFrame");
-        pos1 = caixaNome.transform.localPosition;
-        pos2 = caixaNome.transform.localPosition - new Vector3(2*caixaNome.transform.localPosition.x,0,0);
+        if(pos1.x == 0){
+            pos1 = caixaNome.transform.localPosition;
+            pos2 = caixaNome.transform.localPosition - new Vector3(2*caixaNome.transform.localPosition.x,0,0);
+        }
+
+        // Para a caixa de nome ficar invisivel quando for o narrador falando
+        if(original.r == 0){
+            original = caixaNome.GetComponent<Image>().color;
+            invisivel = new Color(original.r, original.g, original.b, 0f);
+        }
 
         // Atualiza a caixa de nome da personagem
-        // Cool dynamic with position wow
-        if(caixaNome.GetComponentInChildren<TextMeshProUGUI>().text != nome.InnerXml){
-            if(nome.InnerXml == "..." || nome.InnerXml == "Protagonista")
+        if(nome.InnerXml == "..."){
+            caixaNome.transform.localPosition = pos2;
+            caixaNome.GetComponent<Image>().color = invisivel;
+            caixaNome.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        }
+        else if(caixaNome.GetComponentInChildren<TextMeshProUGUI>().text != nome.InnerXml){
+            caixaNome.GetComponent<Image>().color = original;
+            if(nome.InnerXml == "José Carlos")
                 caixaNome.transform.localPosition = pos1;
-            else if(caixaNome.transform.localPosition == pos1 && caixaNome.GetComponentInChildren<TextMeshProUGUI>().text !="")
+            else if(caixaNome.transform.localPosition == pos1)
                 caixaNome.transform.localPosition = pos2;
             else if(caixaNome.transform.localPosition == pos2)
                 caixaNome.transform.localPosition = pos1;
@@ -104,62 +121,66 @@ public class TextManager : MonoBehaviour
         resumoEscolha.GetComponentInChildren<TextMeshProUGUI>().text = xReader.ParseResumo();
 
         XmlNodeList escolhas = xReader.ParseEscolhas();
-        if(escolhas.Count == 0) GameOver();
-        foreach(XmlNode escolha in escolhas){
-            // Testa se a escolha deveria aparecer
-            bool saudavel;
-            bool arma;
+        if(escolhas.Count != 0){
+            foreach(XmlNode escolha in escolhas){
+                // Testa se a escolha deveria aparecer
+                bool saudavel;
+                bool arma;
 
-            XmlNode estaSaudavel = escolha["estaSaudavel"];
-            if(estaSaudavel != null){
-                saudavel = (Jogador.machucado < int.Parse(estaSaudavel.InnerXml));
-            }
-            else saudavel = true;
-
-            XmlNode estaArmado = escolha["estaArmado"];
-            if(estaArmado != null){
-                arma = ((Jogador.armado & 1 << int.Parse(estaArmado.InnerXml)) != 0);
-            }
-            else arma = true;
-
-            if(saudavel && arma){
-                // Cria um botao pra cada node da NodeList
-                GameObject botao = Instantiate(prefabBotao, GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame").transform);
-                
-                // Atualiza a posição da instância na UI
-                switch (i){
-                    case 1:
-                        break;
-                    case 2:
-                        botao.transform.localPosition += new Vector3(330,0,0);
-                        break;
-                    case 3:
-                        botao.transform.localPosition += new Vector3(0,-35,0);
-                        break;
-                    case 4:
-                        botao.transform.localPosition += new Vector3(330,-35,0);
-                        break;
+                XmlNode estaSaudavel = escolha["estaSaudavel"];
+                if(estaSaudavel != null){
+                    saudavel = (Jogador.machucado < int.Parse(estaSaudavel.InnerXml));
                 }
+                else saudavel = true;
 
-                // Atualiza o texto do botao
-                botao.GetComponentInChildren<TextMeshProUGUI>().text = escolha["texto"].InnerXml;
+                XmlNode estaArmado = escolha["estaArmado"];
+                if(estaArmado != null){
+                    arma = ((Jogador.armado & 1 << int.Parse(estaArmado.InnerXml)) != 0);
+                }
+                else arma = true;
 
-                // Testa as consequências da escolha
-                if(escolha["machucado"] != null)
-                    botao.GetComponent<Button>().onClick.AddListener(Jogador.Ai);
-                if(escolha["armado"] != null)
-                    botao.GetComponent<Button>().onClick.AddListener(delegate {Jogador.GunControl(escolha["armado"].InnerXml);});
-                
-                // Atualiza o caminho do botão
-                if(escolha["paraBloco"] != null)
-                    botao.GetComponent<Button>().onClick.AddListener(delegate {ProximoBloco(escolha["paraBloco"].InnerXml); });
-                else if(escolha["gameOver"] != null)
-                    botao.GetComponent<Button>().onClick.AddListener(GameOver);
-                else
-                    botao.GetComponent<Button>().onClick.AddListener(delegate {ProximaCena(escolha["paraCena"].InnerXml); }); 
-                
-                i++;
+                if(saudavel && arma){
+                    // Cria um botao pra cada node da NodeList
+                    GameObject botao = Instantiate(prefabBotao, GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame").transform);
+                    
+                    // Atualiza a posição da instância na UI
+                    switch (i){
+                        case 1:
+                            break;
+                        case 2:
+                            botao.transform.localPosition += new Vector3(330,0,0);
+                            break;
+                        case 3:
+                            botao.transform.localPosition += new Vector3(0,-35,0);
+                            break;
+                        case 4:
+                            botao.transform.localPosition += new Vector3(330,-35,0);
+                            break;
+                    }
+
+                    // Atualiza o texto do botao
+                    botao.GetComponentInChildren<TextMeshProUGUI>().text = escolha["texto"].InnerXml;
+
+                    // Testa as consequências da escolha
+                    if(escolha["machucado"] != null)
+                        botao.GetComponent<Button>().onClick.AddListener(Jogador.Ai);
+                    if(escolha["armado"] != null)
+                        botao.GetComponent<Button>().onClick.AddListener(delegate {Jogador.GunControl(escolha["armado"].InnerXml);});
+                    
+                    // Atualiza o caminho do botão
+                    if(escolha["paraBloco"] != null)
+                        botao.GetComponent<Button>().onClick.AddListener(delegate {ProximoBloco(escolha["paraBloco"].InnerXml); });
+                    
+                    i++;
+                }
             }
+        }
+        else if(escolhas.Count == 0){
+            XmlNode transicao = xReader.ParseTransicao();
+            if(transicao["gameOver"] != null)
+                GameOver();
+            else if(transicao["paraCena"] != null)
+                ProximaCena(transicao["paraCena"].InnerXml); 
         }
     }
 
@@ -179,6 +200,6 @@ public class TextManager : MonoBehaviour
     // Game Over
     void GameOver(){
         Jogador.Morreu();
-        ProximaCena("GameOver");
+        SceneManager.LoadScene("GameOver");
     }
 }

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Adicionar esse dialogo na tela da morte 69 (nice) -->
 <cena>
 	<bloco s="0">
 		<dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Ugh...Que dor de cabeça...</texto>
 			</dialogo>
       
       		<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Devia ter bebido um pouquinho menos...E essa casa tá uma bagunça.</texto>
 			</dialogo>
       
       		<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Outra hora eu arrumo, melhor eu tomar o café e... O que eu tinha pra fazer mesmo?</texto>
 			</dialogo>
 		</dialogos>
@@ -35,40 +34,46 @@
 	<bloco s="1">
 		<dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> É tenho que ir buscar ela mais tarde, preciso de alguma coisa pra passar a ressaca.</texto>
 			</dialogo>
       
     		<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Hmmm, o Túlio deve ter algo.</texto>
 			</dialogo>
  		</dialogos>
-     	<paraCena>1.1</paraCena> <!-- Transição pra cena 1.1 -->
+
+		<transicao> 
+			<paraCena>1.1</paraCena>
+		</transicao>
 	</bloco>
 
 	<bloco s="2">
 		<dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Acho que não tinha nada pra fazer mesmo. Melhor dormir até passar essa dor... </texto>
 			</dialogo>
 
 			<dialogo>
-				<nome> </nome>
+				<nome>...</nome>
 				<texto> Algum tempo se passa. </texto>
 			</dialogo>
 		
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Que barulho é esse?</texto>
 			</dialogo>
 		
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM SÃO VOC-</texto>
 			</dialogo>
 		</dialogos>
-		<gameOver></gameOver> <!-- MORTE -->
+
+		<transicao> 
+			<gameOver></gameOver>
+		</transicao>
 	</bloco>
  </cena>

@@ -1,41 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Adicionar esse dialogo na tela da morte 69 (nice) -->
 <cena>
 	<bloco s="0">
 		<dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Ué, não tem ninguém na rua?</texto>
 			</dialogo>
       
       		<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Era pra estar lotado agora... E nem está tão sol ainda.</texto>
 			</dialogo>
       
       		<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Se não tem ninguém na rua o Túlio ta á toa.</texto>
 			</dialogo>
     
       		<dialogo>
-        		<nome> </nome>
+        		<nome>...</nome>
 				<texto> Alguns minutos andando depois.</texto>
 			</dialogo>
       
     		<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Coé Túlio ta aí? TÚLIO?</texto>
 			</dialogo>
-    </dialogos>
+    	</dialogos>
       
-  	<escolhas>
+  		<escolhas>
 			<resumo> </resumo>
 			<escolha>
 				<texto> ENTRAR NA DELEGACIA </texto>
 				<paraBloco>1</paraBloco>
 			</escolha>
-	</escolhas>
-	 <!-- Transição pra cena 2.0 -->
+		</escolhas>
+	</bloco>
+
+	<!-- Transição pra cena 2.0 -->
+	<bloco s="1">
+		<transicao>
+			<paraCena>2.0</paraCena>
+		</transicao>
 	</bloco>
 </cena>

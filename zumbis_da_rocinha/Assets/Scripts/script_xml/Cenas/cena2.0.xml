@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Adicionar esse dialogo na tela da morte 69 (nice) -->
 <cena>
 	<bloco s="0">
 		<dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Vazio... Onde todo mundo foi parar? Ta estranho demais</texto>
 			</dialogo>
       
-      <dialogo>
-				<nome> </nome>
+      		<dialogo>
+				<nome>...</nome>
 				<texto> Apagão e barulho em direção as celas.</texto>
 			</dialogo>
-      </dialogos>
+      	</dialogos>
     
 		<escolhas>
-			<resumo>  </resumo>
+			<resumo></resumo>
 			<escolha>
 				<texto> INVESTIGAR </texto>
 				<paraBloco>1</paraBloco>
@@ -25,31 +24,37 @@
 				<paraBloco>2</paraBloco>
 			</escolha>
 		</escolhas>
-  
 	</bloco>
+
 	<bloco s="1">
 		<dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
-				<texto> Esse barulho.</texto>
+				<nome>José Carlos</nome>
+				<texto> Esse barulho...</texto>
 			</dialogo>
       
-    <dialogo>
-				<nome> José Carlos </nome>
+    	<dialogo>
+				<nome>José Carlos</nome>
 				<texto> Será que largaram um cara trancado aqui e a delegacia aberta assim?</texto>
 			</dialogo>
 		</dialogos>
-    <!-- Transição pra cena 2.1 -->
-    
+
+		<transicao>
+			<paraCena>2.1</paraCena>
+		</transicao>
 	</bloco>
+
 	<bloco s="2">
 		<dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Nem devia ter entrado aqui, melhor dar o fora </texto>
 			</dialogo>
-      <!--Fim do cenario 2.0 -->
-      
 		</dialogos>
+
+		<!-- GameOver? Não sei-->
+		<transicao>
+			<gameOver></gameOver>
+		</transicao>
 	</bloco>
 </cena>

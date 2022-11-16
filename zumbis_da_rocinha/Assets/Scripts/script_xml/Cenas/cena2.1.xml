@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Adicionar esse dialogo na tela da morte 69 (nice) -->
 <cena>
-	<bloco s="0">
-		<dialogos>
+  <bloco s="0">
+	  <dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Tudo certo aí cara?</texto>
 			</dialogo>
       
       <dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Que que eu to fazendo, nem conheço esse maluco.</texto>
 			</dialogo>
       
       <dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> Melhor ir embora.</texto>
 			</dialogo>
 		</dialogos>
@@ -38,68 +37,78 @@
 		</escolhas>
   
 	</bloco>
+
 	<bloco s="1">
 		<dialogos>
 			<dialogo>
-				<nome> José Carlos </nome>
+				<nome>José Carlos</nome>
 				<texto> E-ei calma, não tem necessidade diss-</texto>
 			</dialogo>
-      <!-- Morte -->
     </dialogos>
-   
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
 	</bloco>
+
 	<bloco s="2">
 		<dialogos>
       <dialogo>
-        <nome></nome>
+        <nome>...</nome>
         <texto> Isso nao faz o menor sentido.</texto>
       </dialogo>
       
       <dialogo>
-        <nome> José Carlos </nome>
+        <nome>José Carlos</nome>
         <texto> Tu tá maluco irmão? O q-</texto>
       </dialogo>
-      <!-- MORTE -->
-      		</dialogos>
+    </dialogos>
 
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
   </bloco>
+
   <bloco s="3">
     <dialogos>
       <dialogo>
-        <nome> José Carlos </nome>
+        <nome>José Carlos</nome>
         <texto> O que que é isso? Ele arrebentou as grades!!!</texto>
       </dialogo>
-      
+        
       <dialogo>
-        <nome> José Carlos </nome>
+        <nome>José Carlos</nome>
         <texto> Será que eu corro pela porta da frente? E se ele me seguir? Ou....</texto>
       </dialogo>
-        </dialogos>
-	
-  <escolhas>
-    <resumo> </resumo>
-    <escolha>
-      <texto> IR EMBORA </texto>
-      <paraBloco>4</paraBloco>
-    </escolha>
+    </dialogos>
+    
+    <escolhas>
+      <resumo> </resumo>
+      <escolha>
+        <texto> IR EMBORA </texto>
+        <paraBloco>4</paraBloco>
+      </escolha>
 
-    <escolha>
-      <texto> PROCURAR UMA ARMA </texto>
-      <paraBloco>5</paraBloco>
-    </escolha>
-   </escolhas>
+      <escolha>
+        <texto> PROCURAR UMA ARMA </texto>
+        <paraBloco>5</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
 
-    </bloco>
   <bloco s="4">
     <dialogos>
       <dialogo>
-        <nome> José Carlos </nome>
+        <nome>José Carlos</nome>
         <texto> Melhor arriscar e bater a porta na cara dele.</texto>
       </dialogo>
-      <!-- Transição pra cena 2.2 -->
     </dialogos>
 
+    <transicao>
+      <paraCena>2.2</paraCena>
+    </transicao>
   </bloco>
+
   <bloco s="5">
     <dialogos>
       <dialogo>
@@ -107,7 +116,10 @@
         <texto> </texto>
       </dialogo>
       <!-- Transição pra cena 2.0 -->
-      
     </dialogos>
-   </bloco>
+
+    <transicao>
+      <paraCena>2.0</paraCena>
+    </transicao>
+  </bloco>
 </cena>
