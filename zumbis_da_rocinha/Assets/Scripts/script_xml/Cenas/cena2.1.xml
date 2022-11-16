@@ -25,10 +25,12 @@
 				<texto> CONVERSAR </texto>
 				<paraBloco>1</paraBloco>
 			</escolha>
+      
 			<escolha>
 				<texto> LUTAR </texto>
 				<paraBloco>2</paraBloco>
 			</escolha>
+      
 			<escolha>
 				<texto> CORRER </texto>
 				<paraBloco>3</paraBloco>
@@ -49,24 +51,63 @@
 	<bloco s="2">
 		<dialogos>
       <dialogo>
-        <nome> </nome>
+        <nome></nome>
         <texto> Isso nao faz o menor sentido.</texto>
       </dialogo>
+      
       <dialogo>
-        <nome> </nome>
-        <texto> Algum tempo se passa. </texto>
+        <nome> José Carlos </nome>
+        <texto> Tu tá maluco irmão? O q-</texto>
+      </dialogo>
+      <!-- MORTE -->
+      		</dialogos>
+
+  </bloco>
+  <bloco s="3">
+    <dialogos>
+      <dialogo>
+        <nome> José Carlos </nome>
+        <texto> O que que é isso? Ele arrebentou as grades!!!</texto>
       </dialogo>
       
-          <dialogo>
-				<nome> José Carlos </nome>
-				<texto> Que barulho é esse?</texto>
-			</dialogo>
+      <dialogo>
+        <nome> José Carlos </nome>
+        <texto> Será que eu corro pela porta da frente? E se ele me seguir? Ou....</texto>
+      </dialogo>
+        </dialogos>
+	
+  <escolhas>
+    <resumo> </resumo>
+    <escolha>
+      <texto> IR EMBORA </texto>
+      <paraBloco>4</paraBloco>
+    </escolha>
+
+    <escolha>
+      <texto> PROCURAR UMA ARMA </texto>
+      <paraBloco>5</paraBloco>
+    </escolha>
+   </escolhas>
+
+    </bloco>
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome> José Carlos </nome>
+        <texto> Melhor arriscar e bater a porta na cara dele.</texto>
+      </dialogo>
+      <!-- Transição pra cena 2.2 -->
+    </dialogos>
+
+  </bloco>
+  <bloco s="5">
+    <dialogos>
+      <dialogo>
+        <nome></nome>
+        <texto> </texto>
+      </dialogo>
+      <!-- Transição pra cena 2.0 -->
       
-          <dialogo>
-				<nome> José Carlos </nome>
-				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM SÃO VOC-</texto>
-			</dialogo>
-		</dialogos>
-    <!-- MORTE -->
-	</bloco>
+    </dialogos>
+   </bloco>
 </cena>

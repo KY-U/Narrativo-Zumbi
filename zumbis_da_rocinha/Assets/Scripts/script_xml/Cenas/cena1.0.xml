@@ -8,19 +8,19 @@
 				<texto> Ugh...Que dor de cabeça...</texto>
 			</dialogo>
       
-      <dialogo>
+      		<dialogo>
 				<nome> José Carlos </nome>
 				<texto> Devia ter bebido um pouquinho menos...E essa casa tá uma bagunça.</texto>
 			</dialogo>
       
-      <dialogo>
+      		<dialogo>
 				<nome> José Carlos </nome>
 				<texto> Outra hora eu arrumo, melhor eu tomar o café e... O que eu tinha pra fazer mesmo?</texto>
 			</dialogo>
 		</dialogos>
     
 		<escolhas>
-			<resumo> Oh mama </resumo>
+			<resumo> </resumo>
 			<escolha>
 				<texto> SAIR DE CASA </texto>
 				<paraBloco>1</paraBloco>
@@ -30,8 +30,8 @@
 				<paraBloco>2</paraBloco>
 			</escolha>
 		</escolhas>
-  
 	</bloco>
+
 	<bloco s="1">
 		<dialogos>
 			<dialogo>
@@ -39,13 +39,14 @@
 				<texto> É tenho que ir buscar ela mais tarde, preciso de alguma coisa pra passar a ressaca.</texto>
 			</dialogo>
       
-    <dialogo>
+    		<dialogo>
 				<nome> José Carlos </nome>
 				<texto> Hmmm, o Túlio deve ter algo.</texto>
 			</dialogo>
-		</dialogos>
-    <!-- Transição pra cena 1.1 -->
+ 		</dialogos>
+     	<paraCena>1.1</paraCena> <!-- Transição pra cena 1.1 -->
 	</bloco>
+
 	<bloco s="2">
 		<dialogos>
 			<dialogo>
@@ -53,21 +54,21 @@
 				<texto> Acho que não tinha nada pra fazer mesmo. Melhor dormir até passar essa dor... </texto>
 			</dialogo>
 
-      <dialogo>
-        <nome> </nome>
-        <texto> Algum tempo se passa. </texto>
-      </dialogo>
-      
-          <dialogo>
+			<dialogo>
+				<nome> </nome>
+				<texto> Algum tempo se passa. </texto>
+			</dialogo>
+		
+			<dialogo>
 				<nome> José Carlos </nome>
 				<texto> Que barulho é esse?</texto>
 			</dialogo>
-      
-          <dialogo>
+		
+			<dialogo>
 				<nome> José Carlos </nome>
 				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM SÃO VOC-</texto>
 			</dialogo>
 		</dialogos>
-    <!-- MORTE -->
+		<gameOver></gameOver> <!-- MORTE -->
 	</bloco>
-</cena>
+ </cena>

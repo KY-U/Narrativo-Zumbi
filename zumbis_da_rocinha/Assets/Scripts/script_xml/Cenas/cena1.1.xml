@@ -8,34 +8,34 @@
 				<texto> Ué, não tem ninguém na rua?</texto>
 			</dialogo>
       
-      <dialogo>
+      		<dialogo>
 				<nome> José Carlos </nome>
 				<texto> Era pra estar lotado agora... E nem está tão sol ainda.</texto>
 			</dialogo>
       
-      <dialogo>
+      		<dialogo>
 				<nome> José Carlos </nome>
 				<texto> Se não tem ninguém na rua o Túlio ta á toa.</texto>
 			</dialogo>
     
-      <dialogo>
-        <nome> </nome>
+      		<dialogo>
+        		<nome> </nome>
 				<texto> Alguns minutos andando depois.</texto>
 			</dialogo>
       
-    <dialogo>
+    		<dialogo>
 				<nome> José Carlos </nome>
 				<texto> Coé Túlio ta aí? TÚLIO?</texto>
 			</dialogo>
     </dialogos>
       
-  <escolhas>
+  	<escolhas>
 			<resumo> </resumo>
 			<escolha>
 				<texto> ENTRAR NA DELEGACIA </texto>
 				<paraBloco>1</paraBloco>
 			</escolha>
-				</escolhas>
+	</escolhas>
 	 <!-- Transição pra cena 2.0 -->
 	</bloco>
 </cena>
