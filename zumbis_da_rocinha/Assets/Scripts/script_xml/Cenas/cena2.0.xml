@@ -52,9 +52,9 @@
 			</dialogo>
 		</dialogos>
 
-		<!-- GameOver? Não sei-->
-		<transicao>
-			<gameOver></gameOver>
-		</transicao>
+	
+	<transicao>
+      <paraCena>3.0</paraCena>
+    </transicao>
 	</bloco>
 </cena>

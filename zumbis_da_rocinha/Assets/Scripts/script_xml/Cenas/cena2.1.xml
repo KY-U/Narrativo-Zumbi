@@ -115,11 +115,10 @@
         <nome></nome>
         <texto> </texto>
       </dialogo>
-      <!-- Transição pra cena 2.0 -->
     </dialogos>
 
     <transicao>
-      <paraCena>2.0</paraCena>
+      <paraCena>2.0.1</paraCena>
     </transicao>
   </bloco>
 </cena>
