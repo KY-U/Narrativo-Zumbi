@@ -17,6 +17,7 @@
 			<resumo> </resumo>
 			<escolha>
 				<texto> PROCURAR NA MESA DO TÚLIO </texto>
+        <armado>0</armado>
 				<paraBloco>1</paraBloco>
 			</escolha>
       
@@ -74,7 +75,6 @@
     <transicao>
       <paraCena>3.0</paraCena>
     </transicao>
-   
 	</bloco>
 
 	<bloco s="2">

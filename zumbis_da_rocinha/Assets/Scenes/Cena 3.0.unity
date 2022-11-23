@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 221797825}
   - component: {fileID: 221797824}
   m_Layer: 0
-  m_Name: vento (1)
+  m_Name: 'vento '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 397571824}
   - component: {fileID: 397571823}
   m_Layer: 0
-  m_Name: Audio Source (1)
+  m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 487453937}
   - component: {fileID: 487453938}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 712370162}
   - component: {fileID: 712370161}
   m_Layer: 0
-  m_Name: Fundo 1.1 (1)
+  m_Name: Fundo 1.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,6 +547,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &736061289
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 174276893771643089, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_Name
+      value: Transicao
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.030490607
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1095151
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.09374566
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+--- !u!95 &736061290 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 174276893771643088, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+  m_PrefabInstance: {fileID: 736061289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &831470159
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +620,7 @@ GameObject:
   - component: {fileID: 831470161}
   - component: {fileID: 831470160}
   m_Layer: 0
-  m_Name: TextManager (1)
+  m_Name: TextManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -586,6 +648,7 @@ MonoBehaviour:
   prefabBotao: {fileID: 7395631505115786410, guid: 035f72b1abc222406b275f880350fe7e, type: 3}
   source: {fileID: 397571823}
   clip: {fileID: 8300000, guid: 947a71af9730882468bf267f37d151f8, type: 3}
+  transicao: {fileID: 736061290}
 --- !u!4 &831470161
 Transform:
   m_ObjectHideFlags: 0
@@ -680,7 +743,7 @@ GameObject:
   - component: {fileID: 898514840}
   - component: {fileID: 898514839}
   m_Layer: 0
-  m_Name: Jogador (1)
+  m_Name: Jogador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -730,7 +793,7 @@ GameObject:
   - component: {fileID: 2069524019}
   - component: {fileID: 2069524018}
   m_Layer: 5
-  m_Name: Tela de jogo (1)
+  m_Name: Tela de jogo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

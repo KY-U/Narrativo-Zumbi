@@ -51,8 +51,9 @@ public class TextManager : MonoBehaviour
     public void CallNextDialogue(){
         // i.e. quando acabar o diálogo
         if(falas.Count == 0){
+            StopAllCoroutines();
             Destroy(GameObject.Find("dialogoUI(Clone)"));   // Limpa a tela
-            Instantiate(prefabEscolhas, canvas.transform);  // Instancia a UI de escolha
+            //Instantiate(prefabEscolhas, canvas.transform);  // Instancia a UI de escolha
             CallEscolhas();
             return;
         }
@@ -116,12 +117,14 @@ public class TextManager : MonoBehaviour
     public void CallEscolhas(){
         int i = 1;
 
-        // Atualiza a caixa de resumo da escolha
-        GameObject resumoEscolha = GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame/ResumoEscolha");
-        resumoEscolha.GetComponentInChildren<TextMeshProUGUI>().text = xReader.ParseResumo();
-
         XmlNodeList escolhas = xReader.ParseEscolhas();
         if(escolhas.Count != 0){
+            Instantiate(prefabEscolhas, canvas.transform);  // Instancia a UI de escolha
+
+            // Atualiza a caixa de resumo da escolha
+            GameObject resumoEscolha = GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame/ResumoEscolha");
+            resumoEscolha.GetComponentInChildren<TextMeshProUGUI>().text = xReader.ParseResumo();
+
             foreach(XmlNode escolha in escolhas){
                 // Testa se a escolha deveria aparecer
                 bool saudavel;
@@ -180,7 +183,7 @@ public class TextManager : MonoBehaviour
             if(transicao["gameOver"] != null)
                 GameOver();
             else if(transicao["paraCena"] != null)
-                ProximaCena(transicao["paraCena"].InnerXml); 
+                StartCoroutine(ProximaCena(transicao["paraCena"].InnerXml));
         }
     }
 
@@ -191,9 +194,16 @@ public class TextManager : MonoBehaviour
     }
 
     // Proxima cena
-    void ProximaCena(string c){
+    public Animator transicao;
+    private WaitForSeconds tempoTransicao = new WaitForSeconds(1.5f);
+    IEnumerator ProximaCena(string c){
+        Destroy(GameObject.Find("dialogoUI(Clone)"));
+        Destroy(GameObject.Find("escolhasUI(Clone)"));
+
+        transicao.SetTrigger("transition");
+        yield return tempoTransicao;
+
         string cena = "Cena " + c;
-        // Chama a animação de transição
         SceneManager.LoadScene(cena);
     }
 
