@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+			<dialogo>
+				<nome>...</nome>
+				<texto> Ao longe, a silhueta de uma pessoa é visivel.</texto>
+			</dialogo>
+     </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto> GRITAR </texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> CONVERSAR </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> PASSAR CORRENDO </texto>
+				<paraBloco>3</paraBloco>
+			</escolha>
+		</escolhas>
+  
+	</bloco>
+
+	<bloco s="1">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> EI! CADÊ TODO MUNDO? O QUE TÁ ACONTECENDO?</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Que? De onde surgiu tanta gente?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Eles estão todos esquisitos...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Me larga! SOLTA O MEU BRAÇO! AAAAAAAAAAAA-</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+	</bloco>
+
+	<bloco s="2">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ei. Você viu mais alguém hoje? Sabe o que tá acontecendp?</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>TÁ TENTANDO ME MORDER?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Não sou maluco de ficar aqui, perdendo tempo com isso. Tenho que saber se ela tá bem...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Atende, por favor atende...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Alô filha...?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto>Papai, porque ta todo mundo nervoso?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Filha você ta bem? Se machucou?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto>Não, mas a tia trancou a porta e tão gritando...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto>Eu tô com medo</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Não se preocupa, eu tô indo aí correndo, não sai daí. Te amo viu.</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>Filha</nome>
+        <texto> Tá bom, mas eu to com medo. Vem logo</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Vai ficar tudo bem...</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena></paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="3">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Acho que ele nem vai me notar.</texto>
+      </dialogo>
+        
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Larga meu braço! Aí!</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Machucado</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Droga não vejo mais aquele cara. Eu preciso saber se ela tá bem.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Atende, por favor atende...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Alô filha...?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto>Papai, porque ta todo mundo nervoso?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Filha você ta bem? Se machucou?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto>Não, mas a tia trancou a porta e tão gritando...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto>Eu tô com medo</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Não se preocupa, eu tô indo aí correndo, não sai daí. Te amo viu.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto> Tá bom, mas eu to com medo. Vem logo</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Vai ficar tudo bem...</texto>
+      </dialogo>
+    </dialogos>
+    
+   
+  </bloco>
+
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Melhor arriscar e bater a porta na cara dele.</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>2.2</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="5">
+    <dialogos>
+      <dialogo>
+        <nome></nome>
+        <texto> </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>2.0.1</paraCena>
+    </transicao>
+  </bloco>
+</cena>
