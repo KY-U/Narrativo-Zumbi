@@ -520,7 +520,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: d77de31ee3635224684d43abf90e42c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -554,6 +554,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 174276892515647577, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 487453937}
     - target: {fileID: 174276893771643089, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
       propertyPath: m_Name
       value: Transicao
@@ -643,9 +647,9 @@ MonoBehaviour:
     bloco: 
   Jogador: {fileID: 898514839}
   canvas: {fileID: 2069524017}
-  prefabDialogo: {fileID: 3361886560769051440, guid: 57f1698878b80391288b18c87521d8fa, type: 3}
-  prefabEscolhas: {fileID: 2724014967703068942, guid: 9c1ca752e0c09e1b7a19ee6c5a077b89, type: 3}
-  prefabBotao: {fileID: 7395631505115786410, guid: 035f72b1abc222406b275f880350fe7e, type: 3}
+  prefabDialogo: {fileID: 7265900195459898979, guid: 35cdb936519d1e008a60ebdc1be5c71e, type: 3}
+  prefabEscolhas: {fileID: 1177507080712276988, guid: 65701d6ef96e2a09c961dc8e7cec4e11, type: 3}
+  prefabBotao: {fileID: 527667637169947142, guid: 8ebbb567cc18c9e3faa55c949e3d4ee0, type: 3}
   source: {fileID: 397571823}
   clip: {fileID: 8300000, guid: 947a71af9730882468bf267f37d151f8, type: 3}
   transicao: {fileID: 736061290}
@@ -837,7 +841,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 359b5d81104635b40a135a9efb4088c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

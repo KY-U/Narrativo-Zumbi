@@ -30,7 +30,7 @@ public class XML_reading {
         return xmlDoc.SelectNodes(xPath);
     }
 
-    // Retorna o texto do node resumo (textinho da UI de escolha)
+    // Retorna o texto do node resumo (textinho da UI de escolha) ******
     public string ParseResumo(){
         xPath = "//cena/bloco[@s='"+ bloco +"']/escolhas/resumo";
         XmlNode resumo = xmlDoc.SelectSingleNode(xPath);

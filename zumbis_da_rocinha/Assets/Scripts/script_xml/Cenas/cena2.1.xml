@@ -110,13 +110,6 @@
   </bloco>
 
   <bloco s="5">
-    <dialogos>
-      <dialogo>
-        <nome></nome>
-        <texto> </texto>
-      </dialogo>
-    </dialogos>
-
     <transicao>
       <paraCena>2.0.1</paraCena>
     </transicao>

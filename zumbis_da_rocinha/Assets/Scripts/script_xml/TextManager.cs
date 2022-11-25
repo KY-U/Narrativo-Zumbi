@@ -77,18 +77,16 @@ public class TextManager : MonoBehaviour
 
         // Atualiza a caixa de nome da personagem
         if(nome.InnerXml == "..."){
-            caixaNome.transform.localPosition = pos2;
             caixaNome.GetComponent<Image>().color = invisivel;
+            caixaNome.transform.localPosition = pos2;
             caixaNome.GetComponentInChildren<TextMeshProUGUI>().text = "";
         }
         else if(caixaNome.GetComponentInChildren<TextMeshProUGUI>().text != nome.InnerXml){
             caixaNome.GetComponent<Image>().color = original;
-            if(nome.InnerXml == "José Carlos")
+            if(nome.InnerXml == "José Carlos" || caixaNome.transform.localPosition == pos2)
                 caixaNome.transform.localPosition = pos1;
             else if(caixaNome.transform.localPosition == pos1)
                 caixaNome.transform.localPosition = pos2;
-            else if(caixaNome.transform.localPosition == pos2)
-                caixaNome.transform.localPosition = pos1;
             caixaNome.GetComponentInChildren<TextMeshProUGUI>().text = nome.InnerXml;
         }
 
@@ -101,21 +99,21 @@ public class TextManager : MonoBehaviour
     // sub rotina para imprimir o texto letra por letra
     public AudioSource source;
     public AudioClip clip;
-    WaitForSeconds delay = new WaitForSeconds(0.01f);
+    WaitForSeconds delay = new WaitForSeconds(0.03f);
     IEnumerator LBLTyping(XmlNode texto){
         GameObject caixaTexto = GameObject.Find("dialogoUI(Clone)/CaixaDialogoFrame/CaixaDialogo");
         caixaTexto.GetComponent<TextMeshProUGUI>().text = "";
         foreach(char letra in texto.InnerXml.ToCharArray()){
             source.Stop();
             caixaTexto.GetComponent<TextMeshProUGUI>().text += letra;
-            source.PlayOneShot(clip);
+            //source.PlayOneShot(clip);
             //yield return null;
             yield return delay;
         }
     }
 
     public void CallEscolhas(){
-        int i = 1;
+        int i = 0;
 
         XmlNodeList escolhas = xReader.ParseEscolhas();
         if(escolhas.Count != 0){
@@ -147,19 +145,7 @@ public class TextManager : MonoBehaviour
                     GameObject botao = Instantiate(prefabBotao, GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame").transform);
                     
                     // Atualiza a posição da instância na UI
-                    switch (i){
-                        case 1:
-                            break;
-                        case 2:
-                            botao.transform.localPosition += new Vector3(330,0,0);
-                            break;
-                        case 3:
-                            botao.transform.localPosition += new Vector3(0,-35,0);
-                            break;
-                        case 4:
-                            botao.transform.localPosition += new Vector3(330,-35,0);
-                            break;
-                    }
+                    botao.transform.localPosition += new Vector3(0,i*(-30),0);
 
                     // Atualiza o texto do botao
                     botao.GetComponentInChildren<TextMeshProUGUI>().text = escolha["texto"].InnerXml;

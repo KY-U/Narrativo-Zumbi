@@ -895,7 +895,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 12de97abbfef9c9f2879a0f36a128033, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.01
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1355,9 +1355,9 @@ MonoBehaviour:
     bloco: 
   Jogador: {fileID: 490985901}
   canvas: {fileID: 2136870789}
-  prefabDialogo: {fileID: 3361886560769051440, guid: 57f1698878b80391288b18c87521d8fa, type: 3}
-  prefabEscolhas: {fileID: 2724014967703068942, guid: 9c1ca752e0c09e1b7a19ee6c5a077b89, type: 3}
-  prefabBotao: {fileID: 7395631505115786410, guid: 035f72b1abc222406b275f880350fe7e, type: 3}
+  prefabDialogo: {fileID: 7265900195459898979, guid: 35cdb936519d1e008a60ebdc1be5c71e, type: 3}
+  prefabEscolhas: {fileID: 1177507080712276988, guid: 65701d6ef96e2a09c961dc8e7cec4e11, type: 3}
+  prefabBotao: {fileID: 527667637169947142, guid: 8ebbb567cc18c9e3faa55c949e3d4ee0, type: 3}
   source: {fileID: 1422496194}
   clip: {fileID: 8300000, guid: 947a71af9730882468bf267f37d151f8, type: 3}
   transicao: {fileID: 1755394627}

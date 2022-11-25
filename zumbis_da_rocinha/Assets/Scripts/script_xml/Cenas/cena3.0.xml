@@ -60,7 +60,7 @@
 		<dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Ei. Você viu mais alguém hoje? Sabe o que tá acontecendp?</texto>
+        <texto> Ei. Você viu mais alguém hoje? Sabe o que tá acontecendo?</texto>
       </dialogo>
       
       <dialogo>
@@ -100,7 +100,7 @@
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>Eu tô com medo</texto>
+        <texto>Eu tô com medo.</texto>
       </dialogo>
 
       <dialogo>
@@ -110,7 +110,7 @@
       
       <dialogo>
         <nome>Filha</nome>
-        <texto> Tá bom, mas eu to com medo. Vem logo</texto>
+        <texto> Tá bom, mas eu to com medo. Vem logo.</texto>
       </dialogo>
       
       <dialogo>
@@ -120,7 +120,7 @@
     </dialogos>
 
     <transicao>
-      <paraCena></paraCena>
+      <paraCena>Fim</paraCena>
     </transicao>
   </bloco>
 
@@ -173,7 +173,7 @@
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>Eu tô com medo</texto>
+        <texto>Eu tô com medo.</texto>
       </dialogo>
 
       <dialogo>
@@ -183,7 +183,7 @@
 
       <dialogo>
         <nome>Filha</nome>
-        <texto> Tá bom, mas eu to com medo. Vem logo</texto>
+        <texto> Tá bom, mas eu to com medo. Vem logo.</texto>
       </dialogo>
 
       <dialogo>
@@ -191,33 +191,9 @@
         <texto>Vai ficar tudo bem...</texto>
       </dialogo>
     </dialogos>
-    
-   
-  </bloco>
-
-  <bloco s="4">
-    <dialogos>
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto> Melhor arriscar e bater a porta na cara dele.</texto>
-      </dialogo>
-    </dialogos>
 
     <transicao>
-      <paraCena>2.2</paraCena>
-    </transicao>
-  </bloco>
-
-  <bloco s="5">
-    <dialogos>
-      <dialogo>
-        <nome></nome>
-        <texto> </texto>
-      </dialogo>
-    </dialogos>
-
-    <transicao>
-      <paraCena>2.0.1</paraCena>
+      <paraCena>Fim</paraCena>
     </transicao>
   </bloco>
 </cena>

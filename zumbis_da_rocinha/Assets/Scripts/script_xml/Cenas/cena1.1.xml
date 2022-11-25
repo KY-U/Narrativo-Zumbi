@@ -28,17 +28,6 @@
 			</dialogo>
     	</dialogos>
       
-  		<escolhas>
-			<resumo> </resumo>
-			<escolha>
-				<texto> ENTRAR NA DELEGACIA </texto>
-				<paraBloco>1</paraBloco>
-			</escolha>
-		</escolhas>
-	</bloco>
-
-	<!-- Transição pra cena 2.0 -->
-	<bloco s="1">
 		<transicao>
 			<paraCena>2.0</paraCena>
 		</transicao>
