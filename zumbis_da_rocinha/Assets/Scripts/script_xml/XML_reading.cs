@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class XML_reading {
     [SerializeField] private TextAsset xmlFile; // Arquivo XML a ser lido
     private XmlDocument xmlDoc;
-    public string bloco;
+    private string bloco;
     string xPath;
 
     // Carrega o arquivo em uma string e le o documento a partir dela

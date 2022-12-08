@@ -13,10 +13,6 @@ public class PlayerManager : MonoBehaviour{
     public int armado = 0;
     public int deathCount = 0;
 
-    private void Start() {
-        //Carregar Status
-    }
-
     // Salvar Status
     // Carregar Status
 

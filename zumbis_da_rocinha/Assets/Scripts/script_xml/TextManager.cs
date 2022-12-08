@@ -91,18 +91,32 @@ public class TextManager : MonoBehaviour
         GameObject caixaTexto = GameObject.Find("dialogoUI(Clone)/CaixaDialogoFrame/CaixaDialogo");
         caixaTexto.GetComponent<TextMeshProUGUI>().text = "";
 
-        //Atualiza o trigger do "botao" que chama a proxima parte do dialogo 
-        GameObject acelerar = GameObject.Find("dialogoUI(Clone)/Trigger");
-        acelerar.GetComponent<Button>().onClick.RemoveAllListeners();
-        acelerar.GetComponent<Button>().onClick.AddListener(delegate{acelerarTexto(caixaTexto, texto);});
+        // Atualiza os botões que controlam o fluxo do diálogo
+            // Termina texto imediatamente 
+            GameObject acelerar = GameObject.Find("dialogoUI(Clone)/Trigger");
+            acelerar.GetComponent<Button>().onClick.RemoveAllListeners();
+            acelerar.GetComponent<Button>().onClick.AddListener(delegate{acelerarTexto(caixaTexto, texto);});
 
-        GameObject continuar = GameObject.Find("dialogoUI(Clone)/Continuar");
-        continuar.GetComponent<Button>().onClick.RemoveAllListeners();
-        continuar.GetComponent<Button>().onClick.AddListener(delegate{completarTexto(caixaTexto, texto);});
+            // Acelera o texto
+            GameObject continuar = GameObject.Find("dialogoUI(Clone)/Continuar");
+            continuar.GetComponent<Button>().onClick.RemoveAllListeners();
+            continuar.GetComponent<Button>().onClick.AddListener(delegate{completarTexto(caixaTexto, texto);});
 
+        // Inicia a mostragem do texto
+        // Cool printing dynamic wow
         StartCoroutine(LBLTyping(caixaTexto, texto));
     }
 
+    // Função do botão Trigger
+    public void acelerarTexto(GameObject caixa, XmlNode texto){
+        buttonPressed = true;
+        if(caixa.GetComponent<TextMeshProUGUI>().text == texto.InnerXml){
+            buttonPressed = false;
+            CallNextDialogue();
+        }
+    }
+
+    // Função do botão Continuar
     private bool buttonPressed = false;
     public void completarTexto(GameObject caixa, XmlNode texto){
         StopAllCoroutines();
@@ -111,14 +125,6 @@ public class TextManager : MonoBehaviour
             CallNextDialogue();
         }
         else caixa.GetComponent<TextMeshProUGUI>().text = texto.InnerXml;
-    }
-
-    public void acelerarTexto(GameObject caixa, XmlNode texto){
-        buttonPressed = true;
-        if(caixa.GetComponent<TextMeshProUGUI>().text == texto.InnerXml){
-            buttonPressed = false;
-            CallNextDialogue();
-        }
     }
 
     // sub rotina para imprimir o texto letra por letra
