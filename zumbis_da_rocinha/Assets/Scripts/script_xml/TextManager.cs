@@ -40,10 +40,6 @@ public class TextManager : MonoBehaviour
 
         Destroy(GameObject.Find("escolhasUI(Clone)"));  // Limpa a tela se necessário
         Instantiate(prefabDialogo, canvas.transform);   // Instancia a UI de diálogo
-        
-        //Atualiza o trigger do "botao" que chama a proxima parte do dialogo 
-        GameObject trigger = GameObject.Find("dialogoUI(Clone)/Trigger");
-        trigger.GetComponent<Button>().onClick.AddListener(CallNextDialogue);
 
         CallNextDialogue();
     }
@@ -92,23 +88,47 @@ public class TextManager : MonoBehaviour
 
         // Atualiza a caixa de texto
         // Cool Dynamic with gradual texting wow
+        GameObject caixaTexto = GameObject.Find("dialogoUI(Clone)/CaixaDialogoFrame/CaixaDialogo");
+        caixaTexto.GetComponent<TextMeshProUGUI>().text = "";
+
+        //Atualiza o trigger do "botao" que chama a proxima parte do dialogo 
+        GameObject acelerar = GameObject.Find("dialogoUI(Clone)/Trigger");
+        acelerar.GetComponent<Button>().onClick.RemoveAllListeners();
+        acelerar.GetComponent<Button>().onClick.AddListener(delegate{acelerarTexto(caixaTexto, texto);});
+
+        GameObject continuar = GameObject.Find("dialogoUI(Clone)/Continuar");
+        continuar.GetComponent<Button>().onClick.RemoveAllListeners();
+        continuar.GetComponent<Button>().onClick.AddListener(delegate{completarTexto(caixaTexto, texto);});
+
+        StartCoroutine(LBLTyping(caixaTexto, texto));
+    }
+
+    private bool buttonPressed = false;
+    public void completarTexto(GameObject caixa, XmlNode texto){
         StopAllCoroutines();
-        StartCoroutine(LBLTyping(texto));
+        if(caixa.GetComponent<TextMeshProUGUI>().text == texto.InnerXml){
+            buttonPressed = false;
+            CallNextDialogue();
+        }
+        else caixa.GetComponent<TextMeshProUGUI>().text = texto.InnerXml;
+    }
+
+    public void acelerarTexto(GameObject caixa, XmlNode texto){
+        buttonPressed = true;
+        if(caixa.GetComponent<TextMeshProUGUI>().text == texto.InnerXml){
+            buttonPressed = false;
+            CallNextDialogue();
+        }
     }
 
     // sub rotina para imprimir o texto letra por letra
-    public AudioSource source;
-    public AudioClip clip;
-    WaitForSeconds delay = new WaitForSeconds(0.03f);
-    IEnumerator LBLTyping(XmlNode texto){
-        GameObject caixaTexto = GameObject.Find("dialogoUI(Clone)/CaixaDialogoFrame/CaixaDialogo");
-        caixaTexto.GetComponent<TextMeshProUGUI>().text = "";
+    WaitForSeconds fastDelay = new WaitForSeconds(0.01f);
+    WaitForSeconds slowDelay = new WaitForSeconds(0.05f);
+    IEnumerator LBLTyping(GameObject caixa, XmlNode texto){
         foreach(char letra in texto.InnerXml.ToCharArray()){
-            source.Stop();
-            caixaTexto.GetComponent<TextMeshProUGUI>().text += letra;
-            //source.PlayOneShot(clip);
-            //yield return null;
-            yield return delay;
+            caixa.GetComponent<TextMeshProUGUI>().text += letra;
+            if(buttonPressed) yield return fastDelay;
+            else yield return slowDelay;
         }
     }
 
