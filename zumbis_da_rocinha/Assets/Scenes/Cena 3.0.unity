@@ -489,7 +489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397571822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.44544, y: 4.5494704, z: -91.80788}
+  m_LocalPosition: {x: -5.37, y: 3.12, z: -91.80788}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -763,6 +763,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xReader:
     xmlFile: {fileID: 4900000, guid: f635ddcc78bcc124a92717899ae6baac, type: 3}
+  audioCues:
+    source: {fileID: 0}
+    sons: []
   Jogador: {fileID: 898514839}
   canvas: {fileID: 2069524017}
   prefabDialogo: {fileID: 7265900195459898979, guid: 35cdb936519d1e008a60ebdc1be5c71e, type: 3}

@@ -7,25 +7,25 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class TextManager : MonoBehaviour
-{
-    [SerializeField] private XML_reading xReader;   // Instanciação da classe que lê o XML
+public class TextManager : MonoBehaviour {
+    [SerializeField] private XML_reading xReader;       // Instanciação da classe que lê o XML
+    [SerializeField] private AudioManager audioCues;    // Deixas de audio
     [SerializeField] private PlayerManager Jogador; 
 
-    public GameObject canvas;                       // Parente de todas as UI bases
+    public GameObject canvas;                           // Parente de todas as UI bases
 
-    public GameObject prefabDialogo;                // Prefab da UI de dialogo
+    public GameObject prefabDialogo;                    // Prefab da UI de dialogo
     private Queue<XmlNode> falas;
 
-    public GameObject prefabEscolhas;               // Prefab da UI de escolhas
-    public GameObject prefabBotao;                  // Prefab dos botões da UI de escolha
+    public GameObject prefabEscolhas;                   // Prefab da UI de escolhas
+    public GameObject prefabBotao;                      // Prefab dos botões da UI de escolha
 
     // Para dinâmicas da caixa de nome
     private Vector3 pos1 = new Vector3(0,0,0);
     private Vector3 pos2;
     private Color original = new Color(0,0,0,0);
     private Color invisivel;
-    
+
     void Start(){
         falas = new Queue<XmlNode>();
         xReader.definirBloco("0");
@@ -57,6 +57,9 @@ public class TextManager : MonoBehaviour
         XmlNode fala = falas.Dequeue();
         XmlNode nome = fala.FirstChild;
         XmlNode texto = nome.NextSibling;
+        XmlNode som = texto.NextSibling;
+
+        if(som != null) audioCues.PlayCue(som.InnerXml);
 
         // Define as posições da caixa de nome
         GameObject caixaNome = GameObject.Find("dialogoUI(Clone)/CaixaNomeFrame");
