@@ -158,15 +158,13 @@ public class TextManager : MonoBehaviour {
                 bool arma;
 
                 XmlNode estaSaudavel = escolha["estaSaudavel"];
-                if(estaSaudavel != null){
+                if(estaSaudavel != null)
                     saudavel = (Jogador.machucado < int.Parse(estaSaudavel.InnerXml));
-                }
                 else saudavel = true;
 
                 XmlNode estaArmado = escolha["estaArmado"];
-                if(estaArmado != null){
+                if(estaArmado != null)
                     arma = ((Jogador.armado & 1 << int.Parse(estaArmado.InnerXml)) != 0);
-                }
                 else arma = true;
 
                 if(saudavel && arma){

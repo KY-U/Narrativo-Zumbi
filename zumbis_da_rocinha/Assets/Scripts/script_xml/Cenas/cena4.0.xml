@@ -7,28 +7,45 @@
 				<texto> Carros pegando fogo uiui</texto>
 			</dialogo>
     
-    <dialogo>
-				<nome>José Carlos</nome>
-				<texto> eita carro pegando fogo pipipipopopo</texto>
+      <dialogo>
+          <nome>José Carlos</nome>
+          <texto> eita carro pegando fogo pipipipopopo</texto>
 			</dialogo>
-     </dialogos>
+    </dialogos>
     
 		<escolhas>
 			<resumo></resumo>
 			<escolha>
-				<texto> DAR A VOLTA </texto>
+				<texto> ATRAVESSAR </texto>
 				<paraBloco>1</paraBloco>
 			</escolha>
       
 			<escolha>
-				<texto> ATRAVESSAR </texto>
+				<texto> DAR A VOLTA </texto>
 				<paraBloco>2</paraBloco>
 			</escolha>
-  		</escolhas>
-  
+  	</escolhas>
 	</bloco>
 
-	<bloco s="1">
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Mano tu escolheu atravessar o carro pegando fogo??????</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Ideia de maluco</texto>
+      </dialogo>
+    </dialogos>
+    
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+
+	<bloco s="2">
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
@@ -43,30 +60,8 @@
       <dialogo>
         <nome>José Carlos</nome>
         <texto> bora pro proximo bloco</texto>
-      <paraBloco>3</paraBloco>
       </dialogo>
-    </dialogos>
-	</bloco>
 
-	<bloco s="2">
-		<dialogos>
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto> Mano tu escolheu atravessar o carro pegando fogo??????</texto>
-      </dialogo>
-      
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto>Ideia de maluco</texto>
-      </dialogo>
-     </dialogos>
-    
-    <transicao>
-    <gameOver></gameOver>
-    </transicao>
-    
-    <bloco s="3">
-		<dialogos>
 			<dialogo>
 				<nome>...</nome>
 				<texto>Zumbis correndo atras de voce mano</texto>
@@ -78,7 +73,7 @@
       </dialogo>
     </dialogos>
     
-    	<escolhas>
+    <escolhas>
 			<resumo></resumo>
 			<escolha>
 				<texto> ARMA </texto>
@@ -89,13 +84,13 @@
 				<texto> EMPURRAR </texto>
 				<paraBloco>5</paraBloco>
 			</escolha>
-      
-    <escolha>
+
+      <escolha>
 				<texto> ESCONDER </texto>
 				<paraBloco>6</paraBloco>
 			</escolha>
-  		</escolhas>
-	  </bloco>
+  	</escolhas>
+	</bloco>
     
   <bloco s="4">
 		<dialogos>
@@ -104,36 +99,35 @@
         <texto>Tiro nesse noia</texto>
       </dialogo>
     </dialogos>
-   </bloco>
-    
+
     <transicao>
-    <paraCena>5.0</paraCena>
+      <paraCena>5.0</paraCena>
     </transicao>
+  </bloco>
     
-<bloco s="5">
+  <bloco s="5">
 		<dialogos>
       <dialogo>
         <nome>José Carlos</nome>
         <texto>Se machuca no corpo a corpo</texto>
       </dialogo>
     </dialogos>
-   </bloco>
   
-     <transicao>
-    <paraCena>5.0</paraCena>
+    <transicao>
+      <paraCena>5.0</paraCena>
     </transicao>
+  </bloco>
     
-<bloco s="6">
+  <bloco s="6">
 		<dialogos>
       <dialogo>
         <nome>José Carlos</nome>
         <texto>20 em furtividade</texto>
       </dialogo>
     </dialogos>
-   </bloco>
   
- <transicao>
-    <paraCena>5.0</paraCena>
+    <transicao>
+      <paraCena>5.0</paraCena>
     </transicao>
   </bloco>
- </cena>
+</cena>
