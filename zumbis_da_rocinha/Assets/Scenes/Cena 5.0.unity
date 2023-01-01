@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xReader:
-    xmlFile: {fileID: 4900000, guid: f635ddcc78bcc124a92717899ae6baac, type: 3}
+    xmlFile: {fileID: 4900000, guid: fdf588fddd27b4743a53aa85bfb70edc, type: 3}
   audioCues:
     source: {fileID: 0}
     sons: []

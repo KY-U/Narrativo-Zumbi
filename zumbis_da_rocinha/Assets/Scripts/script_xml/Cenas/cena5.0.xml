@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+			<dialogo>
+				<nome>...</nome>
+				<texto> Chega na escola</texto>
+			</dialogo>
+    
+      <dialogo>
+          <nome>José Carlos</nome>
+          <texto> Ta meio na merda essa escola</texto>
+			</dialogo>
+    </dialogos>
+   		     
+    <transicao>
+      <paraCena>5.1</paraCena>
+    </transicao>
+  </bloco>
+</cena>

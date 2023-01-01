@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cena 5.0.unity
     guid: aa37ca8624b50ae49aa56f71827a7b6e
   - enabled: 1
+    path: Assets/Scenes/Cena 5.1.1.unity
+    guid: 660d0e3582bbb3a4dbdc1e5575c37643
+  - enabled: 1
     path: Assets/Scenes/Cena 5.1.unity
     guid: 2162e12ad1fa7de4a8d4a2df60a13868
   - enabled: 1

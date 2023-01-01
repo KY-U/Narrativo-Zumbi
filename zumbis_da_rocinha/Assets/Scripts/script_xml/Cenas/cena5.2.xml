@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+			<dialogo>
+				<nome>...</nome>
+				<texto>Cantina</texto>
+			</dialogo>
+    
+      <dialogo>
+          <nome>José Carlos</nome>
+          <texto> Barulho vindo da cantina, o que fazer?</texto>
+			</dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto> PULAR A BANCADA </texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> DAR A VOLTA PRA ENTRAR NA CANTINA </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+  	</escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>...</nome>
+        <texto>Ao pular a cantina voce ve um zumbi de costas na porta</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> PQP 20 de furtividade de novo</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Ih achei uma faca, vou vazar</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.1.1</paraCena>
+    </transicao>
+  </bloco>
+
+	<bloco s="2">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Ih que zumbi feiao</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Fazer o sprite do zumbi aparecer aqui</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> morte (descrição foda que eu n sei fazer)</texto>
+      </dialogo>
+		</dialogos>
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+</cena>

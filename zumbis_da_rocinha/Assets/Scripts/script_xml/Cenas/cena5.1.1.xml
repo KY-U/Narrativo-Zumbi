@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+		 <dialogo>
+          <nome>José Carlos</nome>
+          <texto> Ufa voltei</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Certo e agora?</texto>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto>SALA DE AULA</texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> QUADRA </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+  	</escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Vou subir</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.4</paraCena>
+    </transicao>
+  </bloco>
+
+	<bloco s="2">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Quadra</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ainda nao tem quadra</texto>
+      </dialogo>   
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.3</paraCena>
+    </transicao>
+	</bloco>
+</cena>

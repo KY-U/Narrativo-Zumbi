@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+			<dialogo>
+				<nome>...</nome>
+				<texto> Patio</texto>
+			</dialogo>
+    
+      <dialogo>
+          <nome>José Carlos</nome>
+          <texto> Alguma coisa aqui e ali nao sei mais</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Pra onde vou em?</texto>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto>CANTINA</texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> QUADRA </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+  	</escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Cantina que fome</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.2</paraCena>
+    </transicao>
+  </bloco>
+
+	<bloco s="2">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Quadra</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ainda nao tem quadra</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.3</paraCena>
+    </transicao>
+	</bloco>
+</cena>
