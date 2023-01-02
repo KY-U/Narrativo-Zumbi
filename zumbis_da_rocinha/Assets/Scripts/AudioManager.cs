@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class AudioManager {
+public class AudioManager{
     public AudioSource source;
     public AudioClip[] sons;
 

@@ -9,7 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class TextManager : MonoBehaviour {
     [SerializeField] private XML_reading xReader;       // Instanciação da classe que lê o XML
-    [SerializeField] private AudioManager audioCues;    // Deixas de audio
+
+    [SerializeField] private AudioManager  audioCues;   // Deixas de audio
+    [SerializeField] private ItemManager   itemCues;    // Deixas de item
     [SerializeField] private PlayerManager Jogador; 
 
     public GameObject canvas;                           // Parente de todas as UI bases
@@ -49,7 +51,6 @@ public class TextManager : MonoBehaviour {
         if(falas.Count == 0){
             StopAllCoroutines();
             Destroy(GameObject.Find("dialogoUI(Clone)"));   // Limpa a tela
-            //Instantiate(prefabEscolhas, canvas.transform);  // Instancia a UI de escolha
             CallEscolhas();
             return;
         }
@@ -57,9 +58,14 @@ public class TextManager : MonoBehaviour {
         XmlNode fala = falas.Dequeue();
         XmlNode nome = fala.FirstChild;
         XmlNode texto = nome.NextSibling;
-        XmlNode som = texto.NextSibling;
+        XmlNode som = fala["som"];
+        XmlNode item = fala["item"];
 
-        if(som != null) audioCues.PlayCue(som.InnerXml);
+        if(som != null)
+            audioCues.PlayCue(som.InnerXml);
+
+        if(item != null)
+            itemCues.ItemCue(item.InnerXml);
 
         // Define as posições da caixa de nome
         GameObject caixaNome = GameObject.Find("dialogoUI(Clone)/CaixaNomeFrame");

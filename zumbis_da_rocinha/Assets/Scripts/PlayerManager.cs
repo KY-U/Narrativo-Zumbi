@@ -32,8 +32,5 @@ public class PlayerManager : MonoBehaviour{
             int gun = int.Parse(g);
             if(gun > 0) armado |= 1 << gun;
             else armado &= ~(1 << -gun);
-
-            Animator achouArma = GameObject.Find("animacaoArma/Canvas/arma").GetComponent<Animator>();
-            achouArma.SetTrigger("ganhouArma");
         }
 }
