@@ -1,6 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+using System.Xml;
 
 /*
     pistola -> 0
@@ -8,16 +14,58 @@ using UnityEngine;
     taco    -> 2
 */
 public class PlayerManager : MonoBehaviour{
-    public int curScene;
+    public string curScene;
     public int machucado = 0;
     public int armado = 0;
     public int deathCount = 0;
 
     // Salvar Status
+    public void Salvar(){
+        XmlDocument saveFile = new XmlDocument();
+
+        XmlElement root = saveFile.CreateElement("Save");
+        root.SetAttribute("filesave", "Save_01");
+
+        XmlElement curSceneElement = saveFile.CreateElement("curScene");
+        curSceneElement.InnerText = curScene;
+        root.AppendChild(curSceneElement);
+
+        XmlElement machucadoElement = saveFile.CreateElement("machucado");
+        machucadoElement.InnerText = machucado.ToString();
+        root.AppendChild(machucadoElement);
+
+        XmlElement armadoElement = saveFile.CreateElement("armado");
+        armadoElement.InnerText = armado.ToString();
+        root.AppendChild(armadoElement);
+
+        XmlElement deathCountElement = saveFile.CreateElement("deathCount");
+        deathCountElement.InnerText = deathCount.ToString();
+        root.AppendChild(deathCountElement);
+
+        saveFile.AppendChild(root);
+        saveFile.Save(Application.dataPath + "/ZRsave.text");
+    }
+
     // Carregar Status
+    public void Carregar(){
+        if(File.Exists(Application.dataPath + "/ZRsave.text")){
+            XmlDocument loadFile = new XmlDocument();
+            loadFile.Load(Application.dataPath + "/ZRsave.text");
+
+            XmlNode root = loadFile.SelectSingleNode("Save");
+            curScene = root["curScene"].InnerXml;
+            machucado = int.Parse(root["machucado"].InnerXml);
+            armado = int.Parse(root["armado"].InnerXml);
+            deathCount = int.Parse(root["deathCount"].InnerXml);
+        }
+    }
 
     // Sets
         // Machucado
+        public void SetCurScene(string scene){
+            curScene = scene;
+        }
+
         public void Ai(){ 
             machucado++; 
         }

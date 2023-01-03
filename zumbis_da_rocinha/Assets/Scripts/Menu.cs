@@ -5,12 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public void LoadScenes(string cena)
-    {
-        SceneManager.LoadScene(cena);
+    public PlayerManager Jogador;
+
+    public void LoadScenes(string cena){
+        SceneManager.LoadScene("Cena " + cena);
     }
-    public void Quit()
-    {
+
+    public void ReturnToMenu(){
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void LoadSave(){
+        Jogador.Carregar();
+        LoadScenes(Jogador.curScene);
+    }
+
+    public void Quit(){
         Debug.Log("Saindo");
         Application.Quit();
     }

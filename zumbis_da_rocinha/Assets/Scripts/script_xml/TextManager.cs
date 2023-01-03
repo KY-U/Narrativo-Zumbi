@@ -12,6 +12,7 @@ public class TextManager : MonoBehaviour {
 
     [SerializeField] private AudioManager  audioCues;   // Deixas de audio
     [SerializeField] private ItemManager   itemCues;    // Deixas de item
+    
     [SerializeField] private PlayerManager Jogador; 
 
     public GameObject canvas;                           // Parente de todas as UI bases
@@ -222,6 +223,11 @@ public class TextManager : MonoBehaviour {
         transicao.SetTrigger("transition");
         yield return tempoTransicao;
 
+        if(c != "Fim"){
+            Jogador.SetCurScene(c);
+            Jogador.Salvar();
+        }
+        
         string cena = "Cena " + c;
         SceneManager.LoadScene(cena);
     }

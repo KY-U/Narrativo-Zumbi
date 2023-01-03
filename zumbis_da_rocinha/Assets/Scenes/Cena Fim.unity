@@ -533,6 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf3dacda0279ff418c27b19d2fde104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Jogador: {fileID: 0}
 --- !u!4 &963482759
 Transform:
   m_ObjectHideFlags: 0
@@ -635,8 +636,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 963482758}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: LoadScenes
-        m_Mode: 5
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
