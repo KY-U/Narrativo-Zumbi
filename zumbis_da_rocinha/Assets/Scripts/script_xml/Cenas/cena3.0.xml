@@ -65,47 +65,47 @@
       
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>TÁ TENTANDO ME MORDER?</texto>
+        <texto> TÁ TENTANDO ME MORDER?</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Não sou maluco de ficar aqui, perdendo tempo com isso. Tenho que saber se ela tá bem...</texto>
+        <texto> Não sou maluco de ficar aqui, perdendo tempo com isso. Tenho que saber se ela tá bem...</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Atende, por favor atende...</texto>
+        <texto> Atende, por favor atende...</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Alô filha...?</texto>
+        <texto> Alô filha...?</texto>
       </dialogo>
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>Papai, porque ta todo mundo nervoso?</texto>
+        <texto> Papai, porque ta todo mundo nervoso?</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Filha você ta bem? Se machucou?</texto>
+        <texto> Filha você ta bem? Se machucou?</texto>
       </dialogo>
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>Não, mas a tia trancou a porta e tão gritando...</texto>
+        <texto> Não, mas a tia trancou a porta e tão gritando...</texto>
       </dialogo>
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>Eu tô com medo.</texto>
+        <texto> Eu tô com medo.</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Não se preocupa, eu tô indo aí correndo, não sai daí. Te amo viu.</texto>
+        <texto> Não se preocupa, eu tô indo aí correndo, não sai daí. Te amo viu.</texto>
       </dialogo>
       
       <dialogo>
@@ -115,12 +115,12 @@
       
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Vai ficar tudo bem...</texto>
+        <texto> Vai ficar tudo bem...</texto>
       </dialogo>
     </dialogos>
 
     <transicao>
-      <paraCena>Fim</paraCena>
+      <paraCena>4.0</paraCena>
     </transicao>
   </bloco>
 
@@ -143,42 +143,42 @@
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Droga não vejo mais aquele cara. Eu preciso saber se ela tá bem.</texto>
+        <texto> Droga não vejo mais aquele cara. Eu preciso saber se ela tá bem.</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Atende, por favor atende...</texto>
+        <texto> Atende, por favor atende...</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Alô filha...?</texto>
+        <texto> Alô filha...?</texto>
       </dialogo>
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>Papai, porque ta todo mundo nervoso?</texto>
+        <texto> Papai, porque ta todo mundo nervoso?</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Filha você ta bem? Se machucou?</texto>
+        <texto> Filha você ta bem? Se machucou?</texto>
       </dialogo>
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>Não, mas a tia trancou a porta e tão gritando...</texto>
+        <texto> Não, mas a tia trancou a porta e tão gritando...</texto>
       </dialogo>
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>Eu tô com medo.</texto>
+        <texto> Eu tô com medo.</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Não se preocupa, eu tô indo aí correndo, não sai daí. Te amo viu.</texto>
+        <texto> Não se preocupa, eu tô indo aí correndo, não sai daí. Te amo viu.</texto>
       </dialogo>
 
       <dialogo>
@@ -188,12 +188,12 @@
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Vai ficar tudo bem...</texto>
+        <texto> Vai ficar tudo bem...</texto>
       </dialogo>
     </dialogos>
 
     <transicao>
-      <paraCena>Fim</paraCena>
+      <paraCena>4.0</paraCena>
     </transicao>
   </bloco>
 </cena>

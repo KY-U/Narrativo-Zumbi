@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Merda, tá mais vazio do que eu gostar-</texto>
+			</dialogo>
+
+      <!---> Usar só o som da batida aqui?<-->
+      <dialogo>
+        <nome>...</nome>
+        <texto> *Sons de batida no armário*</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Mas que- o que foi isso?</texto>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto> CHECAR O ARMÁRIO </texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> CHECAR EMBAIXO DA ARQUIBANCADA </texto>
+				<paraBloco>2</paraBloco>
+        <!---><armado>2</armado> para o taco<-->
+			</escolha>
+
+      <escolha>
+				<texto> IGNORAR O BARULHO </texto>
+				<paraBloco>3</paraBloco>
+			</escolha>
+  	</escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Veio do armário... Tem alguém lá dentro?</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Parece o zelad-</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+
+	<bloco s="2">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Não tem ninguém aqui, mas... Acho que posso levar isso por precaução</texto>
+        <!---><item></item> para mostrar o taco na tela<-->
+			</dialogo>
+		</dialogos>
+
+    <transicao>
+      <paraBloco>4</paraBloco>
+    </transicao>
+  </bloco>
+
+  <bloco s="3">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Não vou perder tempo com isso... </texto>
+			</dialogo>
+		</dialogos>
+
+    <transicao>
+      <paraBloco>4</paraBloco>
+    </transicao>
+  </bloco>
+
+  <bloco s="4">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> ...Acho que a sala dela fica no segundo andar</texto>
+			</dialogo>
+		</dialogos>
+
+    <transicao>
+      <paraCena>Fim</paraCena>
+      <!--->Mudar para a sala de aula quando tiver<-->
+    </transicao>
+  </bloco>
+</cena>

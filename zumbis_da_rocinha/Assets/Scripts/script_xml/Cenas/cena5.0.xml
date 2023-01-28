@@ -2,19 +2,49 @@
 <cena>
   <bloco s="0">
 	  <dialogos>
-			<dialogo>
-				<nome>...</nome>
-				<texto> Chega na escola</texto>
-			</dialogo>
-    
       <dialogo>
           <nome>José Carlos</nome>
-          <texto> Ta meio na merda essa escola</texto>
+          <texto> Só preciso achar ela...</texto>
 			</dialogo>
     </dialogos>
-   		     
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto> IR PARA A CANTINA </texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> IR PARA A QUADRA </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+  	</escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Se eu passar pela cantina eu devo chegar na sala dela.</texto>
+      </dialogo>
+    </dialogos>
+
     <transicao>
       <paraCena>5.1</paraCena>
     </transicao>
   </bloco>
+
+	<bloco s="2">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não lembro direito o caminho, mas deve dar pra chegar na sala dela por aqui...</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.3</paraCena>
+    </transicao>
+	</bloco>
 </cena>
