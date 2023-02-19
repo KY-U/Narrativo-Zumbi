@@ -52,9 +52,144 @@
 			</dialogo>
 		</dialogos>
 
-	
-	<transicao>
-      <paraCena>3.0</paraCena>
-    </transicao>
+		<transicao>
+		<paraCena>3.0</paraCena>
+		</transicao>
+	</bloco>
+
+	<!--> /////////////////////////////////////// Cena 2.0.1 /////////////////////////////////////// <!-->
+
+	<bloco s="3">
+		<dialogos>
+			<dialogo>
+			  	<nome>José Carlos</nome>
+				<texto>Tem que ter alguma coisa aqui.</texto>
+			</dialogo>
+		
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Onde o Túlio deixaria uma arma?</texto>
+			</dialogo>
+	    </dialogos>
+	  
+		<escolhas>
+			<resumo> </resumo>
+			<escolha>
+				<texto> PROCURAR NA MESA DO TÚLIO </texto>
+		  		<armado>0</armado>
+				<paraBloco>1</paraBloco>
+			</escolha>
+		
+			<escolha>
+				<texto> PROCURAR NA MESA DO DELEGADO </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+		
+			<escolha>
+				<texto> ARMÁRIO </texto>
+				<paraBloco>3</paraBloco>
+			</escolha>
+		</escolhas>
+	</bloco>
+  
+	<bloco s="4">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> ACHEI! Uma arma... Merda, não sei usar...</texto>
+		  		<item>0</item>
+			</dialogo>
+
+	  		<dialogo>
+				<nome>...</nome>
+				<texto> Barulho de passos se aproximando</texto>
+		  	</dialogo>
+	  
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Atiro ou não atiro, o que eu faç-</texto>
+		  	</dialogo>
+	  
+	   		<dialogo>
+				<nome>...</nome>
+				<texto>A arma dispara acidentalmente, e a figura cai no chão.</texto>
+		  	</dialogo>
+	  
+	   		<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Eu matei ele? Ah merda... melhor eu ir embora</texto>
+		  	</dialogo>
+	  
+	   		<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Ele ia me matar eu só me defendi, eu não sou um...</texto>
+		  	</dialogo>
+		
+	  		<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Não adianta pensar nisso agora...o mais importante é encontrar ela.</texto>
+		  	</dialogo>
+	 	</dialogos>
+	  
+	  	<transicao>
+			<paraCena>3.0</paraCena>
+	  	</transicao>
+	</bloco>
+  
+	<bloco s="5">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Eu só não posso ficar encurralado...</texto>
+			</dialogo>
+		
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Tem que ter uma arma aqui em algum canto.</texto>
+			</dialogo>
+	  	</dialogos>
+  
+		<transicao>
+			<gameOver></gameOver>
+		</transicao>
+	</bloco>
+  
+	<bloco s="6">
+	  	<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Tá, deve ter algo aqui... Um escudo?</texto>
+				<item>1</item>
+			</dialogo>
+			
+			<dialogo>
+				<nome>...</nome>
+				<texto> Barulho de passos se aproximando</texto>
+			</dialogo>
+		
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Esse cara tá LOUCO, ELE QUER ME MATAR!</texto>
+			</dialogo>
+			
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Se eu prender esse escudo na porta... Ele não vai conseguir passar.</texto>
+			</dialogo>
+			
+			<dialogo>
+				<nome>...</nome>
+				<texto>Barulho do homem batendo no escudo.</texto>
+			</dialogo>
+			
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Não adianta pensar nisso agora... o mais importante é encontrar ela.</texto>
+			</dialogo>
+	  	</dialogos>
+	  
+		<transicao>
+			<paraCena>3.0</paraCena>
+		</transicao>
 	</bloco>
 </cena>

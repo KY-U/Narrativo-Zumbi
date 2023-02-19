@@ -15,6 +15,7 @@ using System.Xml;
 */
 public class PlayerManager : MonoBehaviour{
     public string curScene;
+    public string curBlock = "0";
     public int machucado = 0;
     public int armado = 0;
     public int deathCount = 0;
@@ -29,6 +30,10 @@ public class PlayerManager : MonoBehaviour{
         XmlElement curSceneElement = saveFile.CreateElement("curScene");
         curSceneElement.InnerText = curScene;
         root.AppendChild(curSceneElement);
+
+        XmlElement curBlockElement = saveFile.CreateElement("curBlock");
+        curBlockElement.InnerText = curBlock;
+        root.AppendChild(curBlockElement);
 
         XmlElement machucadoElement = saveFile.CreateElement("machucado");
         machucadoElement.InnerText = machucado.ToString();
@@ -53,10 +58,11 @@ public class PlayerManager : MonoBehaviour{
             loadFile.Load(Application.dataPath + "/ZRsave.text");
 
             XmlNode root = loadFile.SelectSingleNode("Save");
-            curScene = root["curScene"].InnerXml;
-            machucado = int.Parse(root["machucado"].InnerXml);
-            armado = int.Parse(root["armado"].InnerXml);
-            deathCount = int.Parse(root["deathCount"].InnerXml);
+            if(root["curScene"] != null) curScene = root["curScene"].InnerXml;
+            if(root["curBlock"] != null) curBlock = root["curBlock"].InnerXml;
+            if(root["machucado"] != null) machucado = int.Parse(root["machucado"].InnerXml);
+            if(root["armado"] != null) armado = int.Parse(root["armado"].InnerXml);
+            if(root["deathCount"] != null) deathCount = int.Parse(root["deathCount"].InnerXml);
         }
     }
 
@@ -64,6 +70,10 @@ public class PlayerManager : MonoBehaviour{
         // Machucado
         public void SetCurScene(string scene){
             curScene = scene;
+        }
+
+        public void SetCurBlock(string block){
+            curBlock = block;
         }
 
         public void Ai(){ 
