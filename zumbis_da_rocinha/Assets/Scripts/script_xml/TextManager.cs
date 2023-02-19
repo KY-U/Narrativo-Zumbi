@@ -37,10 +37,10 @@ public class TextManager : MonoBehaviour {
 
     void Start(){
         falas = new Queue<XmlNode>();
-        xReader.definirBloco("0");
         xReader.LoadFile();
 
         Jogador.Carregar();
+        xReader.definirBloco(Jogador.curBlock);
 
         LoadDialogue(); // Chama a primeira execução de bloco
     }
@@ -182,9 +182,7 @@ public class TextManager : MonoBehaviour {
                 if(estaArmado != null){
                     int temArma = int.Parse(estaArmado.InnerXml);
                     arma = ((Jogador.armado & 1 << System.Math.Abs(temArma)) != 0);
-                    Debug.Log(arma);
                     if(temArma < 0) arma = !arma;
-                    Debug.Log(arma);
                 }
                 else arma = true;
 
@@ -197,13 +195,14 @@ public class TextManager : MonoBehaviour {
 
                     // Atualiza o texto do botao
                     botao.GetComponentInChildren<TextMeshProUGUI>().text = escolha["texto"].InnerXml;
+
+                    // Salva o estado qualquer que seja o botão
                     botao.GetComponent<Button>().onClick.AddListener(Jogador.Salvar);
 
                     // Testa as consequências da escolha
                     if(escolha["machucado"] != null)
                         botao.GetComponent<Button>().onClick.AddListener(Jogador.Ai);
                     if(escolha["armado"] != null){
-                        Debug.Log("achou a tag");
                         botao.GetComponent<Button>().onClick.AddListener(delegate {Jogador.GunControl(escolha["armado"].InnerXml);});
                     }
 
@@ -219,8 +218,16 @@ public class TextManager : MonoBehaviour {
             XmlNode transicao = xReader.ParseTransicao();
             if(transicao["gameOver"] != null)
                 GameOver();
-            else if(transicao["paraCena"] != null)
+            else if(transicao["paraCena"] != null){
+                // Checa se precisa voltar em um bloco diferente do inicial
+                if(transicao["paraCena"].Attributes["b"] != null)
+                    Jogador.SetCurBlock(transicao["paraCena"].Attributes["b"].Value);
+                else Jogador.SetCurBlock("0");
+
+                Jogador.Salvar(); // Talvez mover isso pra fora do if? Não sei se precisa salvar em caso de morrer
                 StartCoroutine(ProximaCena(transicao["paraCena"].InnerXml));
+            }
+                
         }
     }
 
@@ -239,13 +246,11 @@ public class TextManager : MonoBehaviour {
         transicao.SetTrigger("transition");
         yield return tempoTransicao;
 
-        if(c != "Fim"){
+        // !! Mudar isso quando tiver um final !!
+        if(c != "Fim")
             Jogador.SetCurScene(c);
-            Jogador.Salvar();
-        }
         
-        string cena = "Cena " + c;
-        SceneManager.LoadScene(cena);
+        SceneManager.LoadScene("Cena " + c);
     }
 
     // Game Over

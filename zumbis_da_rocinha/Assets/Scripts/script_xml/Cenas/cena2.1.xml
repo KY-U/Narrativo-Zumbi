@@ -111,7 +111,7 @@
 
   <bloco s="5">
     <transicao>
-      <paraCena>2.0.1</paraCena>
+      <paraCena b="3">2.0</paraCena>
     </transicao>
   </bloco>
 </cena>
