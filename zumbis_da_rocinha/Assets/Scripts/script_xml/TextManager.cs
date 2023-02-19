@@ -1,3 +1,4 @@
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,20 +9,25 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 public class TextManager : MonoBehaviour {
+    [Header ("XML")]
     [SerializeField] private XML_reading xReader;       // Instanciação da classe que lê o XML
+    private Queue<XmlNode> falas;
 
+    [Header ("UI")]
+    public GameObject canvas;                           // Parente de todas as UI bases
+    public GameObject prefabDialogo;                    // Prefab da UI de dialogo
+    public GameObject prefabEscolhas;                   // Prefab da UI de escolhas
+    public GameObject prefabBotao;                      // Prefab dos botões da UI de escolha
+
+    [Header ("Scene Dynamics")]
     [SerializeField] private AudioManager  audioCues;   // Deixas de audio
     [SerializeField] private ItemManager   itemCues;    // Deixas de item
     
+    [Header ("Player")]
     [SerializeField] private PlayerManager Jogador; 
 
-    public GameObject canvas;                           // Parente de todas as UI bases
-
-    public GameObject prefabDialogo;                    // Prefab da UI de dialogo
-    private Queue<XmlNode> falas;
-
-    public GameObject prefabEscolhas;                   // Prefab da UI de escolhas
-    public GameObject prefabBotao;                      // Prefab dos botões da UI de escolha
+    [Header ("Animator")]
+    public Animator transicao;
 
     // Para dinâmicas da caixa de nome
     private Vector3 pos1 = new Vector3(0,0,0);
@@ -33,6 +39,9 @@ public class TextManager : MonoBehaviour {
         falas = new Queue<XmlNode>();
         xReader.definirBloco("0");
         xReader.LoadFile();
+
+        Jogador.Carregar();
+
         LoadDialogue(); // Chama a primeira execução de bloco
     }
 
@@ -170,8 +179,13 @@ public class TextManager : MonoBehaviour {
                 else saudavel = true;
 
                 XmlNode estaArmado = escolha["estaArmado"];
-                if(estaArmado != null)
-                    arma = ((Jogador.armado & 1 << int.Parse(estaArmado.InnerXml)) != 0);
+                if(estaArmado != null){
+                    int temArma = int.Parse(estaArmado.InnerXml);
+                    arma = ((Jogador.armado & 1 << System.Math.Abs(temArma)) != 0);
+                    Debug.Log(arma);
+                    if(temArma < 0) arma = !arma;
+                    Debug.Log(arma);
+                }
                 else arma = true;
 
                 if(saudavel && arma){
@@ -183,13 +197,16 @@ public class TextManager : MonoBehaviour {
 
                     // Atualiza o texto do botao
                     botao.GetComponentInChildren<TextMeshProUGUI>().text = escolha["texto"].InnerXml;
+                    botao.GetComponent<Button>().onClick.AddListener(Jogador.Salvar);
 
                     // Testa as consequências da escolha
                     if(escolha["machucado"] != null)
                         botao.GetComponent<Button>().onClick.AddListener(Jogador.Ai);
-                    if(escolha["armado"] != null)
+                    if(escolha["armado"] != null){
+                        Debug.Log("achou a tag");
                         botao.GetComponent<Button>().onClick.AddListener(delegate {Jogador.GunControl(escolha["armado"].InnerXml);});
-                    
+                    }
+
                     // Atualiza o caminho do botão
                     if(escolha["paraBloco"] != null)
                         botao.GetComponent<Button>().onClick.AddListener(delegate {ProximoBloco(escolha["paraBloco"].InnerXml); });
@@ -214,7 +231,6 @@ public class TextManager : MonoBehaviour {
     }
 
     // Proxima cena
-    public Animator transicao;
     private WaitForSeconds tempoTransicao = new WaitForSeconds(1.5f);
     IEnumerator ProximaCena(string c){
         Destroy(GameObject.Find("dialogoUI(Clone)"));

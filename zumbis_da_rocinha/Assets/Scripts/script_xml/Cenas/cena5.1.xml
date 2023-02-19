@@ -22,8 +22,9 @@
 		<escolhas>
 			<resumo></resumo>
 			<escolha>
+        <estaArmado>-1</estaArmado>
 				<texto> PULAR A BANCADA </texto>
-        <!---><armado>1</armado> para a faca<-->
+        <armado>1</armado>
 				<paraBloco>1</paraBloco>
 			</escolha>
       
