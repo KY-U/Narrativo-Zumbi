@@ -21,7 +21,7 @@ public class XML_reading {
     }
 
     public void definirBloco(string b){
-        bloco = b; 
+        bloco = b;
     }
 
     // Retorna uma lista com todos os nodes de dialogo de determinado bloco

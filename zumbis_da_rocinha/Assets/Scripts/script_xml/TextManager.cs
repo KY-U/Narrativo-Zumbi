@@ -39,26 +39,32 @@ public class TextManager : MonoBehaviour {
         falas = new Queue<XmlNode>();
         xReader.LoadFile();
 
-        //Jogador.Carregar();
+        //Jogador.Carregar(); // Quebrando o jogo, consertar depois
         xReader.definirBloco(Jogador.curBlock);
 
         LoadDialogue(); // Chama a primeira execução de bloco
     }
 
     public void LoadDialogue(){
-        foreach(XmlNode dialogo in xReader.ParseDialogo()){
-            falas.Enqueue(dialogo); // Adiciona todos os nodes na fila
+        Destroy(GameObject.Find("escolhasUI(Clone)"));  // Limpa a tela se necessário
+
+        XmlNodeList dialogos = xReader.ParseDialogo();
+        if(dialogos.Count == 0 || dialogos == null){
+            CallEscolhas();
+            return;
         }
 
-        Destroy(GameObject.Find("escolhasUI(Clone)"));  // Limpa a tela se necessário
+        foreach(XmlNode dialogo in dialogos){
+            falas.Enqueue(dialogo); // Adiciona todos os nodes na fila
+        }
+            
         Instantiate(prefabDialogo, canvas.transform);   // Instancia a UI de diálogo
-
         CallNextDialogue();
     }
 
     public void CallNextDialogue(){
         // i.e. quando acabar o diálogo
-        if(falas.Count == 0){
+        if(falas.Count == 0 || falas == null){
             StopAllCoroutines();
             Destroy(GameObject.Find("dialogoUI(Clone)"));   // Limpa a tela
             CallEscolhas();
@@ -158,16 +164,27 @@ public class TextManager : MonoBehaviour {
     }
 
     public void CallEscolhas(){
-        int i = 0;
-
         XmlNodeList escolhas = xReader.ParseEscolhas();
-        if(escolhas.Count != 0){
-            Instantiate(prefabEscolhas, canvas.transform);  // Instancia a UI de escolha
+
+        if(escolhas.Count == 0 || escolhas == null){
+            CallTransicao();
+            return;
+        }
+        else{
+            GameObject caixaEscolhas = Instantiate(prefabEscolhas, canvas.transform);  // Instancia a UI de escolha
+
+            // Lógica para o evento de tempo
+            if(escolhas[0].ParentNode.Attributes["timed"] != null){
+                GameObject timebar = caixaEscolhas.transform.GetChild(1).gameObject;
+                timebar.SetActive(true);
+                timebar.GetComponent<TimedChoiceEvent>().maxTime = float.Parse(escolhas[0].ParentNode.Attributes["timed"].Value);
+            }
 
             // Atualiza a caixa de resumo da escolha
             GameObject resumoEscolha = GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame/ResumoEscolha");
-            resumoEscolha.GetComponentInChildren<TextMeshProUGUI>().text = xReader.ParseResumo();
+            resumoEscolha.GetComponent<TextMeshProUGUI>().text = xReader.ParseResumo();
 
+            int i = 0;
             foreach(XmlNode escolha in escolhas){
                 // Testa se a escolha deveria aparecer
                 bool saudavel;
@@ -186,10 +203,11 @@ public class TextManager : MonoBehaviour {
                 }
                 else arma = true;
 
+                // Instancia a escolha
                 if(saudavel && arma){
                     // Cria um botao pra cada node da NodeList
                     GameObject botao = Instantiate(prefabBotao, GameObject.Find("escolhasUI(Clone)/CaixaEscolhasFrame").transform);
-                    
+
                     // Atualiza a posição da instância na UI
                     botao.transform.localPosition += new Vector3(0,i*(-30),0);
 
@@ -198,6 +216,7 @@ public class TextManager : MonoBehaviour {
 
                     // Salva o estado qualquer que seja o botão
                     botao.GetComponent<Button>().onClick.AddListener(Jogador.Salvar);
+
 
                     // Testa as consequências da escolha
                     if(escolha["machucado"] != null)
@@ -213,27 +232,30 @@ public class TextManager : MonoBehaviour {
                 }
             }
         }
-        else if(escolhas.Count == 0){
-            XmlNode transicao = xReader.ParseTransicao();
-            if(transicao["gameOver"] != null)
-                this.GameOver();
-            else if(transicao["paraCena"] != null){
-                Jogador.Salvar(); // Talvez mover isso pra fora do if? Não sei se precisa salvar em caso de morrer
+    }
 
-                // Checa se precisa voltar em um bloco diferente do inicial
-                if(transicao["paraCena"].Attributes["b"] != null)
-                    Jogador.SetCurBlock(transicao["paraCena"].Attributes["b"].Value);
-                else Jogador.SetCurBlock("0");
+    public void CallTransicao(){
+        XmlNode transicao = xReader.ParseTransicao();
+        if(transicao["gameOver"] != null)
+            this.GameOver();
+        else if(transicao["paraCena"] != null){
+            Jogador.Salvar(); // Talvez mover isso pra fora do if? Não sei se precisa salvar em caso de morrer
 
-                StartCoroutine(ProximaCena(transicao["paraCena"].InnerXml));
-            }
+            // Checa se precisa voltar em um bloco diferente do inicial
+            if(transicao["paraCena"].Attributes["b"] != null)
+                Jogador.SetCurBlock(transicao["paraCena"].Attributes["b"].Value);
+            else Jogador.SetCurBlock("0");
+
+            StartCoroutine(ProximaCena(transicao["paraCena"].InnerXml));
         }
+        else return;
     }
 
     // Proximo bloco de dialogo
     void ProximoBloco(string bloco){
         xReader.definirBloco(bloco);
         LoadDialogue();
+        return;
     }
 
     // Proxima cena
