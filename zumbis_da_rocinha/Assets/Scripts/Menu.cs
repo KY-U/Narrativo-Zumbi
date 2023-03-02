@@ -11,13 +11,18 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Cena " + cena);
     }
 
-    public void ReturnToMenu(){
-        SceneManager.LoadScene("Menu");
+    public void NewGame(){
+        Jogador.LimparSave();
+        LoadScenes(Jogador.curScene);
     }
 
     public void LoadSave(){
         Jogador.Carregar();
         LoadScenes(Jogador.curScene);
+    }
+
+    public void ReturnToMenu(){
+        SceneManager.LoadScene("Menu");
     }
 
     public void Quit(){

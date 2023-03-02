@@ -39,7 +39,7 @@ public class TextManager : MonoBehaviour {
         falas = new Queue<XmlNode>();
         xReader.LoadFile();
 
-        Jogador.Carregar();
+        //Jogador.Carregar();
         xReader.definirBloco(Jogador.curBlock);
 
         LoadDialogue(); // Chama a primeira execução de bloco
@@ -202,13 +202,12 @@ public class TextManager : MonoBehaviour {
                     // Testa as consequências da escolha
                     if(escolha["machucado"] != null)
                         botao.GetComponent<Button>().onClick.AddListener(Jogador.Ai);
-                    if(escolha["armado"] != null){
+                    if(escolha["armado"] != null)
                         botao.GetComponent<Button>().onClick.AddListener(delegate {Jogador.GunControl(escolha["armado"].InnerXml);});
-                    }
 
                     // Atualiza o caminho do botão
                     if(escolha["paraBloco"] != null)
-                        botao.GetComponent<Button>().onClick.AddListener(delegate {ProximoBloco(escolha["paraBloco"].InnerXml); });
+                        botao.GetComponent<Button>().onClick.AddListener(delegate {ProximoBloco(escolha["paraBloco"].InnerXml);});
                     
                     i++;
                 }
@@ -217,17 +216,17 @@ public class TextManager : MonoBehaviour {
         else if(escolhas.Count == 0){
             XmlNode transicao = xReader.ParseTransicao();
             if(transicao["gameOver"] != null)
-                GameOver();
+                this.GameOver();
             else if(transicao["paraCena"] != null){
+                Jogador.Salvar(); // Talvez mover isso pra fora do if? Não sei se precisa salvar em caso de morrer
+
                 // Checa se precisa voltar em um bloco diferente do inicial
                 if(transicao["paraCena"].Attributes["b"] != null)
                     Jogador.SetCurBlock(transicao["paraCena"].Attributes["b"].Value);
                 else Jogador.SetCurBlock("0");
 
-                Jogador.Salvar(); // Talvez mover isso pra fora do if? Não sei se precisa salvar em caso de morrer
                 StartCoroutine(ProximaCena(transicao["paraCena"].InnerXml));
             }
-                
         }
     }
 
@@ -254,7 +253,7 @@ public class TextManager : MonoBehaviour {
     }
 
     // Game Over
-    void GameOver(){
+    public void GameOver(){
         Jogador.Morreu();
         SceneManager.LoadScene("GameOver");
     }
