@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+
+  <bloco s="0">
+    <escolhas timed="5">
+      <resumo> Criança braba</resumo>
+      <escolha>
+        <texto>A</texto>
+        <paraBloco>1</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>B</texto>
+        <paraBloco>morte</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <bloco s="1">
+    <dialogos>
+      <dialogo>
+        <nome>...</nome>
+        <texto> Bom, de algum jeito tu ta vivo</texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas timed="5">
+      <resumo> Corre bixo</resumo>
+      <escolha>
+        <texto>A</texto>
+        <paraBloco>2</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>B</texto>
+        <paraBloco>morte</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <bloco s="2">
+    <dialogos>
+      <dialogo>
+        <nome>...</nome>
+        <texto> Bom, de algum jeito tu ta vivo</texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas timed="5">
+      <resumo> AAAAAAAAAA </resumo>
+      <escolha>
+        <texto>A</texto>
+        <paraBloco>3</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>B</texto>
+        <paraBloco>morte</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <bloco s="3">
+    <dialogos>
+      <dialogo>
+        <nome>...</nome>
+        <texto> Bom, de algum jeito tu ta vivo</texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas timed="5">
+      <resumo> Fudeu</resumo>
+      <escolha>
+        <texto>A</texto>
+        <paraBloco>morte</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>B</texto>
+        <paraBloco>morte</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+
+  <bloco s="morte">
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+
+</cena>
