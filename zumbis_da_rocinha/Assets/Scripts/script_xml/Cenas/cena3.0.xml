@@ -71,16 +71,19 @@
       <dialogo>
         <nome>José Carlos</nome>
         <texto> Não sou maluco de ficar aqui, perdendo tempo com isso. Tenho que saber se ela tá bem...</texto>
+      <item>0</item>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
         <texto> Atende, por favor atende...</texto>
+         <item>1</item>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
         <texto> Alô filha...?</texto>
+       <item>2</item>
       </dialogo>
 
       <dialogo>
@@ -144,16 +147,19 @@
       <dialogo>
         <nome>José Carlos</nome>
         <texto> Droga não vejo mais aquele cara. Eu preciso saber se ela tá bem.</texto>
+       <item>0</item>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
         <texto> Atende, por favor atende...</texto>
+       <item>1</item>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
         <texto> Alô filha...?</texto>
+       <item>2</item>
       </dialogo>
 
       <dialogo>
