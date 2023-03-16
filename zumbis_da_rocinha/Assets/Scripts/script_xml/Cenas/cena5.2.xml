@@ -6,16 +6,66 @@
           <nome>José Carlos</nome>
           <texto> Vazio... O barulho parece ser na cozinha </texto>
 			</dialogo>
+    </dialogos>
+    
+      <escolhas>
+        <resumo></resumo>
+        <escolha>
+         
+          <texto> INVESTIGAR A CANTINA </texto>
+         <paraBloco>1</paraBloco>
+        </escolha>
+
+        <escolha>
+          <texto> IR PARA A COZINHA </texto>
+          <paraBloco>2</paraBloco>
+        </escolha>
+
+        <escolha>
+          <texto> VOLTAR </texto>
+          <paraBloco>3</paraBloco>
+        </escolha>
+      </escolhas>
+    </bloco>
+  
+  <bloco s="1">
+    <dialogos>
+    <dialogo>
+      <nome>José Carlos</nome>
+      <texto> Tem uma faca aqui, melhor eu levar comigo. </texto>
+      <item>1</item>
+    </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.1.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="2">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Tem alguem ai? Precisa de ajuda? </texto>
+      
+      </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Tem uma faca aqui, melhor eu levar comigo. </texto>
-         <!---><item></item> para mostrar o taco na tela<-->
+        <texto> Drog- </texto>
+        <item>0</item>
       </dialogo>
     </dialogos>
-    
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+
+
+  <bloco s="3">
 		<transicao>
-      <paraCena>5.1</paraCena>
+      <paraCena>5.1.1</paraCena>
     </transicao>
 	</bloco>
 </cena>

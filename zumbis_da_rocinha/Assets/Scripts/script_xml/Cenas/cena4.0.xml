@@ -4,13 +4,18 @@
 	  <dialogos>
 			<dialogo>
 				<nome>...</nome>
-				<texto> Carros pegando fogo uiui</texto>
+				<texto> Depois de um tempo andando, um carro capotado e pegando fogo bloqueia o caminho a pé.</texto>
 			</dialogo>
     
       <dialogo>
           <nome>José Carlos</nome>
-          <texto> eita carro pegando fogo pipipipopopo</texto>
+          <texto> Barricaram a rua... acho que pulando o muro eu consigo chegar na escola.</texto>
 			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ou será que dá pra atravessar isso?</texto>
+      </dialogo>
     </dialogos>
     
 		<escolhas>
@@ -36,7 +41,7 @@
       
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Ideia de maluco</texto>
+        <texto>Ideia de maluco.</texto>
       </dialogo>
     </dialogos>
     
@@ -49,27 +54,27 @@
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto>Aqui dei a volta</texto>
+				<texto> Melhor dar a volta, ninguem atravessaria um carro em chamas.</texto>
 			</dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Melhor do que pular na droga do carro pegando fogo</texto>
+        <texto> Melhor do que pular no meio do fogo.</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> bora pro proximo bloco</texto>
+        <texto> Eu preciso chegar na escola logo... Espero que ela esteja bem.</texto>
       </dialogo>
 
 			<dialogo>
 				<nome>...</nome>
-				<texto>Zumbis correndo atras de voce mano</texto>
+				<texto>Voce escuta o barulho deles se aproximando.</texto>
 			</dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> </texto>
+        <texto>Merda, nao da tempo de correr eles vao me alcançar.</texto>
       </dialogo>
     </dialogos>
     
@@ -85,10 +90,7 @@
 				<paraBloco>5</paraBloco>
 			</escolha>
 
-      <escolha>
-				<texto> ESCONDER </texto>
-				<paraBloco>6</paraBloco>
-			</escolha>
+   
   	</escolhas>
 	</bloco>
     
@@ -96,7 +98,7 @@
 		<dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Tiro nesse noia</texto>
+        <texto>Acho que ja entendi que voces tão mortos.</texto>
       </dialogo>
     </dialogos>
 
@@ -108,8 +110,8 @@
   <bloco s="5">
 		<dialogos>
       <dialogo>
-        <nome>José Carlos</nome>
-        <texto>Se machuca no corpo a corpo</texto>
+        <nome>...</nome>
+        <texto>Se machuca ao empurrar um deles.</texto>
       </dialogo>
     </dialogos>
   
@@ -118,16 +120,5 @@
     </transicao>
   </bloco>
     
-  <bloco s="6">
-		<dialogos>
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto>20 em furtividade</texto>
-      </dialogo>
-    </dialogos>
   
-    <transicao>
-      <paraCena>5.0</paraCena>
-    </transicao>
-  </bloco>
 </cena>

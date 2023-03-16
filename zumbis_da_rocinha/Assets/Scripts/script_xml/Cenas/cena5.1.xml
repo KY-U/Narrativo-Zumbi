@@ -10,7 +10,7 @@
       <!---> Usar só o som aqui? (Panela caindo sla)<-->
       <dialogo>
         <nome>...</nome>
-        <texto> *Barulhos na cozinha*</texto>
+        <texto> *Barulhos*</texto>
       </dialogo>
 
       <dialogo>
@@ -23,18 +23,18 @@
 			<resumo></resumo>
 			<escolha>
         <estaArmado>-1</estaArmado>
-				<texto> PULAR A BANCADA </texto>
+				<texto> IR PARA A CANTINA </texto>
         <armado>1</armado>
 				<paraBloco>1</paraBloco>
 			</escolha>
       
 			<escolha>
-				<texto> IR PRA COZINHA </texto>
+				<texto> IR PARA A QUADRA </texto>
 				<paraBloco>2</paraBloco>
 			</escolha>
 
       <escolha>
-				<texto> IGNORAR O BARULHO </texto>
+				<texto> SUBIR AS ESCADAS </texto>
 				<paraBloco>3</paraBloco>
 			</escolha>
   	</escolhas>
@@ -57,14 +57,15 @@
 		<dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Tem alguém aí? Precisa de ajud-</texto>
-      </dialogo>
-    </dialogos>
+        <texto> Pode ser ela na quadra.</texto>
+       </dialogo>
+     </dialogos>
 
     <transicao>
-      <gameOver></gameOver>
+      <paraCena>5.3</paraCena>
     </transicao>
   </bloco>
+
 
 	<bloco s="3">
 		<dialogos>
@@ -75,7 +76,7 @@
 		</dialogos>
 
     <transicao>
-      <paraCena>Fim</paraCena>
+      <paraCena>5.4</paraCena>
     </transicao>
   </bloco>
 </cena>

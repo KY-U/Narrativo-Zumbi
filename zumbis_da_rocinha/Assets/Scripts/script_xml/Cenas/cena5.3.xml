@@ -48,7 +48,18 @@
       
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Parece o zelad-</texto>
+        <texto> Parece um professor.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> EI ONDE ESTÃO AS CRIANÇAS?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ah. Voce tambem virou um z-</texto>
+        <item>0</item>
       </dialogo>
     </dialogos>
 
@@ -62,12 +73,12 @@
 			<dialogo>
 				<nome>José Carlos</nome>
 				<texto> Não tem ninguém aqui, mas... Acho que posso levar isso por precaução</texto>
-        <!---><item></item> para mostrar o taco na tela<-->
+       <item>1</item> 
 			</dialogo>
 		</dialogos>
 
     <transicao>
-      <paraBloco>4</paraBloco>
+      <paraCena>5.1</paraCena>
     </transicao>
   </bloco>
 
@@ -80,21 +91,9 @@
 		</dialogos>
 
     <transicao>
-      <paraBloco>4</paraBloco>
+      <paraCena>5.1</paraCena>
     </transicao>
   </bloco>
 
-  <bloco s="4">
-		<dialogos>
-			<dialogo>
-				<nome>José Carlos</nome>
-				<texto> ...Acho que a sala dela fica no segundo andar</texto>
-			</dialogo>
-		</dialogos>
-
-    <transicao>
-      <paraCena>Fim</paraCena>
-      <!--->Mudar para a sala de aula quando tiver<-->
-    </transicao>
-  </bloco>
+ 
 </cena>

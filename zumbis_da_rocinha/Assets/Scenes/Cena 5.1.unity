@@ -634,6 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curScene: 0
+  curBlock: 0
   machucado: 0
   armado: 0
   deathCount: 0
@@ -841,16 +842,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xReader:
     xmlFile: {fileID: 4900000, guid: ecc072b83f344ed40b9846e4deca9379, type: 3}
-  audioCues:
-    source: {fileID: 0}
-    sons: []
-  itemCues:
-    itens: []
-  Jogador: {fileID: 859080727}
   canvas: {fileID: 2063399904}
   prefabDialogo: {fileID: 7265900195459898979, guid: 35cdb936519d1e008a60ebdc1be5c71e, type: 3}
   prefabEscolhas: {fileID: 1177507080712276988, guid: 65701d6ef96e2a09c961dc8e7cec4e11, type: 3}
   prefabBotao: {fileID: 527667637169947142, guid: 8ebbb567cc18c9e3faa55c949e3d4ee0, type: 3}
+  audioCues:
+    source: {fileID: 0}
+    sons: []
+  itemCues:
+    itens:
+    - {fileID: 0}
+  Jogador: {fileID: 859080727}
   transicao: {fileID: 1129981790}
 --- !u!4 &1537608480
 Transform:

@@ -37,17 +37,32 @@
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Que? De onde surgiu tanta gente?</texto>
+        <texto> Que? </texto>
+        <item>7</item>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Que isso?</texto>
+        <item>3</item>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> De onde surgiu tanta gente?</texto>
+        <item>4</item>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
         <texto> Eles estão todos esquisitos...</texto>
+        <item>5</item>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
         <texto> Me larga! SOLTA O MEU BRAÇO! AAAAAAAAAAAA-</texto>
+        <item>6</item>
       </dialogo>
     </dialogos>
 

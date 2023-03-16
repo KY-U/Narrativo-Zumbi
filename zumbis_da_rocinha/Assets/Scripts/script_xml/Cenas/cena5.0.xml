@@ -4,47 +4,28 @@
 	  <dialogos>
       <dialogo>
           <nome>José Carlos</nome>
-          <texto> Só preciso achar ela...</texto>
+          <texto> Preciso ser rápido, acho que vai começar a chover.</texto>
 			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Olha o estado que ficou a escola. Tomara que ela esteja segura.</texto>
+      </dialogo>
     </dialogos>
     
 		<escolhas>
 			<resumo></resumo>
 			<escolha>
-				<texto> IR PARA A CANTINA </texto>
+				<texto> Entrar na escola </texto>
 				<paraBloco>1</paraBloco>
 			</escolha>
-      
-			<escolha>
-				<texto> IR PARA A QUADRA </texto>
-				<paraBloco>2</paraBloco>
-			</escolha>
-  	</escolhas>
+    </escolhas>
 	</bloco>
 
   <bloco s="1">
-		<dialogos>
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto> Se eu passar pela cantina eu devo chegar na sala dela.</texto>
-      </dialogo>
-    </dialogos>
-
-    <transicao>
+		 <transicao>
       <paraCena>5.1</paraCena>
     </transicao>
   </bloco>
-
-	<bloco s="2">
-		<dialogos>
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto> Não lembro direito o caminho, mas deve dar pra chegar na sala dela por aqui...</texto>
-      </dialogo>
-    </dialogos>
-
-    <transicao>
-      <paraCena>5.3</paraCena>
-    </transicao>
-	</bloco>
+	
 </cena>

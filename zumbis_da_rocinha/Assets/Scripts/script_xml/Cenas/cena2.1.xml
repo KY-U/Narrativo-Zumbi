@@ -43,7 +43,8 @@
 			<dialogo>
 				<nome>José Carlos</nome>
 				<texto> E-ei calma, não tem necessidade diss-</texto>
-			</dialogo>
+        <item>0</item>
+      </dialogo>
     </dialogos>
 
     <transicao>
@@ -56,6 +57,7 @@
       <dialogo>
         <nome>...</nome>
         <texto> Isso nao faz o menor sentido.</texto>
+        <item>1</item>
       </dialogo>
       
       <dialogo>
@@ -74,6 +76,7 @@
       <dialogo>
         <nome>José Carlos</nome>
         <texto> O que que é isso? Ele arrebentou as grades!!!</texto>
+        <item>1</item>
       </dialogo>
         
       <dialogo>
