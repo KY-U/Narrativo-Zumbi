@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> É aqui a sala dela.</texto>
+			</dialogo>
+
+      <!---> Usar só o som da batida aqui?<-->
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não tem ninguem aqui tambem.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> O que é isso? Parece um bilhete.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> INSIRA O BILHETE</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> F-filha...? Você me esperou...?T-Tá tudo bem, não tá?</texto>
+        <item>0</item>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Não, não parece ser ela.</texto>
+        <item>0</item>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Será que não?</texto>
+        <item>0</item>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto> ATIRAR! </texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> FUGIR </texto>
+				<paraBloco>2</paraBloco>
+       
+			</escolha>
+    </escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Devo atirar nela? Ainda é só uma criança.</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>O que minha filha pensaria disso...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não tenho escolha.</texto>
+      </dialogo>
+
+      
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.1.2</paraCena>
+    </transicao>
+  </bloco>
+
+	<bloco s="2">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Não posso matar uma criança</texto>
+     
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Preciso fugir.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto>Voce foi MACHUCADO</texto>
+      </dialogo>
+		</dialogos>
+
+    <transicao>
+      <paraCena>5.1.2</paraCena>
+    </transicao>
+  </bloco>
+
+  
+
+ 
+</cena>

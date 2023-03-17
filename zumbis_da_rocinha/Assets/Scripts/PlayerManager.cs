@@ -14,7 +14,7 @@ using System.Xml;
     taco    -> 2
 */
 public class PlayerManager : MonoBehaviour{
-    public string curScene;
+    public string curScene = "1.0";
     public string curBlock = "0";
     public int machucado = 0;
     public int armado = 0;

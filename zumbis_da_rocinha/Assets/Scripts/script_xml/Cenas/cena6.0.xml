@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não tem ninguém por aqui? Tá muito quieto... </texto>
+			</dialogo>
+
+      <!---> Usar só o som aqui? (Panela caindo sla)<-->
+      <dialogo>
+        <nome>...</nome>
+        <texto> *Barulhos*</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Foi só falar.</texto>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+        <estaArmado>-1</estaArmado>
+				<texto> IR PARA A CANTINA </texto>
+        <armado>1</armado>
+				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> IR PARA A QUADRA </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+
+      <escolha>
+				<texto> SUBIR AS ESCADAS </texto>
+				<paraBloco>3</paraBloco>
+			</escolha>
+  	</escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Vamos ver...</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>5.2</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="2">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Pode ser ela na quadra.</texto>
+       </dialogo>
+     </dialogos>
+
+    <transicao>
+      <paraCena>5.3</paraCena>
+    </transicao>
+  </bloco>
+
+
+	<bloco s="3">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Não posso perder tempo com isso... Ah, acho que a sala dela é no segundo andar</texto>
+			</dialogo>
+		</dialogos>
+
+    <transicao>
+      <paraCena>5.4</paraCena>
+    </transicao>
+  </bloco>
+</cena>

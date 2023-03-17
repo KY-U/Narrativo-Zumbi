@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Preciso encontrar ela agora</texto>
+			</dialogo>
+		</dialogos>
+    
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto>SAIR</texto>
+        <paraBloco>1</paraBloco>
+      </escolha>
+     </escolhas>
+  </bloco>
+  
+    <bloco s="1">
+      <transicao>
+        <paraCena>5.3</paraCena>
+      </transicao>
+    </bloco>
+  </cena>

@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 274052623}
   - component: {fileID: 274052624}
   m_Layer: 0
-  m_Name: Concept_02 (1)
+  m_Name: Zumbi_meio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -414,12 +414,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274052622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.9299998, y: 2.3841002, z: 0}
-  m_LocalScale: {x: 0.3269436, y: 0.30507573, z: 56.25}
+  m_LocalPosition: {x: -11.211676, y: 9.478875, z: 0}
+  m_LocalScale: {x: 0.93476456, y: 1.2118744, z: 3164.0625}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 712370162}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &274052624
 SpriteRenderer:
@@ -461,7 +461,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e069651102d2c504ba59675b72362ebc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -852,6 +852,11 @@ Transform:
   m_Children:
   - {fileID: 1270722185}
   - {fileID: 309046799}
+  - {fileID: 1166233000}
+  - {fileID: 274052623}
+  - {fileID: 1381516571}
+  - {fileID: 1476704245}
+  - {fileID: 1413494891}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1198,7 +1203,7 @@ GameObject:
   - component: {fileID: 1166233000}
   - component: {fileID: 1166233001}
   m_Layer: 0
-  m_Name: Concept_02 (2)
+  m_Name: Zumbi_esquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1212,12 +1217,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166232999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.8522, y: 2.4261, z: 0}
-  m_LocalScale: {x: 0.271464, y: 0.2773088, z: 56.25}
+  m_LocalPosition: {x: -13.848338, y: 9.645715, z: 0}
+  m_LocalScale: {x: 0.7761428, y: 1.1015737, z: 3164.0625}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 712370162}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1166233001
 SpriteRenderer:
@@ -1328,7 +1333,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 359b5d81104635b40a135a9efb4088c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1468,7 +1473,7 @@ GameObject:
   - component: {fileID: 1381516571}
   - component: {fileID: 1381516572}
   m_Layer: 0
-  m_Name: Concept_02 (4)
+  m_Name: Zumbi_frente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1482,12 +1487,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381516570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.1529, y: -1.2918997, z: 0}
-  m_LocalScale: {x: 0.7034518, y: 0.6506231, z: 56.25}
+  m_LocalPosition: {x: -14.70807, y: -5.1235647, z: 0}
+  m_LocalScale: {x: 2.0112393, y: 2.584517, z: 3164.0625}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 712370162}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1381516572
 SpriteRenderer:
@@ -1552,7 +1557,7 @@ GameObject:
   - component: {fileID: 1413494891}
   - component: {fileID: 1413494890}
   m_Layer: 0
-  m_Name: Concept_02
+  m_Name: Zumbi_direito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1617,13 +1622,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413494889}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.179, y: 2.4866, z: 0}
-  m_LocalScale: {x: 0.29721618, y: 0.28129935, z: 56.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.064491, y: 9.886043, z: 0}
+  m_LocalScale: {x: 0.84977084, y: 1.1174258, z: 3164.0625}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 712370162}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1476704244
 GameObject:
@@ -1636,7 +1641,7 @@ GameObject:
   - component: {fileID: 1476704245}
   - component: {fileID: 1476704246}
   m_Layer: 0
-  m_Name: Concept_02 (3)
+  m_Name: Zumbi_frentinha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1650,12 +1655,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476704244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3607998, y: 0.82060003, z: 0}
-  m_LocalScale: {x: 0.44183898, y: 0.40747982, z: 56.25}
+  m_LocalPosition: {x: 6.7743516, y: 3.2680707, z: 0}
+  m_LocalScale: {x: 1.263262, y: 1.6186615, z: 3164.0625}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 712370162}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1476704246
 SpriteRenderer:

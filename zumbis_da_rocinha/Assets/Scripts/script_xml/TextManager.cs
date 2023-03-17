@@ -39,7 +39,7 @@ public class TextManager : MonoBehaviour {
         falas = new Queue<XmlNode>();
         xReader.LoadFile();
 
-        //Jogador.Carregar(); // Quebrando o jogo, consertar depois
+        Jogador.Carregar(); // Quebrando o jogo, consertar depois
         xReader.definirBloco(Jogador.curBlock);
 
         LoadDialogue(); // Chama a primeira execução de bloco

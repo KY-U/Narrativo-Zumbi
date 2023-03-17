@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+          <nome>José Carlos</nome>
+          <texto> Pronto.</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Agora é só...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>MERDA VOCÊS NAO PARAM DE APARECER MAIS?</texto>
+        <item>0</item>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto>ATIRAR!</texto>
+				<paraBloco>1</paraBloco>
+			</escolha>
+
+      <resumo></resumo>
+      <escolha>
+        <texto>FUGIR</texto>
+        <paraBloco>2</paraBloco>
+      </escolha>
+    </escolhas>
+	</bloco>
+
+  <bloco s="1">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> MORRE DE UMA VEZ!.</texto>
+      </dialogo>
+
+    </dialogos>
+		 <transicao>
+      <paraCena>6.0</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="2">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não aguento mais correr...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Eu não consig-</texto>
+      </dialogo>
+
+    </dialogos>
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+	
+</cena>
