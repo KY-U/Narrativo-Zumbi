@@ -9,10 +9,14 @@ using UnityEngine.SceneManagement;
 using System.Xml;
 
 /*
-    pistola -> 0
-    faca    -> 1
-    taco    -> 2
+enum inventory{
+    CLEAR_ALL,  //0
+    PISTOLA,    //1
+    FACA,       //2
+    TACO        //3
+}
 */
+
 public class PlayerManager : MonoBehaviour{
     public string curScene = "1.0";
     public string curBlock = "0";
@@ -98,6 +102,9 @@ public class PlayerManager : MonoBehaviour{
         public void GunControl(string g){
             int gun = int.Parse(g);
             if(gun > 0) armado |= 1 << gun;
-            else armado &= ~(1 << -gun);
+            else if(gun < 0) armado &= ~(1 << -gun);
+            else{
+                for(int i = 1; i < 4; i++) armado &= ~(1 << i);
+            }
         }
 }
