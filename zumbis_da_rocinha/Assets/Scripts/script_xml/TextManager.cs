@@ -39,9 +39,12 @@ public class TextManager : MonoBehaviour {
         falas = new Queue<XmlNode>();
         xReader.LoadFile();
 
-        Jogador.Carregar(); // Quebrando o jogo, consertar depois
+        // failsafe
+        if(Jogador.curScene != SceneManager.GetActiveScene().name.Substring(5))
+            Jogador.SetCurScene(SceneManager.GetActiveScene().name.Substring(5));
+        
+        Jogador.Carregar();
         xReader.definirBloco(Jogador.curBlock);
-
         LoadDialogue(); // Chama a primeira execução de bloco
     }
 
@@ -155,9 +158,31 @@ public class TextManager : MonoBehaviour {
     // sub rotina para imprimir o texto letra por letra
     WaitForSeconds fastDelay = new WaitForSeconds(0.01f);
     WaitForSeconds slowDelay = new WaitForSeconds(0.05f);
+    bool writingB = false;
+    int boldTag;
     IEnumerator LBLTyping(GameObject caixa, XmlNode texto){
+        bool isBold = false;
         foreach(char letra in texto.InnerXml.ToCharArray()){
-            caixa.GetComponent<TextMeshProUGUI>().text += letra;
+            if(letra == '<'){
+                writingB = true;
+                if(!isBold){
+                    isBold = true; 
+                    boldTag = 4;       
+                }
+                else{
+                    isBold = false;
+                    boldTag = 5;
+                }
+            }
+
+            if(writingB){
+                boldTag--;
+                if(boldTag == 0) writingB = false;
+                yield return fastDelay;
+            }
+
+            if(!isBold && !writingB) caixa.GetComponent<TextMeshProUGUI>().text += letra;
+            else if(!writingB) caixa.GetComponent<TextMeshProUGUI>().text += "<b>" + letra + "</b>";
             if(buttonPressed) yield return fastDelay;
             else yield return slowDelay;
         }
@@ -239,12 +264,14 @@ public class TextManager : MonoBehaviour {
         if(transicao["gameOver"] != null)
             this.GameOver();
         else if(transicao["paraCena"] != null){
-            Jogador.Salvar(); // Talvez mover isso pra fora do if? Não sei se precisa salvar em caso de morrer
-
+            Jogador.SetCurScene(transicao["paraCena"].InnerXml);
             // Checa se precisa voltar em um bloco diferente do inicial
             if(transicao["paraCena"].Attributes["b"] != null)
                 Jogador.SetCurBlock(transicao["paraCena"].Attributes["b"].Value);
             else Jogador.SetCurBlock("0");
+
+            // Talvez mover isso pra fora do if? Não sei se precisa salvar em caso de morrer
+            Jogador.Salvar(); 
 
             StartCoroutine(ProximaCena(transicao["paraCena"].InnerXml));
         }
@@ -254,6 +281,7 @@ public class TextManager : MonoBehaviour {
     // Proximo bloco de dialogo
     void ProximoBloco(string bloco){
         xReader.definirBloco(bloco);
+        //Jogador.SetCurBlock(bloco);
         LoadDialogue();
         return;
     }

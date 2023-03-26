@@ -71,8 +71,8 @@ public class PlayerManager : MonoBehaviour{
     }
 
     public void LimparSave(){
-        curScene = "1.0";
-        curBlock = "0";
+        SetCurScene("1.0");
+        SetCurBlock("0");
         machucado = 0;
         armado = 0;
         deathCount = 0;
@@ -80,7 +80,6 @@ public class PlayerManager : MonoBehaviour{
     }
 
     // Sets
-        // Machucado
         public void SetCurScene(string scene){
             curScene = scene;
         }
@@ -89,6 +88,7 @@ public class PlayerManager : MonoBehaviour{
             curBlock = block;
         }
 
+        // Machucado
         public void Ai(){ 
             machucado++; 
         }

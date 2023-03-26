@@ -40,7 +40,7 @@
       
     		<dialogo>
 				<nome>José Carlos</nome>
-				<texto> Hmmm, o Túlio deve ter algo.</texto>
+				<texto> Hmmm, o <b>Túlio</b> deve ter algo.</texto>
 			</dialogo>
  		</dialogos>
 
