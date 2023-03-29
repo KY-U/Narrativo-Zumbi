@@ -163,6 +163,9 @@ public class TextManager : MonoBehaviour {
     IEnumerator LBLTyping(GameObject caixa, XmlNode texto){
         bool isBold = false;
         foreach(char letra in texto.InnerXml.ToCharArray()){
+            // Behold, bullshit
+            // Por favor não olhar por muito tempo, risco de cegueira
+            // Not my proudest code
             if(letra == '<'){
                 writingB = true;
                 if(!isBold){
