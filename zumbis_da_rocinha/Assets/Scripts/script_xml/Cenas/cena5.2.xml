@@ -11,9 +11,9 @@
       <escolhas>
         <resumo></resumo>
         <escolha>
-         
           <texto> INVESTIGAR A CANTINA </texto>
-         <paraBloco>1</paraBloco>
+          <armado>1</armado>
+          <paraBloco>1</paraBloco>
         </escolha>
 
         <escolha>
@@ -38,7 +38,7 @@
     </dialogos>
 
     <transicao>
-      <paraCena>5.1.1</paraCena>
+      <paraCena>5.1</paraCena>
     </transicao>
   </bloco>
 
@@ -65,7 +65,7 @@
 
   <bloco s="3">
 		<transicao>
-      <paraCena>5.1.1</paraCena>
+      <paraCena>5.1</paraCena>
     </transicao>
 	</bloco>
 </cena>

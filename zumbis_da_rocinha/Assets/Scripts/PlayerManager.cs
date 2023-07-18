@@ -9,10 +9,14 @@ using UnityEngine.SceneManagement;
 using System.Xml;
 
 /*
-    pistola -> 0
-    faca    -> 1
-    taco    -> 2
+enum inventory{
+    CLEAR_ALL,  //0
+    PISTOLA,    //1
+    FACA,       //2
+    TACO        //3
+}
 */
+
 public class PlayerManager : MonoBehaviour{
     public string curScene = "1.0";
     public string curBlock = "0";
@@ -67,8 +71,8 @@ public class PlayerManager : MonoBehaviour{
     }
 
     public void LimparSave(){
-        curScene = "1.0";
-        curBlock = "0";
+        SetCurScene("1.0");
+        SetCurBlock("0");
         machucado = 0;
         armado = 0;
         deathCount = 0;
@@ -76,7 +80,6 @@ public class PlayerManager : MonoBehaviour{
     }
 
     // Sets
-        // Machucado
         public void SetCurScene(string scene){
             curScene = scene;
         }
@@ -85,6 +88,7 @@ public class PlayerManager : MonoBehaviour{
             curBlock = block;
         }
 
+        // Machucado
         public void Ai(){ 
             machucado++; 
         }
@@ -98,6 +102,9 @@ public class PlayerManager : MonoBehaviour{
         public void GunControl(string g){
             int gun = int.Parse(g);
             if(gun > 0) armado |= 1 << gun;
-            else armado &= ~(1 << -gun);
+            else if(gun < 0) armado &= ~(1 << -gun);
+            else{
+                for(int i = 1; i < 4; i++) armado &= ~(1 << i);
+            }
         }
 }

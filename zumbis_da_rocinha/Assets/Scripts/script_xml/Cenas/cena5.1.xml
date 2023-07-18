@@ -24,7 +24,6 @@
 			<escolha>
         <estaArmado>-1</estaArmado>
 				<texto> IR PARA A CANTINA </texto>
-        <armado>1</armado>
 				<paraBloco>1</paraBloco>
 			</escolha>
       

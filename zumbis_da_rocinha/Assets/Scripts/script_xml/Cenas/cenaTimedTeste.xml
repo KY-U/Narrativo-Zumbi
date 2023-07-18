@@ -3,7 +3,7 @@
 
   <bloco s="0">
     <escolhas timed="5">
-      <resumo> Criança braba</resumo>
+      <resumo> <b>Criança braba</b></resumo>
       <escolha>
         <texto>A</texto>
         <paraBloco>1</paraBloco>
