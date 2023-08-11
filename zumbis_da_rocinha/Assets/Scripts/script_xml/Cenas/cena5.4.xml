@@ -20,7 +20,18 @@
 
       <dialogo>
         <nome>...</nome>
-        <texto> INSIRA O BILHETE</texto>
+        <texto>Fugi com o pessoal para o MERCADO ARCO ÍRIS. Vou te esperar lá</texto>
+        <item>1</item>
+      </dialogo>
+      
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Espero que esse bilhete tenha sido escrito por ela.</texto>
+      </dialogo>
+          
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>De qualquer forma vou continuar vasculhando.</texto>
       </dialogo>
 
       <dialogo>
@@ -77,7 +88,7 @@
     </dialogos>
 
     <transicao>
-      <paraCena>Fim</paraCena>
+      <paraCena>6.0</paraCena>
     </transicao>
   </bloco>
 
@@ -101,7 +112,7 @@
 		</dialogos>
 
     <transicao>
-      <paraCena>Fim</paraCena>
+      <paraCena>6.0</paraCena>
     </transicao>
   </bloco>
 

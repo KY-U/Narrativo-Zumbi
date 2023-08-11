@@ -77,17 +77,17 @@
 			<escolha>
 				<texto> PROCURAR NA MESA DO TÚLIO </texto>
 		  		<armado>0</armado>
-				<paraBloco>1</paraBloco>
+				<paraBloco>4</paraBloco>
 			</escolha>
 		
 			<escolha>
 				<texto> PROCURAR NA MESA DO DELEGADO </texto>
-				<paraBloco>2</paraBloco>
+				<paraBloco>5</paraBloco>
 			</escolha>
 		
 			<escolha>
 				<texto> ARMÁRIO </texto>
-				<paraBloco>3</paraBloco>
+				<paraBloco>6</paraBloco>
 			</escolha>
 		</escolhas>
 	</bloco>
@@ -140,17 +140,37 @@
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto> Eu só não posso ficar encurralado...</texto>
+				<texto>Ele tá se aproximando!</texto>
 			</dialogo>
 		
 			<dialogo>
 				<nome>José Carlos</nome>
 				<texto> Tem que ter uma arma aqui em algum canto.</texto>
 			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Merda não tem nada aqui. </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto>Você está <b>MACHUCADO</b></texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>AI! ESSE CARA ME ARRANHOU!</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Mas acho que consigo fugir desse maluco.</texto>
+      </dialogo>
 	  	</dialogos>
   
 		<transicao>
-			<gameOver></gameOver>
+      <paraCena>3.0</paraCena>
 		</transicao>
 	</bloco>
   

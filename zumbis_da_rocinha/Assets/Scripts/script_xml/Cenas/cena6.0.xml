@@ -4,37 +4,29 @@
 	  <dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Não tem ninguém por aqui? Tá muito quieto... </texto>
+        <texto> Está começando a escurecer..... Preciso arrumar um abrigo </texto>
 			</dialogo>
-
-      <!---> Usar só o som aqui? (Panela caindo sla)<-->
-      <dialogo>
-        <nome>...</nome>
-        <texto> *Barulhos*</texto>
-      </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Foi só falar.</texto>
+        <texto> Onde devo ficar? </texto>
       </dialogo>
     </dialogos>
     
 		<escolhas>
 			<resumo></resumo>
 			<escolha>
-        <estaArmado>-1</estaArmado>
-				<texto> IR PARA A CANTINA </texto>
-        <armado>1</armado>
-				<paraBloco>1</paraBloco>
+				<texto> FICAR NA RUA </texto>
+ 				<paraBloco>1</paraBloco>
 			</escolha>
       
 			<escolha>
-				<texto> IR PARA A QUADRA </texto>
+				<texto> PROCURAR UMA CASA VAZIA </texto>
 				<paraBloco>2</paraBloco>
 			</escolha>
 
       <escolha>
-				<texto> SUBIR AS ESCADAS </texto>
+				<texto> IR PARA O ABRIGO DA COMUNIDADE </texto>
 				<paraBloco>3</paraBloco>
 			</escolha>
   	</escolhas>
@@ -44,12 +36,12 @@
 		<dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Vamos ver...</texto>
+        <texto> Acho que consigo me esconder em algum beco para descansar...</texto>
       </dialogo>
     </dialogos>
 
     <transicao>
-      <paraCena>5.2</paraCena>
+      <gameOver></gameOver>
     </transicao>
   </bloco>
 
@@ -57,7 +49,7 @@
 		<dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Pode ser ela na quadra.</texto>
+        <texto> Devem ter algumas casas vazias</texto>
        </dialogo>
      </dialogos>
 
@@ -71,7 +63,7 @@
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto> Não posso perder tempo com isso... Ah, acho que a sala dela é no segundo andar</texto>
+				<texto>O abrigo deve ser o lugar mais seguro para descansar. Consigo chegar lá antes de anoitecer</texto>
 			</dialogo>
 		</dialogos>
 
