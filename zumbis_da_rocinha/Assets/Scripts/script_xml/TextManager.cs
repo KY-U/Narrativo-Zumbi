@@ -308,6 +308,5 @@ public class TextManager : MonoBehaviour {
     // Game Over
     public void GameOver(){
         Jogador.Morreu();
-        SceneManager.LoadScene("GameOver");
     }
 }

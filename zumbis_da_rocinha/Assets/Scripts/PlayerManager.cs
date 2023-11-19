@@ -24,6 +24,12 @@ public class PlayerManager : MonoBehaviour{
     public int armado = 0;
     public int deathCount = 0;
 
+    [SerializeField] private HUDUpdates hud;
+
+    public void Start(){
+        hud.RenewUI();
+    }
+
     // Salvar Status
     public void Salvar(){
         XmlDocument saveFile = new XmlDocument();
@@ -90,12 +96,17 @@ public class PlayerManager : MonoBehaviour{
 
         // Machucado
         public void Ai(){ 
-            machucado++; 
+            machucado++;
+            hud.UpdateUI();
+            if(machucado > 3){
+                Morreu();
+            }
         }
 
         // Contador mortes
         public void Morreu(){ 
             deathCount++; 
+            SceneManager.LoadScene("Game Over");
         }
 
         // Adicionar/retirar arma
