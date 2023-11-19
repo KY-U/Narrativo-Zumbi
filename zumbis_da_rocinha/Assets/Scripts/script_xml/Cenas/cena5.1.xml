@@ -22,7 +22,7 @@
 		<escolhas>
 			<resumo></resumo>
 			<escolha>
-        <estaArmado>-1</estaArmado>
+        
 				<texto> IR PARA A CANTINA </texto>
 				<paraBloco>1</paraBloco>
 			</escolha>
@@ -77,5 +77,33 @@
     <transicao>
       <paraCena>5.4</paraCena>
     </transicao>
+  </bloco>
+
+
+  <!--->AQUI TA A VOLTA DA QUADRA, OU SEJA, ELE NÃO PODE MAIS IR PARA A QUADRA, OU NAO QUER SLA<-->
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Para onde vou agora?</texto>
+      </dialogo>
+      
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+
+        <texto> IR PARA A CANTINA </texto>
+        <paraBloco>1</paraBloco>
+      </escolha>
+
+     
+
+      <escolha>
+        <texto> SUBIR AS ESCADAS </texto>
+        <paraBloco>3</paraBloco>
+      </escolha>
+    </escolhas>
   </bloco>
 </cena>

@@ -9,7 +9,7 @@
       
       		<dialogo>
 				<nome>...</nome>
-				<texto> Apagão e barulho em direção as celas.</texto>
+				<texto> Voce ouve um barulho em direção as <b>celas</b>.</texto>
 			</dialogo>
       	</dialogos>
     
@@ -50,6 +50,18 @@
 				<nome>José Carlos</nome>
 				<texto> Nem devia ter entrado aqui, melhor dar o fora </texto>
 			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Lembrei o que eu precisava fazer</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>
+          Preciso ir buscar minha <b>filha</b> na <b>escola</b>
+        </texto>
+      </dialogo>
 		</dialogos>
 
 		<transicao>
@@ -77,22 +89,51 @@
 			<escolha>
 				<texto> PROCURAR NA MESA DO TÚLIO </texto>
 		  		<armado>0</armado>
-				<paraBloco>4</paraBloco>
-			</escolha>
-		
-			<escolha>
-				<texto> PROCURAR NA MESA DO DELEGADO </texto>
 				<paraBloco>5</paraBloco>
 			</escolha>
 		
 			<escolha>
-				<texto> ARMÁRIO </texto>
+				<texto> PROCURAR NA MESA DO DELEGADO </texto>
 				<paraBloco>6</paraBloco>
+			</escolha>
+		
+			<escolha>
+				<texto> ARMÁRIO </texto>
+				<paraBloco>7</paraBloco>
 			</escolha>
 		</escolhas>
 	</bloco>
-  
-	<bloco s="4">
+
+
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Eu preciso fugir, esse cara ta igualzinho o que entrou em casa.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Ou eu posso garantir que esse cara não me siga.</texto>
+      </dialogo>
+    </dialogos>
+    
+    <escolhas>
+        <resumo> </resumo>
+        <escolha>
+          <texto> IR EMBORA </texto>
+          <paraBloco>2</paraBloco>
+        </escolha>
+
+        <escolha>
+          <texto> PROCURAR UMA ARMA </texto>
+          <paraBloco>3</paraBloco>
+        </escolha>
+      </escolhas>
+   
+    
+  </bloco>
+	<bloco s="5">
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
@@ -127,8 +168,19 @@
 		
 	  		<dialogo>
 				<nome>José Carlos</nome>
-				<texto>Não adianta pensar nisso agora...o mais importante é encontrar ela.</texto>
+				<texto>Não adianta pensar nisso agora...</texto>
 		  	</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>MERDA! Preciso ir buscar minha <b>filha</b> na <b>escola</b>
+      </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Espero que ela esteja bem</texto>
+      </dialogo>
 	 	</dialogos>
 	  
 	  	<transicao>
@@ -136,7 +188,7 @@
 	  	</transicao>
 	</bloco>
   
-	<bloco s="5">
+	<bloco s="6">
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
@@ -154,15 +206,15 @@
       </dialogo>
 
       <dialogo>
-        <nome>...</nome>
-        <texto>Você está <b>MACHUCADO</b></texto>
-      </dialogo>
-
-      <dialogo>
         <nome>José Carlos</nome>
         <texto>AI! ESSE CARA ME ARRANHOU!</texto>
       </dialogo>
 
+      <dialogo>
+        <nome>...</nome>
+        <texto>Você está <b>MACHUCADO</b></texto>
+      </dialogo>
+   
       <dialogo>
         <nome>José Carlos</nome>
         <texto>Mas acho que consigo fugir desse maluco.</texto>
@@ -174,11 +226,11 @@
 		</transicao>
 	</bloco>
   
-	<bloco s="6">
+	<bloco s="7">
 	  	<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto>Tá, deve ter algo aqui... Um escudo?</texto>
+				<texto>Tá, deve ter algo aqui... Um <b>escudo</b>?</texto>
 				<item>1</item>
 			</dialogo>
 			
@@ -199,17 +251,31 @@
 			
 			<dialogo>
 				<nome>...</nome>
-				<texto>Barulho do homem batendo no escudo.</texto>
+				<texto>Voce escuta barulhos dele batendo no escudo</texto>
 			</dialogo>
 			
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto>Não adianta pensar nisso agora... o mais importante é encontrar ela.</texto>
+				<texto>Não adianta pensar nisso agora... Lembrei o que precisava fazer</texto>
 			</dialogo>
-	  	</dialogos>
+        
+        <dialogo>
+          <nome>José Carlos</nome>
+          <texto>Preciso ir buscar minha <b>filha</b> na <b>escola</b> </texto>
+        </dialogo>
+
+        <dialogo>
+          <nome>José Carlos</nome>
+          <texto>Espero que ela esteja bem</texto>
+        </dialogo>
+      </dialogos>
+	  
 	  
 		<transicao>
 			<paraCena>3.0</paraCena>
 		</transicao>
 	</bloco>
 </cena>
+
+
+
