@@ -444,7 +444,7 @@ MonoBehaviour:
   machucado: 0
   armado: 0
   deathCount: 0
-  hud: {fileID: 0}
+  hud: {fileID: 2078461363}
 --- !u!4 &490985902
 Transform:
   m_ObjectHideFlags: 0
@@ -1937,6 +1937,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 1089072633}
+--- !u!114 &2078461363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3256366579992073382, guid: 917027ac65f102d07800eca354afb2eb, type: 3}
+  m_PrefabInstance: {fileID: 4552903175984039123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd728d3feb36c58787c8028f670edae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2102341455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,18 +2257,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1284592181858709151, guid: 917027ac65f102d07800eca354afb2eb, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5882353
-      objectReference: {fileID: 0}
     - target: {fileID: 3256366579992073382, guid: 917027ac65f102d07800eca354afb2eb, type: 3}
       propertyPath: pm
       value: 
       objectReference: {fileID: 490985901}
-    - target: {fileID: 3602601861944903678, guid: 917027ac65f102d07800eca354afb2eb, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5882353
-      objectReference: {fileID: 0}
     - target: {fileID: 4552903174262098273, guid: 917027ac65f102d07800eca354afb2eb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2345,14 +2348,6 @@ PrefabInstance:
     - target: {fileID: 4552903174262098301, guid: 917027ac65f102d07800eca354afb2eb, type: 3}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 6518430255981848196, guid: 917027ac65f102d07800eca354afb2eb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -343
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927110718432195576, guid: 917027ac65f102d07800eca354afb2eb, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5882353
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 917027ac65f102d07800eca354afb2eb, type: 3}

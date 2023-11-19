@@ -27,6 +27,11 @@ public class PlayerManager : MonoBehaviour{
     [SerializeField] private HUDUpdates hud;
 
     public void Start(){
+        StartCoroutine(WarmupUI());
+    }
+
+    IEnumerator WarmupUI(){
+        yield return new WaitForSeconds(.2f);
         hud.RenewUI();
     }
 

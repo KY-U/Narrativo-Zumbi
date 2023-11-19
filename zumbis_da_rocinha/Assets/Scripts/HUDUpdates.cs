@@ -20,5 +20,6 @@ public class HUDUpdates : MonoBehaviour
         for(int i = 0; i < 3; i++){
             hearts[i].sprite = coracaoCheio;
         }
+        UpdateUI();
     }
 }
