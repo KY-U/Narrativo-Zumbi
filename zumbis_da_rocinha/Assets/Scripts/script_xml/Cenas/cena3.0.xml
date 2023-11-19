@@ -216,6 +216,7 @@
     </dialogos>
 
     <transicao>
+      <machucado></machucado>
       <paraCena>4.0</paraCena>
     </transicao>
   </bloco>

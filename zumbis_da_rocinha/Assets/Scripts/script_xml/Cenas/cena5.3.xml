@@ -28,8 +28,10 @@
       
 			<escolha>
 				<texto> CHECAR EMBAIXO DA ARQUIBANCADA </texto>
+        <armado>3</armado>
 				<paraBloco>2</paraBloco>
-        <!---><armado>2</armado> para o taco<-->
+        
+       <armado>2</armado> 
 			</escolha>
 
       <escolha>
@@ -58,16 +60,34 @@
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Ah. Voce tambem virou um z-</texto>
+        <texto> Ah. Voce tambem virou um zumbi</texto>
         <item>0</item>
       </dialogo>
     </dialogos>
+    
+      <escolhas>
+        <resumo></resumo>
+        <escolha>
+          <texto>ATIRAR! </texto>
+          <estaArmado>1</estaArmado>
+          <paraBloco>4</paraBloco>
+        </escolha>
 
-    <transicao>
-      <gameOver></gameOver>
-    </transicao>
-  </bloco>
+        <escolha>
+          <texto>Esfaquear! </texto>
+          <estaArmado>2</estaArmado>
+          <paraBloco>5</paraBloco>
+        </escolha>
 
+        <escolha>
+          <texto>Sair na mão </texto>
+          <paraBloco>6</paraBloco>
+        </escolha>
+     
+      </escolhas>
+  
+   </bloco>
+  
 	<bloco s="2">
 		<dialogos>
 			<dialogo>
@@ -78,7 +98,7 @@
 		</dialogos>
 
     <transicao>
-      <paraCena>5.1</paraCena>
+      <paraCena b="4">5.1</paraCena>
     </transicao>
   </bloco>
 
@@ -95,5 +115,217 @@
     </transicao>
   </bloco>
 
- 
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Tiros estão ficando cada vez mais efetivos contra voces </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="4">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="5">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Toma TOMA ESSA </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não aguento mais esses bichos aparecendo do nada </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="4">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="6">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Toma TOMA ESSA </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Merda, sair na mão com isso nao adiant- </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+
+
+  <!---> MIGUEL OHARA<-->
+  <bloco s="7">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Merda, tá mais vazio do que eu gostar-</texto>
+      </dialogo>
+
+     
+      <dialogo>
+        <nome>...</nome>
+        <texto> *Sons de batida no armário*</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Mas que- o que foi isso?</texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto> CHECAR O ARMÁRIO </texto>
+        <paraBloco>8</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto> CHECAR EMBAIXO DA ARQUIBANCADA </texto>
+        <armado>3</armado>
+        <paraBloco>9</paraBloco>
+
+        <armado>2</armado>
+      </escolha>
+
+      <escolha>
+        <texto> IGNORAR O BARULHO </texto>
+        <paraBloco>10</paraBloco>
+      </escolha>
+    </escolhas>
+   </bloco>
+
+  <bloco s="8">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Veio do armário... Tem alguém lá dentro?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Parece um professor.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> EI ONDE ESTÃO AS CRIANÇAS?</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ah. Voce tambem virou um zumbi</texto>
+        <item>0</item>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto>ATIRAR! </texto>
+        <estaArmado>1</estaArmado>
+        <paraBloco>11</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>Esfaquear! </texto>
+        <estaArmado>2</estaArmado>
+        <paraBloco>12</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>Sair na mão </texto>
+        <paraBloco>13</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <bloco s="9">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não tem ninguém aqui, mas... Acho que posso levar isso por precaução</texto>
+        <item>1</item>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="9">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="10">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não vou perder tempo com isso... </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="9">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="11">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Tiros estão ficando cada vez mais efetivos contra voces </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="9">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="12">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Toma TOMA ESSA </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não aguento mais esses bichos aparecendo do nada </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="9">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="13">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Toma TOMA ESSA </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Merda, sair na mão com isso nao adiant- </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+
 </cena>

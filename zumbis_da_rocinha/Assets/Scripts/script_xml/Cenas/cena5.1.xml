@@ -80,7 +80,7 @@
   </bloco>
 
 
-  <!--->AQUI TA A VOLTA DA QUADRA, OU SEJA, ELE NÃO PODE MAIS IR PARA A QUADRA, OU NAO QUER SLA<-->
+  <!--->AQUI TA A VOLTA DA QUADRA<-->
   <bloco s="4">
     <dialogos>
       <dialogo>
@@ -95,15 +95,140 @@
       <escolha>
 
         <texto> IR PARA A CANTINA </texto>
-        <paraBloco>1</paraBloco>
+        <paraBloco>10</paraBloco>
       </escolha>
 
+      <escolha>
+        <texto> VOLTAR PARA A QUADRA </texto>
+        <paraBloco>7</paraBloco>
+      </escolha>
      
+      <escolha>
+        <texto> SUBIR AS ESCADAS </texto>
+        <paraBloco>3</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <!--->AQUI TA A VOLTA DA CANTINA <-->
+  <bloco s="5">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Para onde vou agora?</texto>
+      </dialogo>
+
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto> VOLTAR PARA A CANTINA </texto>
+        <paraBloco>6</paraBloco>
+      </escolha>
+      
+      <escolha>
+        <texto> IR PARA A QUADRA</texto>
+        <paraBloco>8</paraBloco>
+      </escolha>
+
 
       <escolha>
         <texto> SUBIR AS ESCADAS </texto>
         <paraBloco>3</paraBloco>
       </escolha>
     </escolhas>
+  </bloco>
+
+  <!--->CASO VOCE SEJA DOIDO E QUEIRA VOLTAR PRA VER O QUE TEM NA CANTINA <-->
+  <bloco s="6">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ja passei por lá, tenho que procurar em outro lugar</texto>
+      </dialogo>
+
+    </dialogos>
+
+    <escolhas>
+      <escolha>
+        <texto> IR PARA A QUADRA</texto>
+        <paraBloco>8</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto> SUBIR AS ESCADAS </texto>
+        <paraBloco>3</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <!--->CASO VOCE SEJA DOIDO E QUEIRA VOLTAR PRA QUADRA<-->
+  <bloco s="7">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ja passei por lá, tenho que procurar em outro lugar</texto>
+      </dialogo>
+
+    </dialogos>
+
+    <escolhas>
+      <escolha>
+        <texto> IR PARA A CANTINA</texto>
+        <paraBloco>10</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto> SUBIR AS ESCADAS </texto>
+        <paraBloco>3</paraBloco>
+      </escolha>
+    </escolhas> 
+     </bloco>
+
+  <!--->MIGUEL O'HARA<-->
+  <bloco s="8">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Vou investigar</texto>
+      </dialogo>
+
+    </dialogos>
+
+    <transicao>
+      <paraCena b="7">5.3</paraCena>
+    </transicao>
+  </bloco>
+  
+  <!--->ILUSAO DA ESCOLHA<-->
+  <bloco s="9">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Para onde vou?</texto>
+      </dialogo>
+    </dialogos>
+    
+    <escolhas>
+    <escolha>
+      <texto> SUBIR AS ESCADAS </texto>
+      <paraBloco>3</paraBloco>
+    </escolha>
+    </escolhas>
+  </bloco>
+
+  <!--->CORRIGINDO O LOOP NO SENTIDO QUADRA -> CANTINA <-->
+  <bloco s="10">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Vamos ver...</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="7">5.2</paraCena>
+    </transicao>
   </bloco>
 </cena>

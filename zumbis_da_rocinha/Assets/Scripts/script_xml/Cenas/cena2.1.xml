@@ -63,7 +63,9 @@
     </dialogos>
 
     <transicao>
+      <machucado></machucado>
       <paraCena b="4">2.0</paraCena>
+      
     </transicao>
 	</bloco>
 
@@ -106,7 +108,7 @@
     </dialogos>
 
     <transicao>
-      <paraCena>2.2</paraCena>
+      <paraCena>3.0</paraCena>
     </transicao>
   </bloco>
 

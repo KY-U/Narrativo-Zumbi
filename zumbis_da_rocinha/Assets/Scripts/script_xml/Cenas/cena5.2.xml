@@ -12,7 +12,7 @@
         <resumo></resumo>
         <escolha>
           <texto> INVESTIGAR A CANTINA </texto>
-          <armado>1</armado>
+          <armado>2</armado>
           <paraBloco>1</paraBloco>
         </escolha>
 
@@ -38,7 +38,7 @@
     </dialogos>
 
     <transicao>
-      <paraCena>5.1</paraCena>
+      <paraCena b="5">5.1</paraCena>
     </transicao>
   </bloco>
 
@@ -52,8 +52,75 @@
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Drog- </texto>
+        <texto> Ah cara! Até a tia da cantina </texto>
         <item>0</item>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto>ATIRAR! </texto>
+        <estaArmado>1</estaArmado>
+        <paraBloco>4</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>BATER COM O TACO </texto>
+        <estaArmado>3</estaArmado>
+        <paraBloco>5</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>SAIR NA MÃO </texto>
+        <paraBloco>6</paraBloco>
+      </escolha>
+
+    </escolhas>
+ </bloco>
+
+  <bloco s="3">
+		<transicao>
+      <paraCena b="5">5.1</paraCena>
+    </transicao>
+	</bloco>
+
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> O recreio acabou </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="5">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="5">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> AAAAAAH MORRE </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="5">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="6">
+    <dialogos>
+      <dialogo>
+        <nome>...</nome>
+        <texto> Ela vomita algo verde em você</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não to me sentindo legal...</texto>
       </dialogo>
     </dialogos>
 
@@ -62,10 +129,133 @@
     </transicao>
   </bloco>
 
+  <bloco s="7">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Vazio... O barulho parece ser na cozinha </texto>
+      </dialogo>
+    </dialogos>
 
-  <bloco s="3">
-		<transicao>
-      <paraCena>5.1</paraCena>
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto> INVESTIGAR A CANTINA </texto>
+        <armado>2</armado>
+        <paraBloco>8</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto> IR PARA A COZINHA </texto>
+        <paraBloco>9</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto> VOLTAR </texto>
+        <paraBloco>1O</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <bloco s="8">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Tem uma faca aqui, melhor eu levar comigo. </texto>
+        <item>1</item>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="9">5.1</paraCena>
     </transicao>
-	</bloco>
+  </bloco>
+
+  <bloco s="9">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Tem alguem ai? Precisa de ajuda? </texto>
+
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ah cara! Até a tia da cantina </texto>
+        <item>0</item>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto>ATIRAR! </texto>
+        <estaArmado>1</estaArmado>
+        <paraBloco>11</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>BATER COM O TACO </texto>
+        <estaArmado>3</estaArmado>
+        <paraBloco>12</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>SAIR NA MÃO </texto>
+        <paraBloco>13</paraBloco>
+      </escolha>
+
+    </escolhas>
+  </bloco>
+
+  <bloco s="10">
+    <transicao>
+      <paraCena b="9">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="11">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> O recreio acabou </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="9">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="12">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> AAAAAAH MORRE </texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena b="9">5.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="13">
+    <dialogos>
+      <dialogo>
+        <nome>...</nome>
+        <texto> Ela vomita algo verde em você</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não to me sentindo legal...</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+  
 </cena>
