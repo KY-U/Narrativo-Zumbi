@@ -247,8 +247,8 @@ public class TextManager : MonoBehaviour {
 
 
                     // Testa as consequências da escolha
-                    if(escolha["machucado"] != null)
-                        botao.GetComponent<Button>().onClick.AddListener(Jogador.Ai);
+                    // if(escolha["machucado"] != null)
+                    //     botao.GetComponent<Button>().onClick.AddListener(Jogador.Ai);
                     if(escolha["armado"] != null)
                         botao.GetComponent<Button>().onClick.AddListener(delegate {Jogador.GunControl(escolha["armado"].InnerXml);});
 
@@ -264,6 +264,8 @@ public class TextManager : MonoBehaviour {
 
     public void CallTransicao(){
         XmlNode transicao = xReader.ParseTransicao();
+        if(transicao["machucado"] != null)
+            this.Jogador.Ai();
         if(transicao["gameOver"] != null)
             this.GameOver();
         else if(transicao["paraCena"] != null){
@@ -308,6 +310,5 @@ public class TextManager : MonoBehaviour {
     // Game Over
     public void GameOver(){
         Jogador.Morreu();
-        SceneManager.LoadScene("GameOver");
     }
 }
