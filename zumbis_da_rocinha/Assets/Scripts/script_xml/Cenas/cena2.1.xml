@@ -25,13 +25,10 @@
 				<paraBloco>1</paraBloco>
 			</escolha>
       
-			<escolha>
-				<texto> LUTAR </texto>
-				<paraBloco>2</paraBloco>
-			</escolha>
+			
       
 			<escolha>
-				<texto> CORRER </texto>
+				<texto> IR EMBORA</texto>
 				<paraBloco>3</paraBloco>
 			</escolha>
 		</escolhas>
@@ -42,34 +39,35 @@
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto> E-ei calma, não tem necessidade diss-</texto>
+				<texto> E aí cara, ce ta legal ai dentro?</texto>
+        <item>0</item>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ele ta entortando as grades que porr-</texto>
+        <item>0</item>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> O zumbi te arranha.</texto>
+        <item>0</item>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Você está <b>MACHUCADO</b>.</texto>
         <item>0</item>
       </dialogo>
     </dialogos>
 
     <transicao>
-      <gameOver></gameOver>
+      <paraCena b="4">2.0</paraCena>
     </transicao>
 	</bloco>
 
-	<bloco s="2">
-		<dialogos>
-      <dialogo>
-        <nome>...</nome>
-        <texto> Isso nao faz o menor sentido.</texto>
-        <item>1</item>
-      </dialogo>
-      
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto> Tu tá maluco irmão? O q-</texto>
-      </dialogo>
-    </dialogos>
-
-    <transicao>
-      <gameOver></gameOver>
-    </transicao>
-  </bloco>
+	
 
   <bloco s="3">
     <dialogos>

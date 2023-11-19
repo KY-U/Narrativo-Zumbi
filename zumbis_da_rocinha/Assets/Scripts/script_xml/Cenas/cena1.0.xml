@@ -35,7 +35,7 @@
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto> É tenho que ir buscar ela mais tarde, preciso de alguma coisa pra passar a ressaca.</texto>
+				<texto>Preciso de alguma coisa pra passar a ressaca.</texto>
 			</dialogo>
       
     		<dialogo>
@@ -69,13 +69,31 @@
 		
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM SÃO VOC-</texto>
+				<texto> QUE ISSO ARROMBARAM A PORTA? QUEM É VOCE?</texto>
       <item>0</item>
+			</dialogo>
+    
+    <dialogo>
+				<nome>José Carlos</nome>
+				<texto> Desgraçado desgruda de mim. SAI</texto>
+     
+			</dialogo>
+      
+      <dialogo>
+				<nome>...</nome>
+				<texto> Você empurra o homem e consegue sair da sua casa</texto>
+     
+			</dialogo>
+    
+     <dialogo>
+				<nome>...</nome>
+				<texto> Voce está <b>MACHUCADO</b>  </texto>
+     
 			</dialogo>
 		</dialogos>
 
 		<transicao> 
-			<gameOver></gameOver>
+			<paraCena>1.1</paraCena>
 		</transicao>
 	</bloco>
  </cena>

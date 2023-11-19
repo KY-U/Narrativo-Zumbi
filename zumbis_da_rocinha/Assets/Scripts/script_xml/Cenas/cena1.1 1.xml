@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+	<bloco s="0">
+		<dialogos>
+			<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Que merda foi essa? E porque nao tem ninguem na rua?</texto>
+			</dialogo>
+      
+      		<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Isso tá muito estranho, não é nem meio dia</texto>
+			</dialogo>
+      
+      		<dialogo>
+				<nome>José Carlos</nome>
+				<texto>Vou até a delegacia o <b>Túlio</b> deve saber me explicar o que ta rolando </texto>
+			</dialogo>
+    
+      		<dialogo>
+        		<nome>...</nome>
+				<texto> Alguns minutos andando depois.</texto>
+			</dialogo>
+      
+    		<dialogo>
+				<nome>José Carlos</nome>
+				<texto> Coé Túlio ta aí? TÚLIO?</texto>
+			</dialogo>
+    	</dialogos>
+      
+		<transicao>
+			<paraCena>2.0</paraCena>
+		</transicao>
+	</bloco>
+</cena>
