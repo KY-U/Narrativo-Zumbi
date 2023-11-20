@@ -156,7 +156,7 @@ public class TextManager : MonoBehaviour {
     }
 
     // sub rotina para imprimir o texto letra por letra
-    WaitForSeconds fastDelay = new WaitForSeconds(0.01f);
+    WaitForSeconds fastDelay = new WaitForSeconds(0.005f);
     WaitForSeconds slowDelay = new WaitForSeconds(0.05f);
     bool writingB = false;
     int boldTag;

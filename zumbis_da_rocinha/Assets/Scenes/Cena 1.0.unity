@@ -2206,21 +2206,9 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 440646830}
-    - target: {fileID: 174276892515647577, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 174276892515647577, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 174276893771643089, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
       propertyPath: m_Name
       value: Transicao
-      objectReference: {fileID: 0}
-    - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 174276893771643095, guid: e8a1235528c6290f6885fa0bf47d3650, type: 3}
       propertyPath: m_LocalPosition.x

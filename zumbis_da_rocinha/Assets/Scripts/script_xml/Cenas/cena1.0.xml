@@ -92,7 +92,8 @@
 			</dialogo>
 		</dialogos>
 
-		<transicao> 
+		<transicao>
+			<machucado></machucado>
 			<paraCena>1.1.1</paraCena>
 		</transicao>
 	</bloco>
