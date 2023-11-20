@@ -82,6 +82,7 @@
 			<resumo></resumo>
 			<escolha>
 				<texto> ARMA </texto>
+        <estaArmado>1</estaArmado>
 				<paraBloco>4</paraBloco>
 			</escolha>
       
@@ -116,6 +117,7 @@
     </dialogos>
   
     <transicao>
+      <machucado></machucado>
       <paraCena>5.0</paraCena>
     </transicao>
   </bloco>

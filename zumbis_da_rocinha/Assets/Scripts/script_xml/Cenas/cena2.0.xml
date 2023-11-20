@@ -88,7 +88,7 @@
 			<resumo> </resumo>
 			<escolha>
 				<texto> PROCURAR NA MESA DO TÚLIO </texto>
-		  		<armado>0</armado>
+		  		<armado>1</armado>
 				<paraBloco>5</paraBloco>
 			</escolha>
 		
@@ -109,7 +109,7 @@
     <dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Eu preciso fugir, esse cara ta igualzinho o que entrou em casa.</texto>
+        <texto>Eu preciso fugir, esse cara ta muito esquisito.</texto>
       </dialogo>
 
       <dialogo>
@@ -222,7 +222,9 @@
 	  	</dialogos>
   
 		<transicao>
+      <machucado></machucado>
       <paraCena>3.0</paraCena>
+      
 		</transicao>
 	</bloco>
   

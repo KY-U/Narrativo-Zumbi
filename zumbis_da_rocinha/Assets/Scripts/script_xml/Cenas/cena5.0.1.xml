@@ -23,12 +23,25 @@
 			<resumo></resumo>
 			<escolha>
 				<texto>ATIRAR!</texto>
+        <estaArmado>1</estaArmado>
 				<paraBloco>1</paraBloco>
 			</escolha>
 
-      <resumo></resumo>
+      <escolha>
+        <texto>ESFAQUEAR</texto>
+        <estaArmado>2</estaArmado>
+        <paraBloco>2</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto>BATER COM O TACO</texto>
+        <estaArmado>3</estaArmado>
+        <paraBloco>2</paraBloco>
+      </escolha>
+
       <escolha>
         <texto>FUGIR</texto>
+       
         <paraBloco>2</paraBloco>
       </escolha>
     </escolhas>
@@ -51,18 +64,38 @@
     <dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Não aguento mais correr...</texto>
-      </dialogo>
-
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto>Eu não consig-</texto>
+        <texto> MORRE DE UMA VEZ!.</texto>
       </dialogo>
 
     </dialogos>
     <transicao>
-      <gameOver></gameOver>
+      <paraCena>6.0</paraCena>
     </transicao>
   </bloco>
-	
+
+  <bloco s="3">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> MORRE DE UMA VEZ!.</texto>
+      </dialogo>
+
+    </dialogos>
+    <transicao>
+      <paraCena>6.0</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Minha vida agora é só fugir desses monstros?.</texto>
+      </dialogo>
+
+    </dialogos>
+    <transicao>
+      <paraCena>6.0</paraCena>
+    </transicao>
+  </bloco>
 </cena>

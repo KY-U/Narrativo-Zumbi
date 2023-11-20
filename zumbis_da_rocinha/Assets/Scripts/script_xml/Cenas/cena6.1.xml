@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> E aí Claudinei </texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Sou bem vindo no abrigo da comunidade? </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Claudinei</nome>
+        <texto> Fica a vontade Zé Carlos </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Claudinei</nome>
+        <texto> Ta acontecendo alguma parada estranha aqui na Rocinha </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Claudinei</nome>
+        <texto>Só vai ter que largar tuas armas com nois</texto>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto> DEIXAR ARMAS COM O CLAUDINEI </texto>
+        <estaArmado>1</estaArmado>
+        <estaArmado>2</estaArmado>
+        <estaArmado>3</estaArmado>
+        <armado>0</armado>
+ 				<paraBloco>1</paraBloco>
+			</escolha>
+      
+			<escolha>
+				<texto> RECUSAR </texto>
+				<paraBloco>2</paraBloco>
+			</escolha>
+     
+  	</escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Fica com elas, só preciso descansar</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>6.2</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="2">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não vo poder estar fazendo isso amigo</texto>
+       </dialogo>
+
+      <dialogo>
+        <nome>Claudinei</nome>
+        <texto> Então aqui dentro ce não fica</texto>
+      </dialogo>
+
+
+    </dialogos>
+
+    <transicao>
+      <paraCena b="4">6.0</paraCena>
+    </transicao>
+  </bloco>
+
+
+	
+</cena>

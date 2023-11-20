@@ -38,6 +38,16 @@
         <nome>José Carlos</nome>
         <texto> Acho que consigo me esconder em algum beco para descansar...</texto>
       </dialogo>
+    
+      <dialogo>
+        <nome>...</nome>
+        <texto> Dormir na rua é uma ideia bem ruim....</texto>
+      </dialogo>
+        
+    <dialogo>
+        <nome>...</nome>
+        <texto> Zumbis te encontraram enquanto dormia e você morreu</texto>
+      </dialogo>
     </dialogos>
 
     <transicao>
@@ -54,7 +64,7 @@
      </dialogos>
 
     <transicao>
-      <paraCena>5.3</paraCena>
+      <paraCena>6.1</paraCena>
     </transicao>
   </bloco>
 
@@ -63,12 +73,41 @@
 		<dialogos>
 			<dialogo>
 				<nome>José Carlos</nome>
-				<texto>O abrigo deve ser o lugar mais seguro para descansar. Consigo chegar lá antes de anoitecer</texto>
+				<texto>O abrigo deve ser o lugar mais seguro pra eu descansar. Consigo chegar lá antes de anoitecer</texto>
 			</dialogo>
 		</dialogos>
 
     <transicao>
-      <paraCena>5.4</paraCena>
+      <paraCena>6.1</paraCena>
     </transicao>
   </bloco>
+
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não posso ficar no abrigo, então nesse caso... </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Onde devo ficar? </texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto> FICAR NA RUA </texto>
+        <paraBloco>1</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto> PROCURAR UMA CASA VAZIA </texto>
+        <paraBloco>2</paraBloco>
+      </escolha>
+
+    </escolhas>
+  </bloco>
+
 </cena>

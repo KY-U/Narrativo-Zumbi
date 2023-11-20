@@ -20,7 +20,7 @@
 
       <dialogo>
         <nome>...</nome>
-        <texto>Fugi com o pessoal para o MERCADO ARCO ÍRIS. Vou te esperar lá</texto>
+        <texto>Fugi com o pessoal para o <b>MERCADO ARCO ARIES</b>. Vou te esperar lá</texto>
         <item>1</item>
       </dialogo>
       
@@ -57,13 +57,21 @@
 			<resumo></resumo>
 			<escolha>
 				<texto> ATIRAR! </texto>
+        <estaArmado>1</estaArmado>
 				<paraBloco>1</paraBloco>
 			</escolha>
       
 			<escolha>
-				<texto> FUGIR </texto>
+				<texto> FACADA </texto>
+        <estaArmado>2</estaArmado>
 				<paraBloco>2</paraBloco>
 			</escolha>
+
+      <escolha>
+        <texto> FUGIR </texto>
+ 
+        <paraBloco>3</paraBloco>
+      </escolha>
     </escolhas>
 	</bloco>
 
@@ -88,31 +96,53 @@
     </dialogos>
 
     <transicao>
-      <paraCena>6.0</paraCena>
+      <paraCena>5.0.1</paraCena>
     </transicao>
   </bloco>
 
 	<bloco s="2">
 		<dialogos>
 			<dialogo>
-				<nome>José Carlos</nome>
-				<texto> Não posso matar uma criança</texto>
-     
-			</dialogo>
+				<nome>...</nome>
+				<texto> Voce acabou de escolher dar uma facada numa criança</texto>
+     	</dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Você é uma péssima pessoa</texto>
+      </dialogo>
+
+      
+		</dialogos>
+
+    <transicao>
+      <paraCena></paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="3">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não consigo matar uma criança</texto>
+      </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Preciso fugir.</texto>
+        <texto> Preciso fugir</texto>
       </dialogo>
 
       <dialogo>
         <nome>...</nome>
-        <texto>Voce foi MACHUCADO</texto>
+        <texto> Voce foi machucado </texto>
       </dialogo>
-		</dialogos>
+
+
+    </dialogos>
 
     <transicao>
-      <paraCena>6.0</paraCena>
+      <machucado></machucado>
+      <paraCena>5.0.1</paraCena>
     </transicao>
   </bloco>
 

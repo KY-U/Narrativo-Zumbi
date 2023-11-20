@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xReader:
-    xmlFile: {fileID: 4900000, guid: 022633a9fa8ddf94bbf7d8524261fcf2, type: 3}
+    xmlFile: {fileID: 4900000, guid: 65c6b86576ec42f4ead8ff1bf569ac5a, type: 3}
   canvas: {fileID: 2136870789}
   prefabDialogo: {fileID: 7265900195459898979, guid: 35cdb936519d1e008a60ebdc1be5c71e, type: 3}
   prefabEscolhas: {fileID: 1177507080712276988, guid: 65701d6ef96e2a09c961dc8e7cec4e11, type: 3}

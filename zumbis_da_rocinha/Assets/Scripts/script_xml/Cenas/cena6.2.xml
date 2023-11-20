@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Vou dormir um pouco, to precisando relaxar depois de hoje </texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Ao amanhecer... </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Preciso ir atrás dela, ela está no <b>Mercado Arco Aries</b>.
+      </texto>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto>IR PARA O MERCADO</texto>   
+ 				<paraBloco>1</paraBloco>
+			</escolha>
+	 </escolhas>
+	</bloco>
+
+  <bloco s="1">
+		<dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Ja to chegando filha</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>6.3</paraCena>
+    </transicao>
+  </bloco>
+
+</cena>
