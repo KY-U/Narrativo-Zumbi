@@ -4,30 +4,99 @@
 	  <dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Aqui parece bom, acho que não tem ninguem</texto>
+        <texto>Parece um bom lugar para dormir</texto>
 			</dialogo>
 
       <dialogo>
-        <nome>José Carlos</nome>
-        <texto> Espero que eu esteja certo </texto>
+        <nome>...</nome>
+        <texto> Depois de um tempo </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto>Voce acorda com um zumbi em cima de voce</texto>
       </dialogo>
     </dialogos>
     
 		<escolhas>
-			<resumo></resumo>
-			<escolha>
-				<texto> ENTRAR NA CASA </texto>
- 				<paraBloco>1</paraBloco>
-			</escolha>    
-  	</escolhas>
-    
-	</bloco>
-  <bloco s="1">
 		
-    <transicao>
-      <paraCena>6.5</paraCena>
-    </transicao>
+			<escolha>
+				<texto> ATIRAR </texto>
+        <estaArmado>1</estaArmado>
+ 				<paraBloco>1</paraBloco>
+			</escolha>
+
+      <escolha>
+        <texto> EMPURRAR </texto>
+     
+        <paraBloco>2</paraBloco>
+      </escolha>
+    </escolhas>
+    	</bloco>
+  
+  
+  <bloco s="1">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>CARALHO QUE SUSTO!</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>SAI DE CIMA! </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Meu jesus do céu não tenho mais paz</texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto>IR EMBORA</texto>
+        <paraBloco>3</paraBloco>
+      </escolha>
+    </escolhas>
   </bloco>
 
- 
+  <bloco s="2">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>CARALHO QUE SUSTO!</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto>Você foi machucado</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Preciso fugir imediatamente</texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>
+      <resumo></resumo>
+      <escolha>
+        <texto>CORRER</texto>
+        <paraBloco>3</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <bloco s="3">
+
+    <transicao>
+      <machucado></machucado>
+      <transicao>
+        <paraCena b="1">6.4</paraCena>
+      </transicao>
+    </transicao>
+   
+  </bloco>
 </cena>
