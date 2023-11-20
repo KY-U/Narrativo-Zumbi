@@ -29,5 +29,31 @@
     </transicao>
   </bloco>
 
- 
+
+  <bloco s="2">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Ta quase amanhecendo</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Vou correr para o mercado</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <paraCena>6.3</paraCena>
+    </transicao>
+
+  </bloco>
+  <bloco s="1">
+
+    <transicao>
+      <paraCena>6.5</paraCena>
+    </transicao>
+  </bloco>
+
+
 </cena>
