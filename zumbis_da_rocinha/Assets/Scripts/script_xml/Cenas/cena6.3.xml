@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Cheguei, parece bem quieto.... </texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> FILHAAAAAAAAAAAAA </texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto>O seu grito atrai zumbis e eles são atraídos para voce</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Merda vo achar ela rápido.</texto>
+      </dialogo>
+
+    </dialogos>
+
+    <transicao>
+      <paraCena>7.0</paraCena>
+    </transicao>
+  </bloco>
+
+
+	
+</cena>

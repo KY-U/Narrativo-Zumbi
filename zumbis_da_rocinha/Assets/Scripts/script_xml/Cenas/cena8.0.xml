@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Merda eles estao vindo atrás de nós</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto>Corre pai corre</texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>
+      <escolha>
+        <texto> CONTINUAR CORRENDO</texto>
+        <paraBloco>1</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto> REZAR POR UM MILAGRE</texto>
+        <paraBloco>2</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <bloco s="1">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>FILHAAAAAAAAAAA CADEEEEE VOCEEEEEEEE</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Zumbis são atraídos pelo seu grito</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Merda, merda, merdaaaaa</texto>
+      </dialogo>
+    </dialogos>
+
+    <escolhas>    
+      <escolha>
+        <texto> ATIRAR </texto>
+        <armado>1</armado>
+        <paraBloco>3</paraBloco>
+      </escolha>
+
+      <escolha>
+        <texto> PROCURAR ELA ENQUANTO CORRE </texto>
+        <paraBloco>4</paraBloco>
+      </escolha>
+    </escolhas>
+  </bloco>
+
+  <bloco s="2">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Eu vou te encontrar eu prometo...</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Voce escuta um choro dentro de uma porta</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> !!!!!!</texto>
+      </dialogo>
+    </dialogos>
+  </bloco>
+  
+    <escolhas>
+      <escolha>
+        <texto> ABRIR A PORTA </texto>
+
+        <paraBloco>5</paraBloco>
+      </escolha>
+    </escolhas>
+  
+  <bloco s="3">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>MORRAM VOCES NAO VAO PEGAR MINHA FILHA</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Mais e mais zumbis continuam a se acumular ao seu redor</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Não, não NÃAAAAAOOOOOOO</texto>
+      </dialogo>
+    </dialogos>
+
+    <transicao>
+      <gameOver></gameOver>
+    </transicao>
+  </bloco>
+
+  <bloco s="4">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Vou achar logo ela e sair correndo dessa porra</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Cade, cade você</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>Filha</nome>
+        <texto>PAPAI!</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto>Você escuta uma voz vindo de dentro de uma porta</texto>
+      </dialogo>
+    </dialogos>
+    
+      <escolhas>
+        <escolha>
+          <texto> ENTRAR</texto>
+          <paraBloco>5</paraBloco>
+        </escolha>
+      </escolhas>
+  </bloco>
+
+
+  <bloco s="5">
+    <transicao>
+      <paraCena>7.1</paraCena>
+    </transicao>
+  </bloco>
+
+  <bloco s="6">
+    <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Vamos a gente precisa fugir daqui o mais rapido possivel</texto>
+      </dialogo>
+      
+      <transicao>
+        <paraCena>8.0</paraCena>
+      </transicao>
+     
+    </dialogos>
+  </bloco>
+  
+</cena>

@@ -27,9 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Cena 2.0.unity
     guid: 3f070ed334e4385679134a6b0562ae77
   - enabled: 1
-    path: Assets/Scenes/Cena 2.0.1.unity
-    guid: f45ea7b433cf93a48b47b8e6492f7d01
-  - enabled: 1
     path: Assets/Scenes/Cena 2.1.unity
     guid: 73eac8d1969bed9e28b9f498d4072106
   - enabled: 1
@@ -42,11 +39,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Cena 5.0.unity
     guid: aa37ca8624b50ae49aa56f71827a7b6e
   - enabled: 1
-    path: Assets/Scenes/Cena 5.1.1.unity
-    guid: 660d0e3582bbb3a4dbdc1e5575c37643
-  - enabled: 1
     path: Assets/Scenes/Cena 5.1.unity
     guid: 2162e12ad1fa7de4a8d4a2df60a13868
+  - enabled: 1
+    path: Assets/Scenes/Cena 5.0.1.unity
+    guid: 69560116e53be7c4f9da001d5dcced5b
   - enabled: 1
     path: Assets/Scenes/Cena 5.2.unity
     guid: e32f1487857d90e4faa52dd831f93b24
@@ -59,6 +56,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cena 6.0.unity
     guid: 87b34800bf6738f4bb7970d5c69b3289
+  - enabled: 1
+    path: Assets/Scenes/Cena 6.1.unity
+    guid: c093c4fb346ebbc4ca41a7fa6232d7e1
+  - enabled: 1
+    path: Assets/Scenes/Cena 6.2.unity
+    guid: 1422e87bf96f6684a9d36d9df80b386a
+  - enabled: 1
+    path: Assets/Scenes/Cena 6.3.unity
+    guid: 3308c45a606c93b4a865f86e46e47769
+  - enabled: 1
+    path: Assets/Scenes/Cena 7.0.unity
+    guid: 61056ab11e6cfaf4c8787abb625d33f2
+  - enabled: 1
+    path: Assets/Scenes/Cena 7.1.unity
+    guid: 09f693c26386fe349ac88ac664790ec9
+  - enabled: 1
+    path: Assets/Scenes/Cena 8.0.unity
+    guid: fe2b2e5f787283a40877e2085594f0e1
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

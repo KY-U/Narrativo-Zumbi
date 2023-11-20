@@ -29,7 +29,7 @@
 
       <escolha>
         <texto>ESFAQUEAR</texto>
-        <estaArmado>1</estaArmado>
+        <estaArmado>2</estaArmado>
         <paraBloco>2</paraBloco>
       </escolha>
 

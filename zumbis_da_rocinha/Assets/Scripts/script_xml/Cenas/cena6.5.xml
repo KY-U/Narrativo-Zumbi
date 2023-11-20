@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cena>
+  <bloco s="0">
+	  <dialogos>
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto>Aqui parece bom, acho que não tem ninguem</texto>
+			</dialogo>
+
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> Espero que eu esteja certo </texto>
+      </dialogo>
+    </dialogos>
+    
+		<escolhas>
+			<resumo></resumo>
+			<escolha>
+				<texto> ENTRAR NA CASA </texto>
+ 				<paraBloco>1</paraBloco>
+			</escolha>    
+  	</escolhas>
+    
+	</bloco>
+  <bloco s="1">
+		
+    <transicao>
+      <paraCena>6.5</paraCena>
+    </transicao>
+  </bloco>
+
+ 
+</cena>
