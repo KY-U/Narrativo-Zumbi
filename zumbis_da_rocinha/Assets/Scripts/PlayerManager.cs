@@ -111,7 +111,7 @@ public class PlayerManager : MonoBehaviour{
         // Contador mortes
         public void Morreu(){ 
             deathCount++; 
-            SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene("GameOver");
         }
 
         // Adicionar/retirar arma
@@ -122,5 +122,7 @@ public class PlayerManager : MonoBehaviour{
             else{
                 for(int i = 1; i < 4; i++) armado &= ~(1 << i);
             }
+
+            hud.UpdateUI();
         }
 }
