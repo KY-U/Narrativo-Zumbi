@@ -30,29 +30,25 @@
     <dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>FILHAAAAAAAAAAA CADEEEEE VOCEEEEEEEE</texto>
+        <texto>Vai ficar tudo bem. Vai ficar tudo bem.</texto>
       </dialogo>
 
       <dialogo>
         <nome>...</nome>
-        <texto> Zumbis são atraídos pelo seu grito</texto>
+        <texto> Ao longe você observa o exercito indo até você</texto>
       </dialogo>
 
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto> Merda, merda, merdaaaaa</texto>
-      </dialogo>
     </dialogos>
 
     <escolhas>    
       <escolha>
-        <texto> ATIRAR </texto>
-        <armado>1</armado>
+        <texto> SACAR SUA ARMA </texto>
+        <estaArmado>1</estaArmado>
         <paraBloco>3</paraBloco>
       </escolha>
 
       <escolha>
-        <texto> PROCURAR ELA ENQUANTO CORRE </texto>
+        <texto> PARAR DE CORRER </texto>
         <paraBloco>4</paraBloco>
       </escolha>
     </escolhas>
@@ -62,102 +58,98 @@
     <dialogos>
       <dialogo>
         <nome>José Carlos</nome>
-        <texto>Eu vou te encontrar eu prometo...</texto>
-      </dialogo>
-
-      <dialogo>
-        <nome>...</nome>
-        <texto> Voce escuta um choro dentro de uma porta</texto>
+        <texto>Jesus se eu sair dessa vivo prometo nunca mais beber</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> !!!!!!</texto>
+        <texto>E ir na missa todo domingo.</texto>
+      </dialogo>
+
+      <dialogo>
+        <nome>...</nome>
+        <texto> Ao longe você vê dois soldados indo na sua direçao</texto>
+      </dialogo>
+    
+      <dialogo>
+        <nome>José Carlos</nome>
+        <texto> VALEU JESUS VOCÊ É FOD-</texto>
       </dialogo>
     </dialogos>
-  </bloco>
   
-    <escolhas>
+  <escolhas>    
       <escolha>
-        <texto> ABRIR A PORTA </texto>
+        <texto> SACAR SUA ARMA </texto>
+        <estaArmado>1</estaArmado>
+        <paraBloco>3</paraBloco>
+      </escolha>
 
-        <paraBloco>5</paraBloco>
+      <escolha>
+        <texto> PARAR DE CORRER </texto>
+        <paraBloco>4</paraBloco>
       </escolha>
     </escolhas>
+  </bloco>
+  
+    
   
   <bloco s="3">
     <dialogos>
       <dialogo>
-        <nome>José Carlos</nome>
-        <texto>MORRAM VOCES NAO VAO PEGAR MINHA FILHA</texto>
+        <nome>Soldado Ana</nome>
+        <texto>ELE ESTÁ ARMADO! ATIREM</texto>
       </dialogo>
 
       <dialogo>
         <nome>...</nome>
-        <texto> Mais e mais zumbis continuam a se acumular ao seu redor</texto>
+        <texto> Os soldados atiram em você</texto>
+      </dialogo>
+      
+      <dialogo>
+        <nome>...</nome>
+        <texto>Nos seus ultimos instantes você usa seu corpo para proteger sua preciosa filha</texto>
       </dialogo>
 
       <dialogo>
         <nome>José Carlos</nome>
-        <texto> Não, não NÃAAAAAOOOOOOO</texto>
+        <texto> Filha....</texto>
       </dialogo>
     </dialogos>
 
     <transicao>
-      <gameOver></gameOver>
+     <paraCena>Fim</paraCena>
     </transicao>
   </bloco>
 
   <bloco s="4">
     <dialogos>
       <dialogo>
-        <nome>José Carlos</nome>
-        <texto>Vou achar logo ela e sair correndo dessa porra</texto>
+        <nome>Soldado Ana</nome>
+        <texto>PROTEJAM OS DOIS CIVIS! MATEM AS ABOMINAÇÕES</texto>
       </dialogo>
 
       <dialogo>
-        <nome>José Carlos</nome>
-        <texto> Cade, cade você</texto>
+        <nome>Soldado Ana</nome>
+        <texto>Vocês estâo seguros agora, vamos para nosso abrigo</texto>
       </dialogo>
 
       <dialogo>
         <nome>Filha</nome>
-        <texto>PAPAI!</texto>
+        <texto>Você é meu herói papai</texto>
       </dialogo>
 
       <dialogo>
         <nome>...</nome>
-        <texto>Você escuta uma voz vindo de dentro de uma porta</texto>
+        <texto>Vocês partem em um helicóptero para longe dali</texto>
       </dialogo>
     </dialogos>
-    
-      <escolhas>
-        <escolha>
-          <texto> ENTRAR</texto>
-          <paraBloco>5</paraBloco>
-        </escolha>
-      </escolhas>
-  </bloco>
-
-
-  <bloco s="5">
     <transicao>
-      <paraCena>7.1</paraCena>
-    </transicao>
-  </bloco>
-
-  <bloco s="6">
-    <dialogos>
-      <dialogo>
-        <nome>José Carlos</nome>
-        <texto>Vamos a gente precisa fugir daqui o mais rapido possivel</texto>
-      </dialogo>
-      
-      <transicao>
         <paraCena>Fim</paraCena>
       </transicao>
-     
-    </dialogos>
+      
   </bloco>
+
+
+
   
 </cena>

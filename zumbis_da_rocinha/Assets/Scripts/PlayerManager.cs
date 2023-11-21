@@ -103,7 +103,7 @@ public class PlayerManager : MonoBehaviour{
         public void Ai(){ 
             machucado++;
             hud.UpdateUI();
-            if(machucado > 3){
+            if(machucado >= 3){
                 Morreu();
             }
         }

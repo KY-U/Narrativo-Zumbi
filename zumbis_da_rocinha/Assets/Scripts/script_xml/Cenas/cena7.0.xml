@@ -153,12 +153,13 @@
         <nome>José Carlos</nome>
         <texto>Vamos a gente precisa fugir daqui o mais rapido possivel</texto>
       </dialogo>
-      
+    </dialogos>
+    
       <transicao>
         <paraCena>8.0</paraCena>
       </transicao>
      
-    </dialogos>
+    
   </bloco>
   
 </cena>

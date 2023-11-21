@@ -66,6 +66,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Cena 6.3.unity
     guid: 3308c45a606c93b4a865f86e46e47769
   - enabled: 1
+    path: Assets/Scenes/Cena 6.4.unity
+    guid: 95a1bb899760d824b970215dd4bded73
+  - enabled: 1
+    path: Assets/Scenes/Cena 6.5.unity
+    guid: 9724a9579a402c64494c0e15a18d7d0b
+  - enabled: 1
     path: Assets/Scenes/Cena 7.0.unity
     guid: 61056ab11e6cfaf4c8787abb625d33f2
   - enabled: 1
@@ -74,7 +80,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cena 8.0.unity
     guid: fe2b2e5f787283a40877e2085594f0e1
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}

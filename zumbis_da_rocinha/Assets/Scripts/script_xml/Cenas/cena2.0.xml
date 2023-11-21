@@ -94,7 +94,8 @@
 		
 			<escolha>
 				<texto> PROCURAR NA MESA DO DELEGADO </texto>
-				<paraBloco>6</paraBloco>
+        <armado>1</armado>
+				<paraBloco>5</paraBloco>
 			</escolha>
 		
 			<escolha>

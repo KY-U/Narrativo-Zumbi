@@ -54,7 +54,6 @@
     </dialogos>
 
     <escolhas>
-      <resumo></resumo>
       <escolha>
         <texto>IR EMBORA</texto>
         <paraBloco>3</paraBloco>
@@ -81,7 +80,7 @@
     </dialogos>
 
     <escolhas>
-      <resumo></resumo>
+      
       <escolha>
         <texto>CORRER</texto>
         <paraBloco>3</paraBloco>
@@ -91,11 +90,12 @@
 
   <bloco s="3">
 
-    <transicao>
-      <machucado></machucado>
+   
+      
       <transicao>
+        <machucado></machucado>
         <paraCena b="2">6.4</paraCena>
-      </transicao>
+        
     </transicao>
    
   </bloco>
