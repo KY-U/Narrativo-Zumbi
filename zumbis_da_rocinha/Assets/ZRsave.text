@@ -1,7 +1,7 @@
 <Save filesave="Save_01">
-  <curScene>Fim</curScene>
+  <curScene>1.0</curScene>
   <curBlock>0</curBlock>
-  <machucado>2</machucado>
+  <machucado>0</machucado>
   <armado>0</armado>
   <deathCount>0</deathCount>
 </Save>
